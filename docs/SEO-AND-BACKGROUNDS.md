@@ -2,6 +2,8 @@
 
 Borrador 1 · 12/10/2026 · Rama `feat/seo-and-backgrounds`. Parte del estado de `main` tras el PR #3.
 
+**Estado (12/10/2026):** tareas 1–6 y 9 hechas en la rama. Lighthouse móvil sobre el build: 100/100/100/100, CLS 0, LCP 1,5 s. Pendientes 7 y 8 (bloqueadas por datos de Vanesa). Decisiones tomadas por defecto: imagen OG solo con su foto, tarjetas de contacto con hover estático (sin JS de cursor) y cortes rectos entre bandas como Consultaro; el borde degradado de las tarjetas de servicio se descartó porque el filete verde ya cumple esa función.
+
 Dos frentes independientes, un commit por tarea. El SEO va primero porque hoy la página no aparece bien al compartirla ni tiene datos estructurados; los fondos son pulido visual y van después.
 
 ---
@@ -123,6 +125,10 @@ Hoy los fondos son planos: `bg-paper` (blanco), `bg-surface` (gris) y `bg-ink` (
 
 Presupuesto: ninguna animación continua en secciones de texto; solo aurora y pulso del botón de WhatsApp corren indefinidamente, ambas en el compositor.
 
+### B.4.1 Lección
+
+Un ancestro con `overflow: hidden` se convierte en contenedor de scroll y congela `animation-timeline: view()`/`scroll()`: las secciones usan `overflow-clip` y el fundido del hero usa `scroll(root)`.
+
 ### B.5 Verificación
 - Capturas a 390 y 1440 px de cada sección, antes y después, en `docs/design/backgrounds/`.
 - Lighthouse rendimiento móvil sin bajar de lo actual; comprobar que `animation-timeline` no dispara "layout shifts".
@@ -135,15 +141,15 @@ Presupuesto: ninguna animación continua en secciones de texto; solo aurora y pu
 
 | # | Tarea | Depende de |
 |---|---|---|
-| 1 | A.2.1 Metadatos + A.2.3 robots | — |
-| 2 | A.2.2 Imagen OG | 1 |
-| 3 | A.2.4 JSON-LD | 1 |
-| 4 | B.2 Utilidades de fondo en `global.css` | — |
-| 5 | B.3 Aplicar fondos sección a sección (un commit por sección) | 4 |
-| 6 | B.4 Contador, línea de scroll, línea de pasos | 4 |
-| 7 | A.2.5 Páginas por servicio | Descripciones revisadas por Vanesa |
-| 8 | A.2.6 Privacidad y 404 | Datos legales de Vanesa (cédula/NIT) |
-| 9 | A.2.7 + B.5 Verificación y capturas | Todo |
+| 1 ✅ | A.2.1 Metadatos + A.2.3 robots | — |
+| 2 ✅ | A.2.2 Imagen OG | 1 |
+| 3 ✅ | A.2.4 JSON-LD | 1 |
+| 4 ✅ | B.2 Utilidades de fondo en `global.css` | — |
+| 5 ✅ | B.3 Aplicar fondos sección a sección (un commit por sección) | 4 |
+| 6 ✅ | B.4 Contador, línea de scroll, línea de pasos | 4 |
+| 7 ⏳ | A.2.5 Páginas por servicio | Descripciones revisadas por Vanesa |
+| 8 ⏳ | A.2.6 Privacidad y 404 | Datos legales de Vanesa (cédula/NIT) |
+| 9 ✅ | A.2.7 + B.5 Verificación: Lighthouse 100×4, reduced-motion comprobado (solo queda el fundido de opacidad del indicador de scroll) | Todo |
 
 Las tareas 1–6 se pueden hacer ya. 7 y 8 quedan bloqueadas por `docs/CLIENT-QUESTIONS.md` (ciudad, precios, datos legales, revisión de textos).
 
