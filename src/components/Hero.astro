@@ -10,7 +10,7 @@ const wide = await getImage({ src: heroWide, format: 'webp', widths: [1024, 1600
 const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [480, 768, 1080] });
 ---
 
-<section class="relative isolate flex min-h-svh items-end overflow-hidden bg-ink text-white md:items-center">
+<section class="relative isolate flex min-h-svh items-end overflow-clip bg-ink text-white md:items-center">
   <picture>
     <source media="(min-width: 768px)" srcset={wide.srcSet.attribute} sizes="100vw" />
     <img
@@ -28,6 +28,12 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
   <div
     aria-hidden="true"
     class="absolute inset-0 -z-10 bg-linear-to-t from-ink via-ink/60 to-ink/10 md:bg-linear-to-r md:from-ink/90 md:via-ink/55 md:to-transparent"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    style="--glow-x: 20%; --glow-y: 55%; --glow-strength: 22%"
+    class="absolute inset-0 -z-10 hidden bg-glow md:block"
   >
   </div>
 
@@ -57,4 +63,15 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
       </div>
     </div>
   </div>
+
+  <a
+    href="#servicios"
+    aria-label="Bajar a servicios"
+    class="fade-on-scroll absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-[0.625rem] font-medium tracking-[0.2em] text-white/60 uppercase transition hover:text-white md:flex"
+  >
+    Desliza
+    <span class="h-12 w-px overflow-hidden bg-white/15">
+      <span class="block h-full w-full bg-white motion-safe:animate-scroll-hint"></span>
+    </span>
+  </a>
 </section>

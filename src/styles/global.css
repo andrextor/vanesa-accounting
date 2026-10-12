@@ -6,6 +6,24 @@
   --animate-marquee: marquee 40s linear infinite;
   --animate-hero-zoom: hero-zoom 1.8s var(--ease-fluid) both;
   --animate-pulse-ring: pulse-ring 2.4s var(--ease-fluid) infinite;
+  --animate-aurora: aurora 40s linear infinite;
+  --animate-scroll-hint: scroll-hint 1.8s var(--ease-fluid) infinite;
+
+  @keyframes aurora {
+    to {
+      rotate: 1turn;
+    }
+  }
+
+  @keyframes scroll-hint {
+    from {
+      translate: 0 -100%;
+    }
+
+    to {
+      translate: 0 100%;
+    }
+  }
 
   @keyframes marquee {
     to {
@@ -90,5 +108,121 @@ body {
   from {
     opacity: 0;
     translate: 0 1.25rem;
+  }
+}
+
+/* Background textures: CSS only, no extra images. Palette stays navy, gray and one green. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-line) 45%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 45%, transparent) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000 30%, transparent 100%);
+}
+
+@utility bg-dots {
+  background-image: radial-gradient(color-mix(in oklab, var(--color-ink) 12%, transparent) 1.5px, transparent 1.5px);
+  background-size: 1.5rem 1.5rem;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000 20%, transparent 100%);
+}
+
+@utility bg-glow {
+  background-image: radial-gradient(
+    circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    color-mix(in oklab, var(--color-accent) var(--glow-strength, 18%), transparent),
+    transparent 60%
+  );
+}
+
+@utility bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 10rem 10rem;
+  opacity: 0.045;
+  mix-blend-mode: screen;
+}
+
+@utility bg-aurora {
+  background-image:
+    conic-gradient(
+      from 0deg at 30% 40%,
+      transparent,
+      color-mix(in oklab, var(--color-accent) 22%, transparent),
+      transparent 40%
+    ),
+    conic-gradient(
+      from 180deg at 70% 60%,
+      transparent,
+      color-mix(in oklab, var(--color-accent-light) 14%, transparent),
+      transparent 35%
+    );
+  filter: blur(60px);
+}
+
+/* A vertical line that draws itself as it scrolls into view. */
+@utility draw-line {
+  transform-origin: top;
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: draw-line both linear;
+      animation-timeline: view();
+      animation-range: entry 10% cover 60%;
+    }
+  }
+}
+
+@keyframes draw-line {
+  from {
+    scale: 1 0;
+  }
+}
+
+/* Numbers count up as they scroll in: a registered integer property drives a CSS counter, no JavaScript.
+   Browsers without @property jump straight to the final value. */
+@property --n {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@utility count-up {
+  counter-reset: n var(--n);
+  --n: var(--target);
+
+  &::after {
+    content: counter(n);
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: count-up both var(--ease-fluid);
+      animation-timeline: view();
+      animation-range: entry 0% entry 90%;
+    }
+  }
+}
+
+@keyframes count-up {
+  from {
+    --n: 0;
+  }
+
+  to {
+    --n: var(--target);
+  }
+}
+
+/* Fades an element out over the first 200px of scroll (the hero's "scroll" hint). */
+@utility fade-on-scroll {
+  @supports (animation-timeline: scroll()) {
+    animation: fade-out both linear;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
   }
 }

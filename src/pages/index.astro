@@ -8,12 +8,14 @@ import Hero from '../components/Hero.astro';
 import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
 import Stats from '../components/Stats.astro';
+import StructuredData from '../components/StructuredData.astro';
 import ToolsMarquee from '../components/ToolsMarquee.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <StructuredData slot="head" />
   <Header />
 
   <main id="contenido">
