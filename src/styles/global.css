@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: var(--font-instrument-sans);
+  --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
 
   --color-ink: #0f1b2d;
   --color-ink-soft: #4a5568;
@@ -35,7 +36,7 @@ body {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
-      animation: reveal both cubic-bezier(0.22, 1, 0.36, 1);
+      animation: reveal both var(--ease-fluid);
       animation-timeline: view();
       animation-range: entry 0% entry calc(60% + var(--i, 0) * 8%);
     }
@@ -52,7 +53,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-in > * {
-    animation: hero-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: hero-in 0.8s var(--ease-fluid) both;
     animation-delay: calc(var(--i, 0) * 90ms);
   }
 }
