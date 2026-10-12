@@ -1,0 +1,61 @@
+---
+import { getImage } from 'astro:assets';
+import heroWide from '../assets/portraits/vanesa-hero.jpg';
+import heroPortrait from '../assets/portraits/vanesa-office-desk.jpg';
+import { site, whatsappUrl } from '../data/site';
+
+const alt = `${site.name}, ${site.role.toLowerCase()}, en su escritorio`;
+const wide = await getImage({ src: heroWide, format: 'webp', widths: [1024, 1600, 2400] });
+const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [480, 768, 1080] });
+---
+
+<section class="relative isolate flex min-h-svh items-end overflow-hidden bg-ink text-white md:items-center">
+  <picture>
+    <source media="(min-width: 768px)" srcset={wide.srcSet.attribute} sizes="100vw" />
+    <img
+      src={portrait.src}
+      srcset={portrait.srcSet.attribute}
+      sizes="100vw"
+      alt={alt}
+      width={heroPortrait.width}
+      height={heroPortrait.height}
+      fetchpriority="high"
+      decoding="async"
+      class="absolute inset-0 -z-20 size-full object-cover object-top md:object-right"
+    />
+  </picture>
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 bg-linear-to-t from-ink via-ink/60 to-ink/10 md:bg-linear-to-r md:from-ink/90 md:via-ink/55 md:to-transparent"
+  >
+  </div>
+
+  <div class="mx-auto w-full max-w-7xl px-5 pt-40 pb-16 md:px-10 md:pt-32">
+    <div class="max-w-3xl">
+      <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
+        <span aria-hidden="true" class="size-1.5 rounded-full bg-accent-light"></span>
+        {site.hero.eyebrow}
+      </p>
+      <h1 class="mt-5 text-[2.75rem] leading-[1.02] font-medium tracking-[-0.035em] text-balance md:text-7xl">
+        {site.hero.heading}
+      </h1>
+      <p class="mt-6 max-w-lg text-lg leading-relaxed text-white/80">{site.hero.lead}</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a
+          href={whatsappUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90"
+        >
+          Agenda una asesoría
+          <svg aria-hidden="true" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M9 4l4 4-4 4"></path>
+          </svg>
+        </a>
+        <a href="#servicios" class="rounded border border-white/30 px-5 py-3.5 font-medium transition hover:border-white">
+          Ver servicios
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
