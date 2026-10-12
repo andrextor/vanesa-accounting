@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
 import { site, whatsappUrl } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 
@@ -12,6 +13,7 @@ const year = new Date().getFullYear();
 
   <main>
     <Hero />
+    <Stats />
 
     <section id="servicios" class="scroll-mt-20 border-t border-line bg-white">
       <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
