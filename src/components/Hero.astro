@@ -2,10 +2,11 @@
 import { getImage } from 'astro:assets';
 import heroWide from '../assets/portraits/vanesa-hero.jpg';
 import heroPortrait from '../assets/portraits/vanesa-office-desk.jpg';
-import { site, whatsappUrl } from '../data/site';
+import { whatsappUrl } from '../data/site';
+import { getContent } from '../i18n';
 import Icon from './Icon.astro';
 
-const alt = `${site.name}, ${site.role.toLowerCase()}, en su escritorio`;
+const t = getContent(Astro.currentLocale);
 const wide = await getImage({ src: heroWide, format: 'webp', widths: [1024, 1600, 2400] });
 const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [480, 768, 1080] });
 ---
@@ -17,7 +18,7 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
       src={portrait.src}
       srcset={portrait.srcSet.attribute}
       sizes="100vw"
-      alt={alt}
+      alt={t.alts.hero}
       width={heroPortrait.width}
       height={heroPortrait.height}
       fetchpriority="high"
@@ -41,24 +42,24 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
     <div class="hero-in max-w-3xl">
       <p style="--i: 0" class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
         <span aria-hidden="true" class="size-1.5 rounded-full bg-accent-light"></span>
-        {site.hero.eyebrow}
+        {t.hero.eyebrow}
       </p>
       <h1 style="--i: 1" class="mt-5 text-[2.75rem] leading-[1.02] font-medium tracking-[-0.035em] text-balance md:text-7xl">
-        {site.hero.heading}
+        {t.hero.heading}
       </h1>
-      <p style="--i: 2" class="mt-6 max-w-lg text-lg leading-relaxed text-white/80">{site.hero.lead}</p>
+      <p style="--i: 2" class="mt-6 max-w-lg text-lg leading-relaxed text-white/80">{t.hero.lead}</p>
       <div style="--i: 3" class="mt-9 flex flex-wrap gap-3">
         <a
-          href={whatsappUrl()}
+          href={whatsappUrl(t.whatsapp.greeting)}
           target="_blank"
           rel="noopener noreferrer"
           class="group inline-flex items-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90"
         >
-          Agenda una asesoría
+          {t.ui.bookConsultation}
           <Icon name="arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
         </a>
         <a href="#servicios" class="rounded border border-white/30 px-5 py-3.5 font-medium transition hover:border-white">
-          Ver servicios
+          {t.ui.viewServices}
         </a>
       </div>
     </div>
@@ -66,10 +67,10 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
 
   <a
     href="#servicios"
-    aria-label="Bajar a servicios"
+    aria-label={t.ui.scrollHintLabel}
     class="fade-on-scroll absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 text-[0.625rem] font-medium tracking-[0.2em] text-white/60 uppercase transition hover:text-white md:flex"
   >
-    Desliza
+    {t.ui.scrollHint}
     <span class="h-12 w-px overflow-hidden bg-white/15">
       <span class="block h-full w-full bg-white motion-safe:animate-scroll-hint"></span>
     </span>

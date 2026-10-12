@@ -27,6 +27,8 @@ Para que la web solo muestre información real. Responde lo que puedas; lo que q
 - Siendo también **Administradora Financiera**: ¿ofreces análisis financiero, flujo de caja, presupuestos o tableros en **Power BI**? Sería un servicio que pocas contadoras ofrecen.
 - ¿Cómo usas la IA en tu trabajo? Puede ser un mensaje de "contabilidad moderna" si te sientes cómoda con ello.
 
+- La web ya tiene versión en **inglés** (`/en/`). ¿Puedes revisar la traducción de tu cargo y servicios? Propuesta: "Public Accountant", "Financial Administrator", "IFRS for SMEs", "Individual income tax return", "Third-party information reports (exógena)".
+
 ## 3. Servicios
 
 12. ~~Servicios.~~ ✅ Contabilidad mensual, renta persona natural, IVA/retención/ICA, exógena, facturación electrónica, estados financieros y NIIF, asesoría y planeación tributaria, RUT. Falta:

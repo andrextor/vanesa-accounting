@@ -1,7 +1,10 @@
 ---
 import { site } from '../data/site';
+import { getContent, htmlLang, resolveLocale } from '../i18n';
 
-const url = Astro.site?.href ?? '/';
+const locale = resolveLocale(Astro.currentLocale);
+const t = getContent(locale);
+const url = new URL(Astro.url.pathname, Astro.site).href;
 const personId = `${url}#person`;
 const graph = {
   '@context': 'https://schema.org',
@@ -9,37 +12,37 @@ const graph = {
     {
       '@type': 'AccountingService',
       '@id': `${url}#business`,
-      name: `${site.name} · ${site.role}`,
+      name: `${site.name} · ${t.role}`,
       url,
       telephone: site.phone,
       email: site.email,
       areaServed: { '@type': 'Country', name: 'Colombia' },
       founder: { '@id': personId },
-      knowsAbout: site.services.map((service) => service.title),
+      knowsAbout: t.services.map((service) => service.title),
       sameAs: [site.linkedin],
     },
     {
       '@type': 'Person',
       '@id': personId,
       name: site.name,
-      jobTitle: site.role,
+      jobTitle: t.role,
       url,
       email: site.email,
       telephone: site.phone,
       sameAs: [site.linkedin],
-      hasCredential: site.education.map((degree) => ({
+      hasCredential: t.education.map((degree) => ({
         '@type': 'EducationalOccupationalCredential',
         name: degree.title,
         recognizedBy: { '@type': 'CollegeOrUniversity', name: degree.institution },
       })),
-      alumniOf: site.education.map((degree) => ({ '@type': 'CollegeOrUniversity', name: degree.institution })),
+      alumniOf: t.education.map((degree) => ({ '@type': 'CollegeOrUniversity', name: degree.institution })),
     },
     {
       '@type': 'WebSite',
       '@id': `${url}#website`,
       url,
-      name: site.title,
-      inLanguage: 'es-CO',
+      name: t.meta.title,
+      inLanguage: htmlLang[locale],
       publisher: { '@id': personId },
     },
   ],

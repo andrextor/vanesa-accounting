@@ -7,7 +7,12 @@ const site = process.env.SITE_URL ?? 'https://vanesalotero.com';
 
 export default defineConfig({
   site,
-  integrations: [sitemap()],
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: { prefixDefaultLocale: false },
+  },
+  integrations: [sitemap({ i18n: { defaultLocale: 'es', locales: { es: 'es-CO', en: 'en-US' } } })],
   fonts: [
     {
       name: 'Instrument Sans',

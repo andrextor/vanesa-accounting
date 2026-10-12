@@ -1,0 +1,29 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getContent, localeNames, locales, resolveLocale } from '../i18n';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+const current = resolveLocale(Astro.currentLocale);
+const t = getContent(current);
+---
+
+<nav aria-label={t.ui.language} class:list={['items-center rounded-full border border-line bg-paper/60 p-0.5', className]}>
+  {
+    locales.map((locale) => (
+      <a
+        href={getRelativeLocaleUrl(locale)}
+        hreflang={locale}
+        lang={locale}
+        aria-label={localeNames[locale]}
+        aria-current={locale === current ? 'true' : undefined}
+        class="rounded-full px-2.5 py-1.5 text-xs font-medium tracking-[0.08em] text-ink-soft uppercase transition duration-300 hover:text-ink aria-[current]:bg-ink aria-[current]:text-white"
+      >
+        {locale}
+      </a>
+    ))
+  }
+</nav>

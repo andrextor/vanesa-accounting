@@ -1,23 +1,23 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { site, whatsappUrl } from '../data/site';
+import { getContent, resolveLocale } from '../i18n';
 import Icon from './Icon.astro';
+import LanguageSwitch from './LanguageSwitch.astro';
 import Logo from './Logo.astro';
 
-const links = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#para-quien', label: 'Para quién' },
-  { href: '#proceso', label: 'Proceso' },
-  { href: '#sobre-mi', label: 'Sobre mí' },
-  { href: '#contacto', label: 'Contacto' },
-];
+const locale = resolveLocale(Astro.currentLocale);
+const t = getContent(locale);
+const home = getRelativeLocaleUrl(locale);
+const consultation = whatsappUrl(t.whatsapp.greeting);
 ---
 
 <header class="pointer-events-none fixed inset-x-0 top-0 z-40 px-4 md:px-8">
   <nav
-    aria-label="Principal"
+    aria-label={t.ui.mainNav}
     class="pointer-events-auto mx-auto mt-4 grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-4 rounded-full border border-white/60 bg-paper/80 py-2 pr-2 pl-2 shadow-[0_8px_32px_-12px_rgb(15_27_45/0.35)] backdrop-blur-xl md:mt-5"
   >
-    <a href="/" class="justify-self-start pl-3 text-[0.95rem]">
+    <a href={home} class="justify-self-start pl-3 text-[0.95rem]">
       <Logo />
     </a>
 
@@ -25,7 +25,7 @@ const links = [
       <span aria-hidden="true" data-nav-indicator class="nav-indicator absolute top-0 left-0 h-9 rounded-full bg-ink/[0.07]"></span>
       <ul class="relative flex items-center">
         {
-          links.map((link) => (
+          t.nav.map((link) => (
             <li>
               <a
                 href={link.href}
@@ -41,21 +41,24 @@ const links = [
     </div>
 
     <div class="col-start-3 flex items-center justify-self-end gap-1">
+      <LanguageSwitch class="hidden sm:flex" />
       <a
-        href={whatsappUrl()}
+        href={consultation}
         target="_blank"
         rel="noopener noreferrer"
         class="hidden items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-sm font-medium text-white transition duration-500 ease-fluid hover:-translate-y-0.5 hover:bg-accent-deep active:translate-y-px sm:inline-flex"
       >
         <Icon name="whatsapp-logo" class="size-4" />
-        Agenda una asesoría
+        {t.ui.bookConsultation}
       </a>
       <button
         type="button"
         data-menu-toggle
+        data-label-open={t.ui.openMenu}
+        data-label-close={t.ui.closeMenu}
         aria-expanded="false"
         aria-controls="mobile-menu"
-        aria-label="Abrir menú"
+        aria-label={t.ui.openMenu}
         class="group relative size-10 rounded-full transition hover:bg-ink/5 lg:hidden"
       >
         <span
@@ -75,7 +78,7 @@ const links = [
   >
     <ul class="flex flex-col gap-5">
       {
-        links.map((link, index) => (
+        t.nav.map((link, index) => (
           <li
             class="translate-y-10 opacity-0 transition-all duration-700 ease-fluid group-data-open/menu:translate-y-0 group-data-open/menu:opacity-100"
             style={`transition-delay: ${100 + index * 50}ms`}
@@ -91,18 +94,19 @@ const links = [
       class="flex translate-y-10 flex-col gap-3 opacity-0 transition-all delay-[400ms] duration-700 ease-fluid group-data-open/menu:translate-y-0 group-data-open/menu:opacity-100"
     >
       <a
-        href={whatsappUrl()}
+        href={consultation}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex w-max items-center gap-2 rounded-full bg-ink px-5 py-3 font-medium text-white"
       >
         <Icon name="whatsapp-logo" class="size-5" />
-        Agenda una asesoría
+        {t.ui.bookConsultation}
       </a>
       <a href={`mailto:${site.email}`} class="inline-flex items-center gap-2 text-ink-soft">
         <Icon name="envelope-simple" class="size-5" />
         {site.email}
       </a>
+      <LanguageSwitch class="mt-2 flex w-max" />
     </div>
   </div>
 </header>
@@ -114,7 +118,7 @@ const links = [
   const setOpen = (open: boolean): void => {
     if (!toggle || !menu) return;
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    toggle.setAttribute('aria-label', (open ? toggle.dataset.labelClose : toggle.dataset.labelOpen) ?? '');
     menu.toggleAttribute('data-open', open);
     document.documentElement.classList.toggle('overflow-hidden', open);
   };

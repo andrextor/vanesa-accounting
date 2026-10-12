@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import { getContent } from '../i18n';
 
 interface Props {
   tone?: 'light' | 'dark';
@@ -9,6 +10,7 @@ interface Props {
 
 const { tone = 'light', withRole = false, class: className } = Astro.props;
 const dark = tone === 'dark';
+const t = getContent(Astro.currentLocale);
 const [firstName, lastName] = site.name.split(' ');
 ---
 
@@ -19,7 +21,7 @@ const [firstName, lastName] = site.name.split(' ');
     {
       withRole && (
         <span class:list={['mt-1.5 block text-[0.42em] font-medium tracking-[0.24em] uppercase', dark ? 'text-white/60' : 'text-ink-soft']}>
-          {site.role}
+          {t.role}
         </span>
       )
     }

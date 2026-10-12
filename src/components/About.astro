@@ -2,8 +2,11 @@
 import { Image } from 'astro:assets';
 import portrait from '../assets/portraits/vanesa-reviewing-numbers.jpg';
 import { site } from '../data/site';
+import { getContent } from '../i18n';
 import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
+
+const t = getContent(Astro.currentLocale);
 ---
 
 <section id="sobre-mi" class="scroll-mt-0 bg-paper">
@@ -13,7 +16,7 @@ import SectionHeading from './SectionHeading.astro';
         <div class="overflow-hidden rounded-xl">
           <Image
             src={portrait}
-            alt={`${site.name} revisando un estado financiero en su escritorio`}
+            alt={t.alts.portrait}
             widths={[480, 768, 1080]}
             sizes="(min-width: 1024px) 35vw, 100vw"
             class="aspect-[4/5] w-full object-cover transition-transform duration-1000 ease-fluid group-hover:scale-105"
@@ -24,23 +27,23 @@ import SectionHeading from './SectionHeading.astro';
         </span>
         <div class="absolute inset-x-4 bottom-4 rounded-lg bg-paper/90 px-5 py-4 backdrop-blur">
           <p class="font-medium">{site.name}</p>
-          <p class="text-sm text-ink-soft">Contadora Pública · Administradora Financiera</p>
+          <p class="text-sm text-ink-soft">{t.roleLine}</p>
         </div>
       </div>
     </div>
 
     <div>
-      <SectionHeading eyebrow="Sobre mí" title={site.about.heading} />
+      <SectionHeading {...t.sections.about} />
       <div class="reveal mt-6 space-y-4 text-lg leading-relaxed text-ink-soft">
-        {site.about.body.map((paragraph) => <p>{paragraph}</p>)}
+        {t.about.body.map((paragraph) => <p>{paragraph}</p>)}
       </div>
 
       <div class="mt-14 space-y-12">
         <div class="reveal">
-          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">Formación académica</h3>
+          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">{t.ui.education}</h3>
           <ol class="mt-5 grid gap-4 sm:grid-cols-2">
             {
-              site.education.map((degree) => (
+              t.education.map((degree) => (
                 <li class="rounded-xl border border-line bg-surface p-6">
                   <p class="text-sm font-medium text-accent tabular-nums">{degree.year}</p>
                   <p class="mt-3 text-xl font-medium tracking-[-0.02em]">{degree.title}</p>
@@ -52,10 +55,10 @@ import SectionHeading from './SectionHeading.astro';
         </div>
 
         <div class="reveal">
-          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">Diplomados y certificaciones</h3>
+          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">{t.ui.certifications}</h3>
           <ul class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {
-              site.certifications.map((certification) => (
+              t.certifications.map((certification) => (
                 <li class="flex gap-3 border-b border-line pb-3">
                   <Icon name="check" class="mt-1 size-4 text-accent" />
                   {certification}
@@ -64,15 +67,15 @@ import SectionHeading from './SectionHeading.astro';
             }
           </ul>
           <p class="mt-5 text-sm text-ink-soft">
-            Formación complementaria en {site.training.slice(0, -1).join(', ')} y {site.training.at(-1)}.
+            {t.ui.complementaryTraining} {t.training.slice(0, -1).join(', ')} {t.ui.and} {t.training.at(-1)}.
           </p>
         </div>
 
         <div class="reveal">
-          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">Experiencia</h3>
+          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">{t.ui.experience}</h3>
           <ol class="relative mt-5 border-l border-line">
             {
-              site.experience.map((position) => (
+              t.experience.map((position) => (
                 <li class="relative flex flex-col gap-1 py-4 pl-7 before:absolute before:top-7 before:-left-[0.3125rem] before:size-2.5 before:rounded-full before:border-2 before:border-paper before:bg-accent sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                   <div>
                     <p class="text-lg font-medium">{position.company}</p>

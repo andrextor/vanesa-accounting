@@ -1,12 +1,14 @@
 ---
 import { site } from '../data/site';
+import { getContent } from '../i18n';
 
+const t = getContent(Astro.currentLocale);
 const loop = [...site.software, ...site.software];
 ---
 
-<section aria-label="Herramientas que domino" class="border-b border-line bg-paper py-8">
+<section aria-label={t.ui.toolsLabel} class="border-b border-line bg-paper py-8">
   <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 md:flex-row md:items-center md:gap-10 md:px-10">
-    <p class="shrink-0 text-sm font-medium text-ink-soft">Herramientas que domino</p>
+    <p class="shrink-0 text-sm font-medium text-ink-soft">{t.ui.toolsLabel}</p>
     <div class="group relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
       <ul class="flex w-max gap-3 motion-safe:animate-marquee group-hover:[animation-play-state:paused]">
         {
