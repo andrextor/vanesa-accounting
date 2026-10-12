@@ -2,6 +2,7 @@
 import Audiences from '../components/Audiences.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
 import Stats from '../components/Stats.astro';
 import { site, whatsappUrl } from '../data/site';
@@ -19,6 +20,7 @@ const year = new Date().getFullYear();
 
     <Services />
     <Audiences />
+    <Process />
 
     <section id="sobre-mi" class="scroll-mt-20 bg-surface">
       <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[2fr_3fr] md:py-28">
@@ -30,22 +32,6 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <section id="proceso" class="scroll-mt-20 bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <h2 class="text-3xl md:text-4xl">Cómo trabajamos</h2>
-        <ol class="mt-12 grid gap-10 md:grid-cols-3">
-          {
-            site.steps.map((step, index) => (
-              <li class="border-t-2 border-accent pt-6">
-                <span class="text-3xl text-accent">{index + 1}</span>
-                <h3 class="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p class="mt-2 text-ink-soft">{step.description}</p>
-              </li>
-            ))
-          }
-        </ol>
-      </div>
-    </section>
 
     <section id="contacto" class="scroll-mt-20 bg-ink text-paper">
       <div class="mx-auto max-w-6xl px-5 py-20 text-center md:py-28">

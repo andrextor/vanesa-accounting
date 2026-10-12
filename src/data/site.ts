@@ -125,9 +125,18 @@ export const site = {
     body: 'Soy Vanesa Lotero, Contadora Pública. Creo en una contabilidad cercana: explico cada cifra en un lenguaje sencillo para que entiendas tu situación y decidas con confianza.',
   },
   steps: [
-    { title: 'Conversamos', description: 'Entiendo tu situación y lo que necesitas.' },
-    { title: 'Propuesta', description: 'Recibes un plan de trabajo claro y con tarifa definida.' },
-    { title: 'Acompañamiento', description: 'Me encargo de tus obligaciones y te mantengo informada.' },
+    {
+      title: 'Conversamos',
+      description: 'Me cuentas tu situación y revisamos juntos qué obligaciones tienes y qué necesitas.',
+    },
+    {
+      title: 'Propuesta clara',
+      description: 'Recibes un plan de trabajo a tu medida, con alcance y fechas definidos desde el inicio.',
+    },
+    {
+      title: 'Acompañamiento continuo',
+      description: 'Me encargo de tus obligaciones, te explico cada cifra y te mantengo al tanto de cada vencimiento.',
+    },
   ] satisfies Step[],
 } as const;
 
