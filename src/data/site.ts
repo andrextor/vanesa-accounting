@@ -8,6 +8,11 @@ export interface Step {
   description: string;
 }
 
+export interface Audience {
+  title: string;
+  description: string;
+}
+
 export interface Degree {
   title: string;
   institution: string;
@@ -20,15 +25,15 @@ export interface Position {
   period?: string;
 }
 
-// TODO: replace placeholder content with Vanesa's real information.
 export const site = {
   name: 'Vanesa Lotero',
   role: 'Contadora Pública',
   title: 'Vanesa Lotero · Contadora Pública',
   description:
     'Asesoría contable y tributaria para personas y empresas. Orden, claridad y cumplimiento para que tomes mejores decisiones.',
-  email: 'contacto@vanesalotero.com',
-  whatsapp: '573000000000',
+  email: 'vanesacruz0816@gmail.com',
+  whatsapp: '573146963798',
+  phone: '+57 314 696 3798',
   city: 'Colombia',
   experienceYears: 8,
   education: [
@@ -55,7 +60,20 @@ export const site = {
   ] satisfies Position[],
   software: ['Alegra', 'SAP', 'Siigo', 'Helisa', 'QuickBooks Online', 'Microsoft Excel', 'Google Sheets', 'Power BI'],
   flagship: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas',
-  audiences: ['Personas naturales', 'Emprendedores', 'Pequeñas y medianas empresas'],
+  audiences: [
+    {
+      title: 'Personas naturales',
+      description: 'Declaración de renta, RUT y planeación tributaria para cumplir a tiempo y sin estrés.',
+    },
+    {
+      title: 'Emprendedores',
+      description: 'RUT, facturación electrónica e impuestos en orden desde el primer día de tu negocio.',
+    },
+    {
+      title: 'Pequeñas y medianas empresas',
+      description: 'Contabilidad mensual, estados financieros NIIF e impuestos al día para decidir con datos.',
+    },
+  ] satisfies Audience[],
   sectors: ['Comercio', 'Servicios profesionales', 'Restaurantes y alimentos', 'Servicios administrativos y contables'],
   hero: {
     eyebrow: 'Contadora Pública · Colombia',
@@ -103,13 +121,26 @@ export const site = {
     },
   ] satisfies Service[],
   about: {
-    heading: 'Una contadora que habla claro',
-    body: 'Soy Vanesa Lotero, Contadora Pública. Creo en una contabilidad cercana: explico cada cifra en un lenguaje sencillo para que entiendas tu situación y decidas con confianza.',
+    heading: 'Una contadora que habla claro.',
+    body: [
+      'Soy Vanesa Lotero, Contadora Pública y Administradora Financiera, con más de 8 años de experiencia en contabilidad y administración financiera.',
+      'Acompaño a personas naturales, emprendedores y pequeñas empresas a mantener sus números en orden y cumplir con sus obligaciones tributarias, explicando cada cifra en un lenguaje sencillo para que decidas con confianza.',
+    ],
   },
+
   steps: [
-    { title: 'Conversamos', description: 'Entiendo tu situación y lo que necesitas.' },
-    { title: 'Propuesta', description: 'Recibes un plan de trabajo claro y con tarifa definida.' },
-    { title: 'Acompañamiento', description: 'Me encargo de tus obligaciones y te mantengo informada.' },
+    {
+      title: 'Conversamos',
+      description: 'Me cuentas tu situación y revisamos juntos qué obligaciones tienes y qué necesitas.',
+    },
+    {
+      title: 'Propuesta clara',
+      description: 'Recibes un plan de trabajo a tu medida, con alcance y fechas definidos desde el inicio.',
+    },
+    {
+      title: 'Acompañamiento continuo',
+      description: 'Me encargo de tus obligaciones, te explico cada cifra y te mantengo al tanto de cada vencimiento.',
+    },
   ] satisfies Step[],
 } as const;
 

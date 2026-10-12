@@ -1,10 +1,14 @@
 ---
+import About from '../components/About.astro';
+import Audiences from '../components/Audiences.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import { site, whatsappUrl } from '../data/site';
+import Process from '../components/Process.astro';
+import Services from '../components/Services.astro';
+import Stats from '../components/Stats.astro';
 import Layout from '../layouts/Layout.astro';
-
-const year = new Date().getFullYear();
 ---
 
 <Layout>
@@ -12,76 +16,13 @@ const year = new Date().getFullYear();
 
   <main>
     <Hero />
-
-    <section id="servicios" class="scroll-mt-20 border-t border-line bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <h2 class="text-3xl md:text-4xl">Servicios</h2>
-        <ul class="mt-12 grid gap-6 sm:grid-cols-2">
-          {
-            site.services.map((service, index) => (
-              <li class="rounded-2xl border border-line p-8 transition hover:border-accent/50 hover:shadow-sm">
-                <span class="text-sm text-accent">{String(index + 1).padStart(2, '0')}</span>
-                <h3 class="mt-3 text-xl font-semibold">{service.title}</h3>
-                <p class="mt-3 leading-relaxed text-ink-soft">{service.description}</p>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </section>
-
-    <section id="sobre-mi" class="scroll-mt-20 bg-surface">
-      <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[2fr_3fr] md:py-28">
-        <div aria-hidden="true" class="aspect-[4/5] rounded-3xl bg-accent/20"></div>
-        <div>
-          <h2 class="text-3xl md:text-4xl">{site.about.heading}</h2>
-          <p class="mt-6 text-lg leading-relaxed text-ink-soft">{site.about.body}</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="proceso" class="scroll-mt-20 bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <h2 class="text-3xl md:text-4xl">Cómo trabajamos</h2>
-        <ol class="mt-12 grid gap-10 md:grid-cols-3">
-          {
-            site.steps.map((step, index) => (
-              <li class="border-t-2 border-accent pt-6">
-                <span class="text-3xl text-accent">{index + 1}</span>
-                <h3 class="mt-2 text-lg font-semibold">{step.title}</h3>
-                <p class="mt-2 text-ink-soft">{step.description}</p>
-              </li>
-            ))
-          }
-        </ol>
-      </div>
-    </section>
-
-    <section id="contacto" class="scroll-mt-20 bg-ink text-paper">
-      <div class="mx-auto max-w-6xl px-5 py-20 text-center md:py-28">
-        <h2 class="text-3xl md:text-5xl">¿Listo para poner tus cuentas en orden?</h2>
-        <p class="mx-auto mt-5 max-w-xl text-paper/75">La primera conversación es sin compromiso.</p>
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-full bg-accent px-7 py-3 font-semibold text-white transition hover:bg-accent-deep"
-          >
-            Escríbeme por WhatsApp
-          </a>
-          <a href={`mailto:${site.email}`} class="rounded-full border border-paper/30 px-7 py-3 font-semibold transition hover:border-paper">
-            {site.email}
-          </a>
-        </div>
-      </div>
-    </section>
+    <Stats />
+    <Services />
+    <Audiences />
+    <Process />
+    <About />
+    <Contact />
   </main>
 
-  <footer class="bg-ink text-sm text-paper/60">
-    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-2 border-t border-paper/10 px-5 py-8 md:flex-row">
-      <p>© {year} {site.name} · {site.role}</p>
-      <p>{site.city}</p>
-    </div>
-  </footer>
+  <Footer />
 </Layout>

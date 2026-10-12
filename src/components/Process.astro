@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import meeting from '../assets/scenes/advisory-meeting.jpg';
+import { site } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+---
+
+<section id="proceso" class="scroll-mt-8 overflow-hidden bg-ink text-white">
+  <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-2 lg:gap-20">
+    <div class="reveal relative">
+      <Image
+        src={meeting}
+        alt="Reunión de asesoría contable revisando un estado de situación financiera"
+        widths={[480, 768, 1080]}
+        sizes="(min-width: 1024px) 40vw, 100vw"
+        class="aspect-[4/5] w-full rounded-xl object-cover"
+      />
+      <div class="absolute -bottom-6 left-6 rounded-lg bg-paper px-5 py-4 text-ink shadow-2xl md:left-auto md:-right-6">
+        <p class="text-3xl font-medium tracking-[-0.03em]">{site.experienceYears}+ años</p>
+        <p class="text-sm text-ink-soft">poniendo números en orden</p>
+      </div>
+    </div>
+
+    <div>
+      <SectionHeading
+        tone="dark"
+        eyebrow="Cómo trabajamos"
+        title="Un proceso simple, sin letra pequeña."
+        lead="Desde la primera conversación sabes qué voy a hacer, cuándo y por qué."
+      />
+      <ol class="mt-12 space-y-4">
+        {
+          site.steps.map((step, index) => (
+            <li
+              style={`--i: ${index}`}
+              class="reveal group flex gap-6 rounded-xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:border-accent-light/40 hover:bg-white/[0.06]"
+            >
+              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-accent-light/40 text-sm font-medium text-accent-light tabular-nums transition duration-300 group-hover:bg-accent-light group-hover:text-ink">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div>
+                <h3 class="text-xl font-medium tracking-[-0.02em]">{step.title}</h3>
+                <p class="mt-2 leading-relaxed text-white/70">{step.description}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>

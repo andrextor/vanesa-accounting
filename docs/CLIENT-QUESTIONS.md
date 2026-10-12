@@ -41,8 +41,8 @@ Para que la web solo muestre información real. Responde lo que puedas; lo que q
 
 17. Ciudad. ¿Atiendes solo ahí o también de forma remota en todo el país?
 18. ¿Tienes oficina con dirección pública o es solo virtual?
-19. Número de **WhatsApp** para la web y horario de atención.
-20. Correo profesional. ¿Tienes dominio propio (ej. vanesalotero.com) o lo compramos?
+19. ~~WhatsApp.~~ ✅ +57 314 696 3798. Falta: horario de atención.
+20. ~~Correo.~~ ✅ vanesacruz0816@gmail.com. Falta: ¿tienes dominio propio (ej. vanesalotero.com) o lo compramos?
 21. Redes: Instagram, Facebook, TikTok… (solo las que uses).
 22. ¿Tienes perfil de **Google Business** (Google Maps)? Si no, recomendamos crearlo.
 23. ¿Usas agenda en línea (Calendly, Cal.com) o todo por WhatsApp?
