@@ -5,10 +5,22 @@
   --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
   --animate-marquee: marquee 40s linear infinite;
   --animate-hero-zoom: hero-zoom 1.8s var(--ease-fluid) both;
+  --animate-pulse-ring: pulse-ring 2.4s var(--ease-fluid) infinite;
 
   @keyframes marquee {
     to {
       translate: -50% 0;
+    }
+  }
+
+  @keyframes pulse-ring {
+    from {
+      opacity: 0.45;
+    }
+
+    to {
+      opacity: 0;
+      scale: 1.45;
     }
   }
 
