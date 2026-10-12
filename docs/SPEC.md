@@ -1,6 +1,6 @@
 # Spec · web de Vanesa Lotero, contadora pública
 
-Borrador 1 · 12/10/2026. Referencia de estructura: plantilla Framer **Consultaro** (consultaro.framer.website). Referencias internas: `stephany-art/docs/SPEC.md` (formato, regla de datos), `neoteam-social-run/DESIGN.md` (tokens, accesibilidad, movimiento).
+Borrador 1 · 12/10/2026. Referencia de estructura: plantilla Framer **Consultaro** (consultaro.framer.website). Es la **única referencia visual**: no se mezclan páginas, paletas ni componentes de otros proyectos.
 
 **Regla de oro:** es una persona real con una profesión regulada. Solo se publican datos confirmados por ella. Lo que falte va marcado `PENDIENTE` en `src/data/site.ts` y nunca se inventa: cifras, clientes, testimonios, títulos, tarjeta profesional. Las preguntas abiertas están en `docs/CLIENT-QUESTIONS.md`.
 
@@ -66,48 +66,51 @@ Botón flotante de WhatsApp en móvil (aparece tras el hero).
 
 ## 5. Dirección de arte
 
-### 5.1 Lectura de las referencias
+### 5.1 Referencia: Consultaro (única)
 
-- **Consultaro**: corporativo limpio, eyebrows en mayúsculas pequeñas, H2 en frase con contraste retórico, cifras grandes con pie corto, tarjetas de servicio de una línea. Se toma la **estructura y el ritmo**, no el tono de consultora de M&A.
-- **stephany-art**: serif editorial para titulares + Manrope, bandas oscuras entre secciones claras, un solo acento, un solo ornamento.
-- **neoteam**: tokens con contraste AA documentado, reveals con CSS scroll-driven (sin JS), `prefers-reduced-motion`, objetivos táctiles ≥ 44 px, iconos con vocabulario fijo.
+Lo que se replica de su hero y sistema:
+
+- **Hero a sangre**: foto de ancho completo, ella en el tercio derecho, fondo de ventanal con ciudad desenfocada en tonos fríos; velo oscuro en degradado desde la izquierda para que el texto blanco lea.
+- **Navegación transparente** sobre la foto: logo blanco a la izquierda, separador fino, enlaces en blanco, botón blanco "Agenda una asesoría" a la derecha.
+- **Eyebrow** en mayúsculas pequeñas con un punto delante ("● CONTADORA PÚBLICA · `<CIUDAD>`").
+- **H1 grande** en sans, peso medio, interletrado cerrado, dos líneas. Lead corto debajo en blanco al 80 %.
+- **Botones rectos** (radio ~4 px): primario blanco con flecha, secundario fantasma con borde fino.
+- Debajo del hero: secciones claras, eyebrows, H2 en frase, cifras grandes con pie corto, tarjetas de servicio de una línea, FAQ en acordeón.
 
 ### 5.2 Tipografía
 
-Ya configurado en el scaffold: **Fraunces** (400/600, con cursiva) para titulares + **Manrope** (400–700) para texto. Fraunces aporta la calidez "fresca"; la cursiva se reserva para una palabra clave por titular (p. ej. "tu negocio en *calma*"). Alternativa si se ve demasiado blanda: **Instrument Serif**. Decisión al ver la foto.
+Una sola familia sans, como Consultaro: **Inter** (400/500/600). Titulares en 500 con `letter-spacing: -0.03em`; texto en 400. Sustituye a Fraunces + Manrope del scaffold.
 
 ### 5.3 Color
 
-Base del scaffold, validar contra la foto (ropa y fondo de ella mandan):
+Neutros fríos de Consultaro + un único acento, el verde del check del logo:
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--color-paper` | `#f7f6f2` | Fondo general |
-| `--color-ink` | `#13233a` | Texto, botón principal, bandas oscuras (cifras, CTA final, pie) |
-| `--color-ink-soft` | `#3d4b5f` | Texto secundario |
-| `--color-mist` | `#e9efec` | Bandas suaves (Sobre mí, Para quién) |
-| `--color-sage` | `#3f7d6e` | Acento único: CTA, eyebrows, foco, numerales |
-| `--color-sage-deep` | `#2c5d51` | Hover |
-| `--color-line` | `#d9ddd8` | Bordes |
+| `--color-ink` | `#0f1b2d` | Texto, fondos oscuros, pie |
+| `--color-ink-soft` | `#4a5568` | Texto secundario |
+| `--color-paper` | `#ffffff` | Fondo general |
+| `--color-surface` | `#f4f5f7` | Bandas y tarjetas |
+| `--color-line` | `#e2e5ea` | Bordes |
+| `--color-accent` | `#3f7d6e` | Check del logo, punto del eyebrow, numerales, foco |
 
-Ritmo de bandas: hero (paper) → confianza (paper) → por qué (white) → servicios (paper) → para quién (mist) → cifras (ink) → proceso (white) → sobre mí (mist) → testimonios (paper) → FAQ + CTA (ink). Contrastes AA se verifican y documentan en la implementación.
+Contrastes AA se verifican y documentan en la implementación.
 
 ### 5.4 Forma y movimiento
 
-- Radios `rounded-2xl` en tarjetas, botones en píldora (como el scaffold).
-- Ornamento único: filete fino sage sobre los pasos y las cifras.
-- Reveals con `animation-timeline: view()` dentro de `@supports`, nunca en el primer pantallazo; el hero solo tiene una entrada de carga ≤ 700 ms. Todo desactivado con `prefers-reduced-motion`. Sin GSAP ni Lenis.
-- Iconos: `@phosphor-icons/core` (SVG en build, como stephany-art), vocabulario fijo.
+- Radios pequeños (4–8 px), bordes finos, sin sombras marcadas.
+- Entrada del hero ≤ 700 ms; reveals suaves al hacer scroll con CSS, nunca en el primer pantallazo, desactivados con `prefers-reduced-motion`. Sin librerías de animación.
+- Iconos: flecha en botones y pocos más, SVG inline.
 
 ### 5.5 Foto y logo (12/10/2026)
 
-- **Foto del hero:** `src/assets/portraits/vanesa-hero.jpg`, su foto real (`~/Desktop/contadora_2.jpeg`, sin modificar) editada con Higgsfield (GPT Image 2.5): solo cambian el fondo (oficina clara desenfocada) y la camiseta estampada por una blanca lisa. Pose, rostro y blazer son los reales. Descartados: fondo nuevo con la camiseta original (estampado distrae) y recorte sin fondo (bordes irregulares).
+- **Foto del hero:** `src/assets/portraits/vanesa-hero.jpg` (16:9), estilo Consultaro: ella sentada en el tercio derecho, blazer navy, ventanal con ciudad desenfocada en tonos fríos, mitad izquierda libre para el texto. Generada con Higgsfield usando sus dos fotos reales como referencia de identidad y el hero de Consultaro como referencia de composición.
 - **Fotos de apoyo** (generadas con sus dos fotos reales como referencia de identidad, mismo blazer y blusa que el hero para que el set sea coherente):
   - `vanesa-office-desk.jpg` (4:5): en el escritorio con monitor → **Sobre mí**.
   - `vanesa-reviewing-reports.jpg` (4:5): revisando informes con laptop → **Cómo trabajamos** o página de servicio.
   - `vanesa-wide.jpg` (16:9): de pie a la derecha, espacio libre a la izquierda → **imagen OG** (1200×630 con nombre y rol sobre el espacio libre) y fondo opcional del CTA final.
 - **Todas deben ser aprobadas por ella antes de publicar.**
-- **Logo (concepto A, propuesto):** monograma "VL" en el que la V es un check (cuentas en orden, cumplimiento) en sage y la L en ink, más el nombre en Fraunces 600 y "Contadora Pública" en Manrope versalitas. Marca: `src/assets/logo-mark.svg` (usa `currentColor` y `--logo-accent`, sirve en claro y oscuro). Favicon: `public/favicon.svg`. Conceptos: `docs/design/logo-concepts.png`. Logo completo con texto en curvas (para tarjetas y redes) se exporta tras la aprobación.
+- **Logo (concepto 2 · bloque, propuesto):** monograma "VL" en un cuadrado navy (V blanca, L en el verde de acento) + "Vanesa Lotero" en Inter 600 y "Contadora Pública" en versalitas. Sobre la foto del hero se invierte (cuadrado blanco, V navy). Marca: `src/assets/logo-mark.svg` (colores por `--logo-bg`, `--logo-fg`, `--logo-accent`). Favicon: `public/favicon.svg`. Conceptos: `docs/design/logo-concepts.png`.
 
 ---
 
