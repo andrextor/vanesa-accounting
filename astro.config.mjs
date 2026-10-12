@@ -10,20 +10,10 @@ export default defineConfig({
   integrations: [sitemap()],
   fonts: [
     {
-      name: 'Fraunces',
-      cssVariable: '--font-fraunces',
+      name: 'Instrument Sans',
+      cssVariable: '--font-instrument-sans',
       provider: fontProviders.google(),
-      weights: [400, 600],
-      styles: ['normal', 'italic'],
-      display: 'swap',
-      subsets: ['latin'],
-      fallbacks: ['Georgia', 'serif'],
-    },
-    {
-      name: 'Manrope',
-      cssVariable: '--font-manrope',
-      provider: fontProviders.google(),
-      weights: [400, 500, 600, 700],
+      weights: [400, 500, 600],
       styles: ['normal'],
       display: 'swap',
       subsets: ['latin'],

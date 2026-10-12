@@ -79,7 +79,7 @@ Lo que se replica de su hero y sistema:
 
 ### 5.2 Tipografía
 
-Una sola familia sans, como Consultaro: **Inter** (400/500/600). Titulares en 500 con `letter-spacing: -0.03em`; texto en 400. Sustituye a Fraunces + Manrope del scaffold.
+Una sola familia sans, como Consultaro: **Instrument Sans** (400/500/600), elegida el 12/10/2026 entre Plus Jakarta Sans, Geist, Instrument Sans y Schibsted Grotesk (`docs/design/font-options.png`). Titulares en 500 con `letter-spacing: -0.035em`; texto en 400; logo en 600.
 
 ### 5.3 Color
 

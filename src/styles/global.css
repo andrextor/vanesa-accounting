@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-manrope);
+  --font-sans: var(--font-instrument-sans);
 
   --color-ink: #13233a;
   --color-ink-soft: #3d4b5f;
