@@ -13,7 +13,7 @@ const channels = [
 ];
 ---
 
-<section id="contacto" class="relative isolate scroll-mt-0 overflow-hidden bg-ink text-white">
+<section id="contacto" class="relative isolate scroll-mt-0 overflow-clip bg-ink text-white">
   <img
     src={background.src}
     alt=""
@@ -22,6 +22,12 @@ const channels = [
     class="absolute inset-0 -z-20 size-full object-cover object-right opacity-60"
   />
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-linear-to-r from-ink via-ink/90 to-ink/30"></div>
+  <div
+    aria-hidden="true"
+    class="absolute top-1/2 left-1/2 -z-10 hidden size-[120vmax] -translate-1/2 bg-aurora motion-safe:animate-aurora md:block"
+  >
+  </div>
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-noise"></div>
 
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-36">
     <SectionHeading
