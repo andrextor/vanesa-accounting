@@ -108,7 +108,7 @@ Contrastes AA se verifican y documentan en la implementación.
 - **Fotos de apoyo** (generadas siempre a partir de la foto del escritorio aprobada; poses espontáneas, ella mirando el trabajo y no a cámara, otras personas solo de espaldas):
   - `vanesa-office-desk.jpg` (4:5): versión vertical del hero → **hero en móvil**.
   - `vanesa-reviewing-numbers.jpg` (4:5): sentada en su escritorio, de perfil, marcando cifras en un estado financiero → **Sobre mí**.
-  - `vanesa-advising-clients.jpg` (4:5): de perfil explicando un informe a dos clientas vistas de espaldas (sin rostros generados) → **Cómo trabajamos** o alternativa para Sobre mí.
+  - `src/assets/scenes/advisory-meeting.jpg` (4:5): reunión de asesoría con personas anónimas, sin rostros (asesora encuadrada del cuello hacia abajo, clientes de espaldas), sobre la mesa un Estado de Situación Financiera y un Estado de Resultados realistas en pesos; las cifras cuadran (activo 401.720.000 = pasivo + patrimonio) → **Cómo trabajamos**. No representa a Vanesa. Alternativa: `advisory-meeting-alt.jpg` (el activo descuadra 20.000; no usar sin corregir).
   - `vanesa-wide.jpg` (16:9): de pie a la derecha, espacio libre a la izquierda → **imagen OG** (1200×630 con nombre y rol sobre el espacio libre) y fondo opcional del CTA final.
 - **Todas deben ser aprobadas por ella antes de publicar.**
 - **Logo (concepto 2 · bloque, propuesto):** monograma "VL" en un cuadrado navy (V blanca, L en el verde de acento) + "Vanesa Lotero" en Inter 600 y "Contadora Pública" en versalitas. Sobre la foto del hero se invierte (cuadrado blanco, V navy). Marca: `src/assets/logo-mark.svg` (colores por `--logo-bg`, `--logo-fg`, `--logo-accent`). Favicon: `public/favicon.svg`. Conceptos: `docs/design/logo-concepts.png`.
