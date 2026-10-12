@@ -58,10 +58,11 @@ export const site = {
   audiences: ['Personas naturales', 'Emprendedores', 'Pequeñas y medianas empresas'],
   sectors: ['Comercio', 'Servicios profesionales', 'Restaurantes y alimentos', 'Servicios administrativos y contables'],
   hero: {
-    eyebrow: 'Contadora Pública',
+    eyebrow: 'Contadora Pública · Colombia',
     heading: 'Tus números en orden, tu negocio en calma.',
-    lead: 'Acompaño a personas y empresas con contabilidad clara, cumplimiento tributario oportuno y asesoría cercana para crecer con tranquilidad.',
+    lead: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas, explicado en un lenguaje claro.',
   },
+
   // Service list confirmed by Vanesa; descriptions are draft copy pending her review.
   services: [
     {

@@ -1,56 +1,17 @@
 ---
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 import { site, whatsappUrl } from '../data/site';
 import Layout from '../layouts/Layout.astro';
 
-const nav = [
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#sobre-mi', label: 'Sobre mí' },
-  { href: '#proceso', label: 'Proceso' },
-  { href: '#contacto', label: 'Contacto' },
-];
 const year = new Date().getFullYear();
 ---
 
 <Layout>
-  <header class="sticky top-0 z-20 border-b border-line/70 bg-paper/85 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-      <a href="#" class="text-xl font-semibold tracking-tight">{site.name}</a>
-      <nav aria-label="Principal" class="hidden gap-8 text-sm font-medium text-ink-soft md:flex">
-        {nav.map((item) => <a href={item.href} class="transition hover:text-accent">{item.label}</a>)}
-      </nav>
-      <a
-        href={whatsappUrl()}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full bg-ink px-5 py-2 text-sm font-semibold text-paper transition hover:bg-accent-deep"
-      >
-        Agenda una asesoría
-      </a>
-    </div>
-  </header>
+  <Header />
 
   <main>
-    <section class="relative overflow-hidden">
-      <div aria-hidden="true" class="absolute -right-32 -top-32 size-[28rem] rounded-full bg-surface"></div>
-      <div class="relative mx-auto max-w-6xl px-5 py-24 md:py-36">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">{site.hero.eyebrow}</p>
-        <h1 class="mt-5 max-w-3xl text-4xl leading-tight md:text-6xl">{site.hero.heading}</h1>
-        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">{site.hero.lead}</p>
-        <div class="mt-10 flex flex-wrap gap-4">
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-full bg-accent px-7 py-3 font-semibold text-white transition hover:bg-accent-deep"
-          >
-            Hablemos por WhatsApp
-          </a>
-          <a href="#servicios" class="rounded-full border border-ink/20 px-7 py-3 font-semibold transition hover:border-ink">
-            Ver servicios
-          </a>
-        </div>
-      </div>
-    </section>
+    <Hero />
 
     <section id="servicios" class="scroll-mt-20 border-t border-line bg-white">
       <div class="mx-auto max-w-6xl px-5 py-20 md:py-28">

@@ -1,0 +1,37 @@
+---
+import LogoMark from '../assets/logo-mark.svg';
+import { site, whatsappUrl } from '../data/site';
+
+const nav = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#sobre-mi', label: 'Sobre mí' },
+  { href: '#proceso', label: 'Proceso' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<header class="absolute inset-x-0 top-0 z-20 text-white">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 md:px-10">
+    <div class="flex items-center gap-8">
+      <a href="/" class="flex items-center gap-2.5" aria-label={`${site.name}, inicio`}>
+        <LogoMark class="size-8 [--logo-accent:var(--color-accent)] [--logo-bg:#fff] [--logo-fg:var(--color-ink)]" aria-hidden="true" />
+        <span class="leading-none">
+          <span class="block text-lg font-semibold tracking-tight">{site.name}</span>
+          <span class="mt-1 block text-[0.625rem] font-medium uppercase tracking-[0.2em] text-white/70">{site.role}</span>
+        </span>
+      </a>
+      <span aria-hidden="true" class="hidden h-6 w-px bg-white/25 lg:block"></span>
+      <nav aria-label="Principal" class="hidden gap-7 text-[0.9375rem] lg:flex">
+        {nav.map((item) => <a href={item.href} class="text-white/85 transition hover:text-white">{item.label}</a>)}
+      </nav>
+    </div>
+    <a
+      href={whatsappUrl()}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="rounded bg-white px-4 py-2.5 text-sm font-medium text-ink transition hover:bg-white/90"
+    >
+      Escríbeme
+    </a>
+  </div>
+</header>
