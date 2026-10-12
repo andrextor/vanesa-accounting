@@ -27,8 +27,8 @@ export const site = {
   title: 'Vanesa Lotero · Contadora Pública',
   description:
     'Asesoría contable y tributaria para personas y empresas. Orden, claridad y cumplimiento para que tomes mejores decisiones.',
-  email: 'contacto@vanesalotero.com',
-  whatsapp: '573000000000',
+  email: 'vanesacruz0816@gmail.com',
+  whatsapp: '573146963798',
   city: 'Colombia',
   experienceYears: 8,
   education: [
