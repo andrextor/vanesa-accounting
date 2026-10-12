@@ -1,0 +1,31 @@
+---
+import { whatsappUrl } from '../data/site';
+import Icon from './Icon.astro';
+---
+
+<a
+  href={whatsappUrl()}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Escríbeme por WhatsApp"
+  data-whatsapp-fab
+  class="group fixed right-4 bottom-4 z-30 flex translate-y-6 items-center gap-3 rounded-full bg-accent p-4 text-white opacity-0 shadow-[0_16px_40px_-12px_rgb(15_27_45/0.5)] transition-all duration-500 ease-fluid pointer-events-none hover:bg-accent-deep data-visible:pointer-events-auto data-visible:translate-y-0 data-visible:opacity-100 md:right-8 md:bottom-8"
+>
+  <span aria-hidden="true" class="absolute inset-0 -z-10 rounded-full bg-accent motion-safe:animate-ping motion-safe:[animation-duration:2.4s]"></span>
+  <Icon name="whatsapp-logo" class="size-7" />
+  <span
+    class="hidden max-w-0 overflow-hidden text-sm font-medium whitespace-nowrap transition-all duration-500 ease-fluid group-hover:max-w-48 group-hover:pr-1 md:block"
+  >
+    Escríbeme por WhatsApp
+  </span>
+</a>
+
+<script>
+  const fab = document.querySelector<HTMLElement>('[data-whatsapp-fab]');
+  const hero = document.querySelector('main > section');
+  if (fab && hero) {
+    new IntersectionObserver(([entry]) => fab.toggleAttribute('data-visible', !entry?.isIntersecting), {
+      threshold: 0.15,
+    }).observe(hero);
+  }
+</script>
