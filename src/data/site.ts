@@ -25,7 +25,6 @@ export interface Position {
   period?: string;
 }
 
-// TODO: replace placeholder content with Vanesa's real information.
 export const site = {
   name: 'Vanesa Lotero',
   role: 'Contadora Pública',
@@ -121,9 +120,13 @@ export const site = {
     },
   ] satisfies Service[],
   about: {
-    heading: 'Una contadora que habla claro',
-    body: 'Soy Vanesa Lotero, Contadora Pública. Creo en una contabilidad cercana: explico cada cifra en un lenguaje sencillo para que entiendas tu situación y decidas con confianza.',
+    heading: 'Una contadora que habla claro.',
+    body: [
+      'Soy Vanesa Lotero, Contadora Pública y Administradora Financiera, con más de 8 años de experiencia en contabilidad y administración financiera.',
+      'Acompaño a personas naturales, emprendedores y pequeñas empresas a mantener sus números en orden y cumplir con sus obligaciones tributarias, explicando cada cifra en un lenguaje sencillo para que decidas con confianza.',
+    ],
   },
+
   steps: [
     {
       title: 'Conversamos',
