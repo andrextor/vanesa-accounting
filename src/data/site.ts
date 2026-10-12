@@ -8,6 +8,11 @@ export interface Step {
   description: string;
 }
 
+export interface Audience {
+  title: string;
+  description: string;
+}
+
 export interface Degree {
   title: string;
   institution: string;
@@ -55,7 +60,20 @@ export const site = {
   ] satisfies Position[],
   software: ['Alegra', 'SAP', 'Siigo', 'Helisa', 'QuickBooks Online', 'Microsoft Excel', 'Google Sheets', 'Power BI'],
   flagship: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas',
-  audiences: ['Personas naturales', 'Emprendedores', 'Pequeñas y medianas empresas'],
+  audiences: [
+    {
+      title: 'Personas naturales',
+      description: 'Declaración de renta, RUT y planeación tributaria para cumplir a tiempo y sin estrés.',
+    },
+    {
+      title: 'Emprendedores',
+      description: 'RUT, facturación electrónica e impuestos en orden desde el primer día de tu negocio.',
+    },
+    {
+      title: 'Pequeñas y medianas empresas',
+      description: 'Contabilidad mensual, estados financieros NIIF e impuestos al día para decidir con datos.',
+    },
+  ] satisfies Audience[],
   sectors: ['Comercio', 'Servicios profesionales', 'Restaurantes y alimentos', 'Servicios administrativos y contables'],
   hero: {
     eyebrow: 'Contadora Pública · Colombia',
