@@ -33,6 +33,7 @@ export const site = {
     'Asesoría contable y tributaria para personas y empresas. Orden, claridad y cumplimiento para que tomes mejores decisiones.',
   email: 'vanesacruz0816@gmail.com',
   whatsapp: '573146963798',
+  phone: '+57 314 696 3798',
   city: 'Colombia',
   experienceYears: 8,
   education: [

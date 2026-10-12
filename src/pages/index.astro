@@ -1,15 +1,14 @@
 ---
 import About from '../components/About.astro';
 import Audiences from '../components/Audiences.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Process from '../components/Process.astro';
 import Services from '../components/Services.astro';
 import Stats from '../components/Stats.astro';
-import { site, whatsappUrl } from '../data/site';
 import Layout from '../layouts/Layout.astro';
-
-const year = new Date().getFullYear();
 ---
 
 <Layout>
@@ -18,39 +17,12 @@ const year = new Date().getFullYear();
   <main>
     <Hero />
     <Stats />
-
     <Services />
     <Audiences />
     <Process />
     <About />
-
-
-
-    <section id="contacto" class="scroll-mt-20 bg-ink text-paper">
-      <div class="mx-auto max-w-6xl px-5 py-20 text-center md:py-28">
-        <h2 class="text-3xl md:text-5xl">¿Listo para poner tus cuentas en orden?</h2>
-        <p class="mx-auto mt-5 max-w-xl text-paper/75">La primera conversación es sin compromiso.</p>
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-full bg-accent px-7 py-3 font-semibold text-white transition hover:bg-accent-deep"
-          >
-            Escríbeme por WhatsApp
-          </a>
-          <a href={`mailto:${site.email}`} class="rounded-full border border-paper/30 px-7 py-3 font-semibold transition hover:border-paper">
-            {site.email}
-          </a>
-        </div>
-      </div>
-    </section>
+    <Contact />
   </main>
 
-  <footer class="bg-ink text-sm text-paper/60">
-    <div class="mx-auto flex max-w-6xl flex-col justify-between gap-2 border-t border-paper/10 px-5 py-8 md:flex-row">
-      <p>© {year} {site.name} · {site.role}</p>
-      <p>{site.city}</p>
-    </div>
-  </footer>
+  <Footer />
 </Layout>
