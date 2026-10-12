@@ -5,7 +5,14 @@ import { site } from '../data/site';
 import SectionHeading from './SectionHeading.astro';
 ---
 
-<section id="proceso" class="scroll-mt-0 overflow-hidden bg-ink text-white">
+<section id="proceso" class="relative isolate scroll-mt-0 overflow-clip bg-ink text-white">
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-noise"></div>
+  <div
+    aria-hidden="true"
+    style="--glow-x: 25%; --glow-y: 50%; --glow-strength: 16%"
+    class="absolute inset-0 -z-10 hidden bg-glow lg:block"
+  >
+  </div>
   <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-2 lg:gap-20">
     <div class="reveal group relative">
       <div class="overflow-hidden rounded-xl">
@@ -30,14 +37,15 @@ import SectionHeading from './SectionHeading.astro';
         title="Un proceso simple, sin letra pequeña."
         lead="Desde la primera conversación sabes qué voy a hacer, cuándo y por qué."
       />
-      <ol class="mt-12 space-y-4">
+      <ol class="relative mt-12 space-y-4">
+        <span aria-hidden="true" class="draw-line absolute top-8 bottom-8 left-[2.875rem] w-px bg-accent-light/40"></span>
         {
           site.steps.map((step, index) => (
             <li
               style={`--i: ${index}`}
               class="reveal group flex gap-6 rounded-xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:border-accent-light/40 hover:bg-white/[0.06]"
             >
-              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-accent-light/40 text-sm font-medium text-accent-light tabular-nums transition duration-300 group-hover:bg-accent-light group-hover:text-ink">
+              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-accent-light/40 bg-ink text-sm font-medium text-accent-light tabular-nums transition duration-300 group-hover:bg-accent-light group-hover:text-ink">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <div>
