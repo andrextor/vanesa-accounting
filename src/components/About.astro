@@ -70,10 +70,10 @@ import SectionHeading from './SectionHeading.astro';
 
         <div class="reveal">
           <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">Experiencia</h3>
-          <ol class="mt-5 divide-y divide-line border-y border-line">
+          <ol class="relative mt-5 border-l border-line">
             {
               site.experience.map((position) => (
-                <li class="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                <li class="relative flex flex-col gap-1 py-4 pl-7 before:absolute before:top-7 before:-left-[0.3125rem] before:size-2.5 before:rounded-full before:border-2 before:border-paper before:bg-accent sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
                   <div>
                     <p class="text-lg font-medium">{position.company}</p>
                     <p class="text-ink-soft">{position.role}</p>
