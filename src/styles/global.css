@@ -114,8 +114,8 @@ body {
 /* Background textures: CSS only, no extra images. Palette stays navy, gray and one green. */
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 70%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in oklab, var(--color-line) 45%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-line) 45%, transparent) 1px, transparent 1px);
   background-size: 3rem 3rem;
   mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000 30%, transparent 100%);
 }
@@ -143,8 +143,18 @@ body {
 
 @utility bg-aurora {
   background-image:
-    conic-gradient(from 0deg at 30% 40%, transparent, color-mix(in oklab, var(--color-accent) 22%, transparent), transparent 40%),
-    conic-gradient(from 180deg at 70% 60%, transparent, color-mix(in oklab, var(--color-accent-light) 14%, transparent), transparent 35%);
+    conic-gradient(
+      from 0deg at 30% 40%,
+      transparent,
+      color-mix(in oklab, var(--color-accent) 22%, transparent),
+      transparent 40%
+    ),
+    conic-gradient(
+      from 180deg at 70% 60%,
+      transparent,
+      color-mix(in oklab, var(--color-accent-light) 14%, transparent),
+      transparent 35%
+    );
   filter: blur(60px);
 }
 
@@ -206,7 +216,7 @@ body {
 @utility fade-on-scroll {
   @supports (animation-timeline: scroll()) {
     animation: fade-out both linear;
-    animation-timeline: scroll();
+    animation-timeline: scroll(root);
     animation-range: 0 200px;
   }
 }
