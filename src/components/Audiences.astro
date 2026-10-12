@@ -4,7 +4,8 @@ import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
 ---
 
-<section id="para-quien" class="scroll-mt-0 bg-paper">
+<section id="para-quien" class="relative isolate scroll-mt-0 bg-paper">
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots"></div>
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
     <SectionHeading
       eyebrow="Para quién"
@@ -17,8 +18,13 @@ import SectionHeading from './SectionHeading.astro';
         site.audiences.map((audience, index) => (
           <li
             style={`--i: ${index}`}
-            class="reveal group rounded-xl border border-line bg-linear-to-b from-surface to-paper p-8 transition duration-300 hover:border-accent/40"
+            class="reveal group relative isolate overflow-hidden rounded-xl border border-line bg-linear-to-b from-surface to-paper p-8 transition duration-300 hover:border-accent/40"
           >
+            <span
+              aria-hidden="true"
+              style="--glow-x: 12%; --glow-y: 12%; --glow-strength: 28%"
+              class="absolute inset-0 -z-10 bg-glow opacity-0 transition-opacity duration-700 ease-fluid group-hover:opacity-100"
+            />
             <span class="grid size-12 place-items-center rounded-lg bg-ink text-accent-light transition duration-300 group-hover:bg-accent group-hover:text-white">
               <Icon name={audience.icon} class="size-6" />
             </span>
