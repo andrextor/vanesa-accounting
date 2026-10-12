@@ -1,0 +1,27 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  tone?: 'light' | 'dark';
+  align?: 'left' | 'center';
+}
+
+const { eyebrow, title, lead, tone = 'light', align = 'left' } = Astro.props;
+const dark = tone === 'dark';
+---
+
+<div class:list={['reveal max-w-2xl', align === 'center' && 'mx-auto text-center']}>
+  <p
+    class:list={[
+      'flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em]',
+      align === 'center' && 'justify-center',
+      dark ? 'text-white/70' : 'text-ink-soft',
+    ]}
+  >
+    <span aria-hidden="true" class:list={['size-1.5 rounded-full', dark ? 'bg-accent-light' : 'bg-accent']}></span>
+    {eyebrow}
+  </p>
+  <h2 class="mt-4 text-4xl leading-[1.05] font-medium tracking-[-0.035em] text-balance md:text-5xl">{title}</h2>
+  {lead && <p class:list={['mt-5 text-lg leading-relaxed', dark ? 'text-white/70' : 'text-ink-soft']}>{lead}</p>}
+</div>
