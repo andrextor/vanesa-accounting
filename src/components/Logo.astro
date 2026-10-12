@@ -1,0 +1,28 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  tone?: 'light' | 'dark';
+  withRole?: boolean;
+  class?: string;
+}
+
+const { tone = 'light', withRole = false, class: className } = Astro.props;
+const dark = tone === 'dark';
+const [firstName, lastName] = site.name.split(' ');
+---
+
+<span class:list={['inline-flex items-center gap-2.5', className]}>
+  <span aria-hidden="true" class:list={['w-[3px] self-stretch rounded-full', dark ? 'bg-accent-light' : 'bg-accent']}></span>
+  <span class:list={['leading-none', dark ? 'text-white' : 'text-ink']}>
+    <span class="block text-[0.95em] font-semibold tracking-[0.06em] uppercase">{firstName}</span>
+    <span class="mt-0.5 block text-[0.95em] font-semibold tracking-[0.06em] uppercase">{lastName}</span>
+    {
+      withRole && (
+        <span class:list={['mt-1.5 block text-[0.42em] font-medium tracking-[0.24em] uppercase', dark ? 'text-white/60' : 'text-ink-soft']}>
+          {site.role}
+        </span>
+      )
+    }
+  </span>
+</span>

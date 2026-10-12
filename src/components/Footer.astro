@@ -1,6 +1,6 @@
 ---
-import LogoMark from '../assets/logo-mark.svg';
 import { site, whatsappUrl } from '../data/site';
+import Logo from './Logo.astro';
 
 const year = new Date().getFullYear();
 const nav = [
@@ -15,9 +15,8 @@ const nav = [
 <footer class="bg-ink text-white">
   <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-5 py-14 md:grid-cols-[2fr_1fr_1fr] md:px-10">
     <div>
-      <a href="/" class="flex items-center gap-2.5" aria-label={`${site.name}, inicio`}>
-        <LogoMark class="size-9 [--logo-accent:var(--color-accent)] [--logo-bg:#fff] [--logo-fg:var(--color-ink)]" aria-hidden="true" />
-        <span class="text-lg font-semibold tracking-tight">{site.name}</span>
+      <a href="/" class="inline-block text-2xl" aria-label={`${site.name}, inicio`}>
+        <Logo tone="dark" withRole />
       </a>
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/60">{site.flagship}.</p>
     </div>
