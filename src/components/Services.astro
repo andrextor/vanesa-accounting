@@ -1,0 +1,61 @@
+---
+import { site, whatsappUrl } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
+---
+
+<section id="servicios" class="scroll-mt-8 bg-surface">
+  <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
+    <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+      <SectionHeading
+        eyebrow="Servicios"
+        title="Todo lo que tu contabilidad necesita, en un solo lugar."
+        lead={`${site.flagship}, con acompañamiento cercano en cada paso.`}
+      />
+      <a
+        href={whatsappUrl()}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="reveal inline-flex shrink-0 items-center gap-2 self-start rounded bg-ink px-5 py-3.5 font-medium text-white transition hover:bg-ink/90 lg:self-auto"
+      >
+        Cuéntame qué necesitas
+        <svg aria-hidden="true" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 8h10M9 4l4 4-4 4"></path>
+        </svg>
+      </a>
+    </div>
+
+    <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        site.services.map((service, index) => (
+          <li style={`--i: ${index % 4}`} class="reveal">
+            <a
+              href={whatsappUrl(`Hola Vanesa, quiero información sobre: ${service.title}.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-paper p-7 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_48px_-28px_rgb(15_27_45/0.35)]"
+            >
+              <span
+                aria-hidden="true"
+                class="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-accent transition-transform duration-500 group-hover:scale-x-100"
+              />
+              <span class="flex items-start justify-between">
+                <span class="text-sm font-medium text-accent tabular-nums">{String(index + 1).padStart(2, '0')}</span>
+                <span
+                  aria-hidden="true"
+                  class="grid size-9 place-items-center rounded-full border border-line text-ink-soft transition duration-300 group-hover:rotate-45 group-hover:border-accent group-hover:bg-accent group-hover:text-white"
+                >
+                  <svg class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </span>
+              <h3 class="mt-10 text-xl leading-snug font-medium tracking-[-0.02em]">{service.title}</h3>
+              <p class="mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">{service.description}</p>
+              <span class="sr-only">(abre WhatsApp)</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
