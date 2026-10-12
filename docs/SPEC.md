@@ -105,10 +105,10 @@ Contrastes AA se verifican y documentan en la implementación.
 ### 5.5 Foto y logo (12/10/2026)
 
 - **Foto del hero (elegida por Iván y Vanesa, 12/10/2026):** `vanesa-hero.jpg` (16:9) = `vanesa-office-desk.jpg` ampliada hacia la izquierda con Higgsfield: ella en el escritorio con blazer beige, en la mitad derecha; oficina clara a la izquierda para el texto. En móvil se usa la vertical `vanesa-office-desk.jpg` (`<picture>` con dirección de arte). Velo oscuro en degradado desde la izquierda para el texto blanco, como Consultaro.
-- **Fotos de apoyo** (generadas con sus dos fotos reales como referencia de identidad, mismo blazer y blusa que el hero para que el set sea coherente):
+- **Fotos de apoyo** (generadas siempre a partir de la foto del escritorio aprobada; poses espontáneas, ella mirando el trabajo y no a cámara, otras personas solo de espaldas):
   - `vanesa-office-desk.jpg` (4:5): versión vertical del hero → **hero en móvil**.
-  - `vanesa-reviewing-numbers.jpg` (4:5): de pie revisando cifras en una tablet, oficina luminosa → **Sobre mí**.
-  - `vanesa-advising-clients.jpg` (4:5): asesorando a dos clientas vistas de espaldas (sin rostros generados) → **Cómo trabajamos** o alternativa para Sobre mí.
+  - `vanesa-reviewing-numbers.jpg` (4:5): sentada en su escritorio, de perfil, marcando cifras en un estado financiero → **Sobre mí**.
+  - `vanesa-advising-clients.jpg` (4:5): de perfil explicando un informe a dos clientas vistas de espaldas (sin rostros generados) → **Cómo trabajamos** o alternativa para Sobre mí.
   - `vanesa-wide.jpg` (16:9): de pie a la derecha, espacio libre a la izquierda → **imagen OG** (1200×630 con nombre y rol sobre el espacio libre) y fondo opcional del CTA final.
 - **Todas deben ser aprobadas por ella antes de publicar.**
 - **Logo (concepto 2 · bloque, propuesto):** monograma "VL" en un cuadrado navy (V blanca, L en el verde de acento) + "Vanesa Lotero" en Inter 600 y "Contadora Pública" en versalitas. Sobre la foto del hero se invierte (cuadrado blanco, V navy). Marca: `src/assets/logo-mark.svg` (colores por `--logo-bg`, `--logo-fg`, `--logo-accent`). Favicon: `public/favicon.svg`. Conceptos: `docs/design/logo-concepts.png`.
