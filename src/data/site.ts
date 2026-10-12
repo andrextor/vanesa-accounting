@@ -32,9 +32,10 @@ export interface Position {
 export const site = {
   name: 'Vanesa Lotero',
   role: 'Contadora Pública',
-  title: 'Vanesa Lotero · Contadora Pública',
+  title: 'Vanesa Lotero · Contadora Pública en Colombia',
   description:
-    'Asesoría contable y tributaria para personas y empresas. Orden, claridad y cumplimiento para que tomes mejores decisiones.',
+    'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas en Colombia. Renta, IVA, NIIF y asesoría clara.',
+  linkedin: 'https://www.linkedin.com/in/leidy-vanesa-lotero-cruz-196739207/',
   email: 'vanesacruz0816@gmail.com',
   whatsapp: '573146963798',
   phone: '+57 314 696 3798',
