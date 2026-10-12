@@ -1,0 +1,64 @@
+# Preguntas para Vanesa
+
+Para que la web solo muestre información real. Responde lo que puedas; lo que quede en blanco no se publica.
+
+## 1. Perfil y formación
+
+1. Nombre como quieres aparecer: ¿"Vanesa Lotero", "Leidy Vanesa Lotero" u otro?
+2. ~~Universidad, título y año de grado; diplomados y certificaciones.~~ ✅ Respondida.
+3. Número de **tarjeta profesional** (Junta Central de Contadores). ¿Lo podemos mostrar? Da mucha confianza.
+4. ~~Años de experiencia.~~ ✅ Más de 8 años.
+5. ¿Nos puedes exportar tu LinkedIn en PDF? (Perfil → "Más" → "Guardar en PDF"). LinkedIn no deja leer el perfil de forma automática.
+
+## 2. Experiencia y clientes
+
+6. ~~Empresas en las que has trabajado.~~ ✅ Respondida. Falta:
+   - Fechas en **Landak Studio** y **Café Palo Café** (¿sigues con ellos?).
+   - ¿Podemos nombrar las tres empresas en la web? ¿Alguna nos da su logo o un testimonio?
+7. ~~Tipo de clientes.~~ ✅ Personas naturales, emprendedores y pymes.
+8. ~~Sectores.~~ ✅ Comercio, servicios profesionales, restaurantes y alimentos, servicios administrativos y contables.
+9. ¿Algún cliente te autoriza a poner su nombre o logo?
+10. ¿Tienes 2 o 3 **testimonios** reales (nombre, cargo o tipo de negocio y una frase)? Pueden ser capturas de WhatsApp que luego pasamos a texto con permiso.
+11. ¿Alguna cifra que quieras mostrar? (clientes atendidos, declaraciones presentadas, años…). Solo si es real.
+
+### Nuevas, a partir de tus respuestas
+
+- Tienes certificación **QuickBooks ProAdvisor** y un cargo de *Staff Accountant*: ¿atiendes clientes en **Estados Unidos** u otros países? ¿Trabajas en inglés? Si es así, eso te diferencia y vale una sección propia (y quizá la web en inglés más adelante).
+- Siendo también **Administradora Financiera**: ¿ofreces análisis financiero, flujo de caja, presupuestos o tableros en **Power BI**? Sería un servicio que pocas contadoras ofrecen.
+- ¿Cómo usas la IA en tu trabajo? Puede ser un mensaje de "contabilidad moderna" si te sientes cómoda con ello.
+
+## 3. Servicios
+
+12. ~~Servicios.~~ ✅ Contabilidad mensual, renta persona natural, IVA/retención/ICA, exógena, facturación electrónica, estados financieros y NIIF, asesoría y planeación tributaria, RUT. Falta:
+    - Revisar las descripciones cortas que redactamos para cada servicio (te las enviamos).
+    - ¿Nómina y seguridad social, renta de personas jurídicas o constitución de empresas? No estaban en tu lista; si no los ofreces, no aparecen.
+13. ~~Servicio estrella.~~ ✅ Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas.
+14. ¿Se muestran **precios** o tarifas "desde"? ¿O siempre "cotiza sin compromiso"?
+15. ¿La primera conversación es gratuita?
+16. ~~Software.~~ ✅ Alegra, SAP, Siigo, Helisa, QuickBooks Online, Excel, Google Sheets, Power BI.
+
+## 4. Ubicación y contacto
+
+17. Ciudad. ¿Atiendes solo ahí o también de forma remota en todo el país?
+18. ¿Tienes oficina con dirección pública o es solo virtual?
+19. Número de **WhatsApp** para la web y horario de atención.
+20. Correo profesional. ¿Tienes dominio propio (ej. vanesalotero.com) o lo compramos?
+21. Redes: Instagram, Facebook, TikTok… (solo las que uses).
+22. ¿Tienes perfil de **Google Business** (Google Maps)? Si no, recomendamos crearlo.
+23. ¿Usas agenda en línea (Calendly, Cal.com) o todo por WhatsApp?
+
+## 5. Marca y tono
+
+24. ¿Tienes logo, colores o tarjeta de presentación? Envíalos si existen.
+25. ¿Tuteamos ("te ayudo") o usted ("le ayudo")?
+26. Tres palabras que quieres que la gente piense de ti.
+27. ¿Hay alguna contadora o firma cuya web te guste?
+
+## 6. Fotos
+
+28. Foto principal: de medio cuerpo, buena luz, fondo limpio, mirando a cámara. Idealmente 2–3 fotos más (trabajando, en escritorio, sonriendo) para "Sobre mí".
+29. ¿Autorizas su uso en la web y en la vista previa al compartir el enlace?
+
+## 7. Legal
+
+30. ¿Vas a recoger datos por la web (formulario, correo)? Prepararemos la política de tratamiento de datos (Ley 1581) a tu nombre; necesitamos nombre completo, cédula o NIT y correo para solicitudes.
