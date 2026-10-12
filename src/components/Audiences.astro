@@ -1,15 +1,10 @@
 ---
 import { site } from '../data/site';
+import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
-
-const icons = [
-  'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0',
-  'M5 19c2-6 6-11 14-14-1 8-6 12-12 14M9 15l-2-2',
-  'M4 20V8l6-4v16M10 20V10l10 4v6M3 20h18',
-];
 ---
 
-<section id="para-quien" class="scroll-mt-8 bg-paper">
+<section id="para-quien" class="scroll-mt-0 bg-paper">
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
     <SectionHeading
       eyebrow="Para quién"
@@ -25,9 +20,7 @@ const icons = [
             class="reveal group rounded-xl border border-line bg-linear-to-b from-surface to-paper p-8 transition duration-300 hover:border-accent/40"
           >
             <span class="grid size-12 place-items-center rounded-lg bg-ink text-accent-light transition duration-300 group-hover:bg-accent group-hover:text-white">
-              <svg aria-hidden="true" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d={icons[index]} />
-              </svg>
+              <Icon name={audience.icon} class="size-6" />
             </span>
             <h3 class="mt-8 text-2xl font-medium tracking-[-0.025em]">{audience.title}</h3>
             <p class="mt-3 leading-relaxed text-ink-soft">{audience.description}</p>

@@ -3,6 +3,7 @@ import { getImage } from 'astro:assets';
 import heroWide from '../assets/portraits/vanesa-hero.jpg';
 import heroPortrait from '../assets/portraits/vanesa-office-desk.jpg';
 import { site, whatsappUrl } from '../data/site';
+import Icon from './Icon.astro';
 
 const alt = `${site.name}, ${site.role.toLowerCase()}, en su escritorio`;
 const wide = await getImage({ src: heroWide, format: 'webp', widths: [1024, 1600, 2400] });
@@ -21,7 +22,7 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
       height={heroPortrait.height}
       fetchpriority="high"
       decoding="async"
-      class="absolute inset-0 -z-20 size-full object-cover object-top md:object-right"
+      class="absolute inset-0 -z-20 size-full object-cover object-top motion-safe:animate-hero-zoom md:object-right"
     />
   </picture>
   <div
@@ -45,12 +46,10 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
           href={whatsappUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90"
+          class="group inline-flex items-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90"
         >
           Agenda una asesoría
-          <svg aria-hidden="true" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 8h10M9 4l4 4-4 4"></path>
-          </svg>
+          <Icon name="arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
         </a>
         <a href="#servicios" class="rounded border border-white/30 px-5 py-3.5 font-medium transition hover:border-white">
           Ver servicios

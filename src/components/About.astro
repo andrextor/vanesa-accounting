@@ -2,22 +2,23 @@
 import { Image } from 'astro:assets';
 import portrait from '../assets/portraits/vanesa-reviewing-numbers.jpg';
 import { site } from '../data/site';
+import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
-
-const check = 'M3.5 8.5 6.5 11.5 12.5 4.5';
 ---
 
-<section id="sobre-mi" class="scroll-mt-8 bg-paper">
+<section id="sobre-mi" class="scroll-mt-0 bg-paper">
   <div class="mx-auto grid max-w-7xl gap-14 px-5 py-24 md:px-10 md:py-32 lg:grid-cols-[5fr_7fr] lg:gap-20">
-    <div class="lg:sticky lg:top-10 lg:self-start">
-      <div class="reveal relative">
-        <Image
-          src={portrait}
-          alt={`${site.name} revisando un estado financiero en su escritorio`}
-          widths={[480, 768, 1080]}
-          sizes="(min-width: 1024px) 35vw, 100vw"
-          class="aspect-[4/5] w-full rounded-xl object-cover"
-        />
+    <div class="lg:sticky lg:top-28 lg:self-start">
+      <div class="reveal group relative">
+        <div class="overflow-hidden rounded-xl">
+          <Image
+            src={portrait}
+            alt={`${site.name} revisando un estado financiero en su escritorio`}
+            widths={[480, 768, 1080]}
+            sizes="(min-width: 1024px) 35vw, 100vw"
+            class="aspect-[4/5] w-full object-cover transition-transform duration-1000 ease-fluid group-hover:scale-105"
+          />
+        </div>
         <span class="absolute top-4 left-4 rounded-full bg-paper/90 px-3 py-1.5 text-xs font-medium text-accent-deep backdrop-blur">
           QuickBooks ProAdvisor
         </span>
@@ -56,9 +57,7 @@ const check = 'M3.5 8.5 6.5 11.5 12.5 4.5';
             {
               site.certifications.map((certification) => (
                 <li class="flex gap-3 border-b border-line pb-3">
-                  <svg aria-hidden="true" class="mt-1 size-4 shrink-0 text-accent" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                    <path d={check} />
-                  </svg>
+                  <Icon name="check" class="mt-1 size-4 text-accent" />
                   {certification}
                 </li>
               ))
@@ -86,18 +85,6 @@ const check = 'M3.5 8.5 6.5 11.5 12.5 4.5';
           </ol>
         </div>
 
-        <div class="reveal">
-          <h3 class="text-xs font-medium uppercase tracking-[0.18em] text-ink-soft">Herramientas que domino</h3>
-          <ul class="mt-5 flex flex-wrap gap-2">
-            {
-              site.software.map((tool) => (
-                <li class="rounded-full border border-line bg-surface px-4 py-2 text-sm transition hover:border-accent/40 hover:text-accent-deep">
-                  {tool}
-                </li>
-              ))
-            }
-          </ul>
-        </div>
       </div>
     </div>
   </div>

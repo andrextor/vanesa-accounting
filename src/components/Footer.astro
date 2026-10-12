@@ -1,6 +1,6 @@
 ---
-import LogoMark from '../assets/logo-mark.svg';
 import { site, whatsappUrl } from '../data/site';
+import Logo from './Logo.astro';
 
 const year = new Date().getFullYear();
 const nav = [
@@ -15,9 +15,8 @@ const nav = [
 <footer class="bg-ink text-white">
   <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-5 py-14 md:grid-cols-[2fr_1fr_1fr] md:px-10">
     <div>
-      <a href="/" class="flex items-center gap-2.5" aria-label={`${site.name}, inicio`}>
-        <LogoMark class="size-9 [--logo-accent:var(--color-accent)] [--logo-bg:#fff] [--logo-fg:var(--color-ink)]" aria-hidden="true" />
-        <span class="text-lg font-semibold tracking-tight">{site.name}</span>
+      <a href="/" class="inline-block text-2xl" aria-label={`${site.name}, inicio`}>
+        <Logo tone="dark" withRole />
       </a>
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/60">{site.flagship}.</p>
     </div>
@@ -36,6 +35,12 @@ const nav = [
     </div>
   </div>
   <div class="border-t border-white/10">
-    <p class="mx-auto max-w-7xl px-5 py-6 text-xs text-white/50 md:px-10">© {year} {site.name} · {site.role} · {site.city}</p>
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-white/50 sm:flex-row sm:justify-between md:px-10">
+      <p>© {year} {site.name} · {site.role} · {site.city}</p>
+      <p>
+        Sitio creado por{' '}
+        <a href="https://landak.pro/" target="_blank" rel="noopener" class="underline underline-offset-4 transition hover:text-white">Landak Studio</a>
+      </p>
+    </div>
   </div>
 </footer>

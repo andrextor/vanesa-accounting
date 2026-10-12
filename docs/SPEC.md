@@ -111,7 +111,7 @@ Contrastes AA se verifican y documentan en la implementación.
   - `src/assets/scenes/advisory-meeting.jpg` (4:5): reunión de asesoría con personas anónimas, sin rostros (asesora encuadrada del cuello hacia abajo, clientes de espaldas), sobre la mesa un Estado de Situación Financiera y un Estado de Resultados realistas en pesos; las cifras cuadran (activo 401.720.000 = pasivo + patrimonio) → **Cómo trabajamos**. No representa a Vanesa. Elegida por Iván el 12/10/2026.
   - `vanesa-wide.jpg` (16:9): de pie a la derecha, espacio libre a la izquierda → **imagen OG** (1200×630 con nombre y rol sobre el espacio libre) y fondo opcional del CTA final.
 - **Todas deben ser aprobadas por ella antes de publicar.**
-- **Logo (concepto 2 · bloque, propuesto):** monograma "VL" en un cuadrado navy (V blanca, L en el verde de acento) + "Vanesa Lotero" en Inter 600 y "Contadora Pública" en versalitas. Sobre la foto del hero se invierte (cuadrado blanco, V navy). Marca: `src/assets/logo-mark.svg` (colores por `--logo-bg`, `--logo-fg`, `--logo-accent`). Favicon: `public/favicon.svg`. Conceptos: `docs/design/logo-concepts.png`.
+- **Logo (concepto 5 · apilado, aprobado 12/10/2026):** "VANESA / LOTERO" en Instrument Sans 600 mayúsculas con interletrado 0.06em, filete vertical en el verde de acento a la izquierda y "Contadora Pública" opcional debajo. Es texto HTML (`src/components/Logo.astro`, `tone` claro/oscuro). Favicon: cuadrado navy con filete verde y "VL" en trazos (`public/favicon.svg`). Propuestas: `docs/design/logo-proposals.png`.
 
 ---
 
