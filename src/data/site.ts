@@ -58,7 +58,7 @@ export const site = {
     { company: 'Landak Studio', role: 'Servicios de contabilidad y asesoría contable' },
     {
       company: 'Distrirepuestos López',
-      role: 'Auxiliar contable y administrativa',
+      role: 'Contabilidad y administración',
       period: 'Oct 2017 – Dic 2025',
     },
   ] satisfies Position[],
