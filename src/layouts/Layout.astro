@@ -29,6 +29,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <Font cssVariable="--font-instrument-sans" preload />
   </head>
   <body>
+    <a
+      href="#contenido"
+      class="sr-only z-50 rounded bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
+    >
+      Saltar al contenido
+    </a>
     <slot />
   </body>
 </html>

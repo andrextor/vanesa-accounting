@@ -22,7 +22,7 @@ const portrait = await getImage({ src: heroPortrait, format: 'webp', widths: [48
       height={heroPortrait.height}
       fetchpriority="high"
       decoding="async"
-      class="absolute inset-0 -z-20 size-full object-cover object-top md:object-right"
+      class="absolute inset-0 -z-20 size-full object-cover object-top motion-safe:animate-hero-zoom md:object-right"
     />
   </picture>
   <div
