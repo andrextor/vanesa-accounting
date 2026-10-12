@@ -2,6 +2,7 @@
 import { getImage } from 'astro:assets';
 import wide from '../assets/portraits/vanesa-wide.jpg';
 import { site, whatsappUrl } from '../data/site';
+import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
 
 const background = await getImage({ src: wide, format: 'webp', width: 1600 });
@@ -42,9 +43,7 @@ const channels = [
                 <span class="block text-sm text-white/60">{channel.label}</span>
                 <span class="mt-1 block truncate text-lg font-medium">{channel.value}</span>
               </span>
-              <svg aria-hidden="true" class="size-5 shrink-0 transition duration-300 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 8h10M9 4l4 4-4 4" />
-              </svg>
+              <Icon name="arrow-right" class="size-5 transition duration-300 group-hover:translate-x-1" />
             </a>
           </li>
         ))

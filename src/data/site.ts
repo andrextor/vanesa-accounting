@@ -1,4 +1,7 @@
+import type { IconName } from '../lib/icons';
+
 export interface Service {
+  icon: IconName;
   title: string;
   description: string;
 }
@@ -9,6 +12,7 @@ export interface Step {
 }
 
 export interface Audience {
+  icon: IconName;
   title: string;
   description: string;
 }
@@ -62,14 +66,17 @@ export const site = {
   flagship: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas',
   audiences: [
     {
+      icon: 'user',
       title: 'Personas naturales',
       description: 'Declaración de renta, RUT y planeación tributaria para cumplir a tiempo y sin estrés.',
     },
     {
+      icon: 'rocket-launch',
       title: 'Emprendedores',
       description: 'RUT, facturación electrónica e impuestos en orden desde el primer día de tu negocio.',
     },
     {
+      icon: 'buildings',
       title: 'Pequeñas y medianas empresas',
       description: 'Contabilidad mensual, estados financieros NIIF e impuestos al día para decidir con datos.',
     },
@@ -84,37 +91,45 @@ export const site = {
   // Service list confirmed by Vanesa; descriptions are draft copy pending her review.
   services: [
     {
+      icon: 'calculator',
       title: 'Contabilidad mensual',
       description: 'Registro, conciliaciones y cierres al día para que conozcas la salud real de tu negocio cada mes.',
     },
     {
+      icon: 'receipt',
       title: 'Declaración de renta persona natural',
       description:
         'Revisamos tus ingresos, deducciones y beneficios para presentar tu declaración a tiempo y sin sorpresas.',
     },
     {
+      icon: 'percent',
       title: 'IVA, retención en la fuente e ICA',
       description:
         'Liquidación y presentación de tus impuestos periódicos dentro de los plazos de la DIAN y el municipio.',
     },
     {
+      icon: 'database',
       title: 'Información exógena',
       description: 'Preparación y envío de medios magnéticos con la información validada para evitar sanciones.',
     },
     {
+      icon: 'file-text',
       title: 'Facturación electrónica',
       description: 'Te acompaño en la habilitación ante la DIAN y en el uso diario de tu facturación electrónica.',
     },
     {
+      icon: 'chart-line-up',
       title: 'Estados financieros y NIIF',
       description: 'Estados financieros bajo NIIF para pymes, claros y listos para bancos, socios o entidades.',
     },
     {
+      icon: 'lightbulb',
       title: 'Asesoría y planeación tributaria',
       description:
         'Planeación para optimizar tu carga fiscal dentro del marco legal y tomar decisiones con anticipación.',
     },
     {
+      icon: 'identification-card',
       title: 'Creación y actualización de RUT',
       description:
         'Inscripción o actualización de tu RUT con las responsabilidades y actividades correctas desde el inicio.',
