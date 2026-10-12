@@ -1,21 +1,19 @@
 ---
-import { site } from '../data/site';
+import { getContent } from '../i18n';
 import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
+
+const t = getContent(Astro.currentLocale);
 ---
 
 <section id="para-quien" class="relative isolate scroll-mt-0 bg-paper">
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots"></div>
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
-    <SectionHeading
-      eyebrow="Para quién"
-      title="Acompaño a quienes quieren crecer con sus cuentas claras."
-      lead="Cada cliente tiene obligaciones distintas. Adapto el trabajo a tu realidad, no al revés."
-    />
+    <SectionHeading {...t.sections.audiences} />
 
     <ul class="mt-14 grid gap-4 md:grid-cols-3">
       {
-        site.audiences.map((audience, index) => (
+        t.audiences.map((audience, index) => (
           <li
             style={`--i: ${index}`}
             class="reveal group relative isolate overflow-hidden rounded-xl border border-line bg-linear-to-b from-surface to-paper p-8 transition duration-300 hover:border-accent/40"
@@ -36,9 +34,9 @@ import SectionHeading from './SectionHeading.astro';
     </ul>
 
     <div class="reveal mt-12 flex flex-col gap-4 border-t border-line pt-8 md:flex-row md:items-center md:gap-8">
-      <p class="shrink-0 text-sm font-medium text-ink-soft">Experiencia en sectores</p>
+      <p class="shrink-0 text-sm font-medium text-ink-soft">{t.ui.sectorsLabel}</p>
       <ul class="flex flex-wrap gap-2">
-        {site.sectors.map((sector) => <li class="rounded-full border border-line px-4 py-2 text-sm">{sector}</li>)}
+        {t.sectors.map((sector) => <li class="rounded-full border border-line px-4 py-2 text-sm">{sector}</li>)}
       </ul>
     </div>
   </div>

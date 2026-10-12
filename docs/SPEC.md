@@ -142,4 +142,13 @@ AA en todo el texto, foco visible (ya en `global.css`), `<details>` nativo para 
 | 4 | SEO técnico (JSON-LD, OG, robots), Lighthouse, capturas 390 px y 1440 px | Fases 1–3 |
 | 5 | Deploy (dominio, `SITE_URL`) | Dominio |
 
-Fuera de alcance (fase 2 opcional): blog, calendario tributario DIAN, formulario con backend, modo oscuro, inglés.
+Fuera de alcance (fase 2 opcional): blog, calendario tributario DIAN, formulario con backend, modo oscuro.
+
+## 9. Idiomas (añadido 12/10/2026)
+
+- Español en `/` (por defecto) e inglés en `/en/`, con el enrutado i18n de Astro (`prefixDefaultLocale: false`).
+- Todo el texto traducible vive en `src/i18n/es.ts` y `src/i18n/en.ts`, ambos con la misma forma tipada (`Content` en `src/i18n/content.ts`); `src/data/site.ts` solo guarda datos sin idioma (nombre, teléfono, correo, cifras, herramientas). Los componentes leen `getContent(Astro.currentLocale)`.
+- Selector ES/EN en la barra (escritorio) y en el menú móvil (`LanguageSwitch.astro`).
+- Por idioma: `lang`, `og:locale`, título y descripción, JSON-LD (`inLanguage`, `jobTitle`), mensajes de WhatsApp, `hreflang` en el `<head>` y en el sitemap (`x-default` = español).
+- Los anclajes de sección (`#servicios`, `#sobre-mi`…) se mantienen iguales en ambos idiomas.
+- **PENDIENTE:** que Vanesa revise la traducción (términos: Public Accountant, Financial Administrator, IFRS for SMEs, "Third-party information reports" para exógena) y confirme si atiende clientes en inglés.

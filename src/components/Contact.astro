@@ -2,14 +2,16 @@
 import { getImage } from 'astro:assets';
 import wide from '../assets/portraits/vanesa-wide.jpg';
 import { site, whatsappUrl } from '../data/site';
+import { getContent } from '../i18n';
 import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
 
+const t = getContent(Astro.currentLocale);
 const background = await getImage({ src: wide, format: 'webp', width: 1600 });
 
 const channels = [
-  { label: 'WhatsApp', value: site.phone, href: whatsappUrl(), external: true },
-  { label: 'Correo', value: site.email, href: `mailto:${site.email}`, external: false },
+  { label: 'WhatsApp', value: site.phone, href: whatsappUrl(t.whatsapp.greeting), external: true },
+  { label: t.ui.email, value: site.email, href: `mailto:${site.email}`, external: false },
 ];
 ---
 
@@ -30,12 +32,7 @@ const channels = [
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-noise"></div>
 
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-36">
-    <SectionHeading
-      tone="dark"
-      eyebrow="Contacto"
-      title="Pongamos tus cuentas en orden."
-      lead="Escríbeme y cuéntame tu caso. Te respondo personalmente."
-    />
+    <SectionHeading tone="dark" {...t.sections.contact} />
     <ul class="mt-12 grid max-w-2xl gap-4 sm:grid-cols-2">
       {
         channels.map((channel, index) => (

@@ -1,19 +1,17 @@
 ---
 import { site } from '../data/site';
+import { getContent } from '../i18n';
 
+const t = getContent(Astro.currentLocale);
 const stats = [
-  {
-    value: site.experienceYears,
-    suffix: '+',
-    label: 'años de experiencia en contabilidad y administración financiera',
-  },
-  { value: site.education.length, label: 'títulos profesionales: Contadora Pública y Administradora Financiera' },
-  { value: site.certifications.length, label: 'diplomados y certificaciones, incluida QuickBooks ProAdvisor' },
-  { value: site.software.length, label: 'herramientas contables y de análisis que domino' },
+  { value: site.experienceYears, suffix: '+', label: t.stats.years },
+  { value: t.education.length, label: t.stats.degrees },
+  { value: t.certifications.length, label: t.stats.certifications },
+  { value: site.software.length, label: t.stats.tools },
 ];
 ---
 
-<section aria-label="Trayectoria en cifras" class="relative isolate border-b border-line bg-paper">
+<section aria-label={t.ui.statsLabel} class="relative isolate border-b border-line bg-paper">
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-grid"></div>
   <dl class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 px-5 py-14 md:grid-cols-4 md:px-10 md:py-20">
     {
