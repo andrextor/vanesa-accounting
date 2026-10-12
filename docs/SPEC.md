@@ -104,9 +104,9 @@ Contrastes AA se verifican y documentan en la implementación.
 
 ### 5.5 Foto y logo (12/10/2026)
 
-- **Foto del hero:** `src/assets/portraits/vanesa-hero.jpg` (16:9), estilo Consultaro: ella sentada en el tercio derecho, blazer navy, ventanal con ciudad desenfocada en tonos fríos, mitad izquierda libre para el texto. Generada con Higgsfield usando sus dos fotos reales como referencia de identidad y el hero de Consultaro como referencia de composición.
+- **Foto del hero (elegida por Iván y Vanesa, 12/10/2026):** `vanesa-hero.jpg` (16:9) = `vanesa-office-desk.jpg` ampliada hacia la izquierda con Higgsfield: ella en el escritorio con blazer beige, en la mitad derecha; oficina clara a la izquierda para el texto. En móvil se usa la vertical `vanesa-office-desk.jpg` (`<picture>` con dirección de arte). Velo oscuro en degradado desde la izquierda para el texto blanco, como Consultaro.
 - **Fotos de apoyo** (generadas con sus dos fotos reales como referencia de identidad, mismo blazer y blusa que el hero para que el set sea coherente):
-  - `vanesa-office-desk.jpg` (4:5): en el escritorio con monitor → **Sobre mí**.
+  - `vanesa-office-desk.jpg` (4:5): versión vertical del hero → **hero en móvil**.
   - `vanesa-reviewing-reports.jpg` (4:5): revisando informes con laptop → **Cómo trabajamos** o página de servicio.
   - `vanesa-wide.jpg` (16:9): de pie a la derecha, espacio libre a la izquierda → **imagen OG** (1200×630 con nombre y rol sobre el espacio libre) y fondo opcional del CTA final.
 - **Todas deben ser aprobadas por ella antes de publicar.**
