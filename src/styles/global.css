@@ -3,6 +3,20 @@
 @theme {
   --font-sans: var(--font-instrument-sans);
   --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-hero-zoom: hero-zoom 1.8s var(--ease-fluid) both;
+
+  @keyframes marquee {
+    to {
+      translate: -50% 0;
+    }
+  }
+
+  @keyframes hero-zoom {
+    from {
+      scale: 1.08;
+    }
+  }
 
   --color-ink: #0f1b2d;
   --color-ink-soft: #4a5568;
