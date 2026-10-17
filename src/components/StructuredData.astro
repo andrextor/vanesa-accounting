@@ -1,10 +1,19 @@
 ---
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
 import { site } from '../data/site';
 import { getContent, htmlLang, resolveLocale } from '../i18n';
+import type { Faq, Service } from '../i18n/content';
 
+interface Props {
+  service?: Service;
+  faq?: Faq[];
+}
+
+const { service, faq } = Astro.props;
 const locale = resolveLocale(Astro.currentLocale);
 const t = getContent(locale);
-const url = new URL(Astro.url.pathname, Astro.site).href;
+const url = getAbsoluteLocaleUrl(locale);
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const id = (fragment: string): string => new URL(`/#${fragment}`, Astro.site).href;
 const personId = id('person');
 const areaServed = [
@@ -58,6 +67,32 @@ const graph = {
       inLanguage: htmlLang[locale],
       publisher: { '@id': personId },
     },
+    ...(service
+      ? [
+          {
+            '@type': 'Service',
+            '@id': `${pageUrl}#service`,
+            name: service.title,
+            description: service.description,
+            url: pageUrl,
+            provider: { '@id': id('business') },
+            areaServed,
+          },
+        ]
+      : []),
+    ...(faq
+      ? [
+          {
+            '@type': 'FAQPage',
+            '@id': `${pageUrl}#faq`,
+            mainEntity: faq.map(({ question, answer }) => ({
+              '@type': 'Question',
+              name: question,
+              acceptedAnswer: { '@type': 'Answer', text: answer },
+            })),
+          },
+        ]
+      : []),
   ],
 };
 ---

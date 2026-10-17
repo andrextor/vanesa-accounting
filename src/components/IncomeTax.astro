@@ -1,0 +1,113 @@
+---
+import { whatsappUrl } from '../data/site';
+import { getContent, incomeTaxPath, resolveLocale } from '../i18n';
+import Layout from '../layouts/Layout.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+import Icon from './Icon.astro';
+import Process from './Process.astro';
+import SectionHeading from './SectionHeading.astro';
+import StructuredData from './StructuredData.astro';
+import WhatsAppButton from './WhatsAppButton.astro';
+
+const t = getContent(resolveLocale(Astro.currentLocale));
+const page = t.incomeTax;
+const service = t.services.find((item) => item.href === incomeTaxPath);
+if (!service) throw new Error(`No service links to ${incomeTaxPath}`);
+const inquiry = whatsappUrl(t.whatsapp.serviceInquiry(service.title));
+---
+
+<Layout title={page.meta.title} description={page.meta.description}>
+  <StructuredData slot="head" service={service} faq={page.faq.items} />
+  <Header />
+
+  <main id="contenido">
+    <section class="relative isolate overflow-clip bg-ink text-white">
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-noise"></div>
+      <div
+        aria-hidden="true"
+        style="--glow-x: 80%; --glow-y: 40%; --glow-strength: 20%"
+        class="absolute inset-0 -z-10 bg-glow"
+      >
+      </div>
+      <div class="mx-auto w-full max-w-7xl px-5 pt-40 pb-20 md:px-10 md:pt-48 md:pb-28">
+        <div class="hero-in max-w-3xl">
+          <p style="--i: 0" class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.18em] text-white/85">
+            <span aria-hidden="true" class="size-1.5 rounded-full bg-accent-light"></span>
+            {page.eyebrow}
+          </p>
+          <h1 style="--i: 1" class="mt-5 text-[2.75rem] leading-[1.02] font-medium tracking-[-0.035em] text-balance md:text-6xl">
+            {page.heading}
+          </h1>
+          <p style="--i: 2" class="mt-6 max-w-xl text-lg leading-relaxed text-white/80">{page.lead}</p>
+          <div style="--i: 3" class="mt-9">
+            <a
+              href={inquiry}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90"
+            >
+              {t.ui.bookConsultation}
+              <Icon name="arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate bg-paper">
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots"></div>
+      <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
+        <SectionHeading eyebrow={page.facts.eyebrow} title={page.facts.title} />
+        <ul class="mt-12 grid gap-4 md:grid-cols-2">
+          {
+            page.facts.items.map((item, index) => (
+              <li
+                style={`--i: ${index}`}
+                class="reveal flex gap-4 rounded-xl border border-line bg-linear-to-b from-surface to-paper p-6"
+              >
+                <span class="grid size-9 shrink-0 place-items-center rounded-full bg-ink text-accent-light">
+                  <Icon name="check" class="size-4" />
+                </span>
+                <p class="leading-relaxed">{item}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <Process />
+
+    <section id="preguntas" class="relative isolate bg-surface">
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-grid opacity-60"></div>
+      <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
+        <SectionHeading eyebrow={page.faq.eyebrow} title={page.faq.title} />
+        <div class="mt-12 max-w-3xl divide-y divide-line border-y border-line">
+          {
+            page.faq.items.map(({ question, answer }, index) => (
+              <details style={`--i: ${index}`} class="reveal group">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-lg font-medium tracking-[-0.02em] [&::-webkit-details-marker]:hidden">
+                  {question}
+                  <span
+                    aria-hidden="true"
+                    class="grid size-9 shrink-0 place-items-center rounded-full border border-line text-xl leading-none text-ink-soft transition duration-300 group-open:rotate-45 group-open:border-ink group-open:bg-ink group-open:text-white"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p class="pb-6 leading-relaxed text-ink-soft">{answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>

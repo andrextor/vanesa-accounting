@@ -99,6 +99,7 @@ export const es: Content = {
     {
       icon: 'receipt',
       title: 'Declaración de renta persona natural',
+      href: '/declaracion-de-renta/',
       description:
         'Revisamos tus ingresos, deducciones y beneficios para presentar tu declaración a tiempo y sin sorpresas.',
     },
@@ -174,6 +175,62 @@ export const es: Content = {
       'Soy Vanesa Lotero, Contadora Pública y Administradora Financiera, con más de 8 años de experiencia en contabilidad y administración financiera.',
       'Acompaño a personas naturales, emprendedores y pequeñas empresas a mantener sus números en orden y cumplir con sus obligaciones tributarias, explicando cada cifra en un lenguaje sencillo para que decidas con confianza.',
     ],
+  },
+  // Answers written from Vanesa's own replies (17/10/2026); no thresholds, prices or deadlines invented.
+  incomeTax: {
+    meta: {
+      title: 'Declaración de renta en Cali y Yumbo · Vanesa Lotero',
+      description:
+        'Declaración de renta para personas naturales, presencial en Cali y Yumbo o 100 % virtual desde Colombia, Estados Unidos y España. Primera conversación gratis.',
+    },
+    eyebrow: 'Declaración de renta · Cali y Yumbo',
+    heading: 'Tu declaración de renta, a tiempo y sin sorpresas.',
+    lead: 'Revisamos tus ingresos, deducciones y beneficios, y presento tu declaración ante la DIAN. Presencial en Cali y Yumbo, o en línea desde donde estés.',
+    facts: {
+      eyebrow: 'Lo esencial',
+      title: 'Cómo funciona.',
+      items: [
+        'Para personas naturales que superan los topes que fija la DIAN cada año.',
+        'Todo el proceso puede ser virtual: documentos, revisión y presentación, sin desplazarte.',
+        'Si vives en Estados Unidos o España, trabajamos en línea igual que en Colombia.',
+        'La primera conversación es gratis y la cotización, sin compromiso.',
+      ],
+    },
+    faq: {
+      eyebrow: 'Preguntas frecuentes',
+      title: 'Lo que más me preguntan sobre la renta.',
+      items: [
+        {
+          question: '¿Cómo sé si debo declarar renta?',
+          answer:
+            'Cada año la DIAN fija topes de ingresos, patrimonio, compras y consumos, consignaciones y uso de tarjetas. Si superaste alguno durante el año, debes declarar. Revisamos juntos tus movimientos y te digo si te corresponde.',
+        },
+        {
+          question: '¿Qué documentos necesito?',
+          answer:
+            'Depende de si declaras como persona natural o jurídica y de tus fuentes de ingreso. En la primera conversación te doy la lista exacta para tu caso.',
+        },
+        {
+          question: '¿Cuánto cuesta preparar una declaración de renta?',
+          answer:
+            'No hay una tarifa fija: depende del año gravable y de la complejidad de tu declaración. Cotizo sin compromiso y la primera conversación es gratis.',
+        },
+        {
+          question: '¿Puedo hacer todo el proceso de forma virtual?',
+          answer:
+            'Sí. Me envías los documentos, revisamos tu información en línea y presento la declaración. Atiendo así en toda Colombia, Estados Unidos y España.',
+        },
+        {
+          question: '¿Qué pasa si no presenté mi declaración a tiempo?',
+          answer:
+            'Presentarla fuera del plazo genera una sanción ante la DIAN. Escríbeme y revisamos cómo ponerte al día.',
+        },
+        {
+          question: '¿Puedo verificar tu tarjeta profesional?',
+          answer: 'Sí. No la publico en la web, pero te la envío por WhatsApp antes de empezar.',
+        },
+      ],
+    },
   },
   education: [
     { title: 'Contadora Pública', institution: 'Corporación Universitaria UNITEC', year: 2025 },

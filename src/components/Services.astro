@@ -1,10 +1,12 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { whatsappUrl } from '../data/site';
-import { getContent } from '../i18n';
+import { getContent, resolveLocale } from '../i18n';
 import Icon from './Icon.astro';
 import SectionHeading from './SectionHeading.astro';
 
-const t = getContent(Astro.currentLocale);
+const locale = resolveLocale(Astro.currentLocale);
+const t = getContent(locale);
 ---
 
 <section id="servicios" class="relative isolate scroll-mt-0 bg-surface">
@@ -28,9 +30,8 @@ const t = getContent(Astro.currentLocale);
         t.services.map((service, index) => (
           <li style={`--i: ${index % 4}`} class="reveal">
             <a
-              href={whatsappUrl(t.whatsapp.serviceInquiry(service.title))}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={service.href ? getRelativeLocaleUrl(locale, service.href) : whatsappUrl(t.whatsapp.serviceInquiry(service.title))}
+              {...(service.href ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
               class="group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-paper p-7 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_48px_-28px_rgb(15_27_45/0.35)]"
             >
               <span
@@ -47,7 +48,7 @@ const t = getContent(Astro.currentLocale);
               </span>
               <h3 class="mt-10 text-xl leading-snug font-medium tracking-[-0.02em]">{service.title}</h3>
               <p class="mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">{service.description}</p>
-              <span class="sr-only">{t.ui.opensWhatsApp}</span>
+              {!service.href && <span class="sr-only">{t.ui.opensWhatsApp}</span>}
             </a>
           </li>
         ))
