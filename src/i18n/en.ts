@@ -49,6 +49,16 @@ export const en: Content = {
     greeting: 'Hi Vanesa, I’d like information about your accounting services.',
     serviceInquiry: (service) => `Hi Vanesa, I’d like information about: ${service}.`,
   },
+  form: {
+    name: 'Name',
+    email: 'Email',
+    message: 'How can I help you?',
+    send: 'Send message',
+    sending: 'Sending…',
+    success: 'Message sent. I will get back to you soon.',
+    error: 'Could not send. Write to me on WhatsApp or by email.',
+    subject: 'New message from vanesalotero.com',
+  },
   alts: {
     hero: 'Vanesa Lotero, public accountant, at her desk',
     meeting: 'Accounting advisory meeting reviewing a statement of financial position',

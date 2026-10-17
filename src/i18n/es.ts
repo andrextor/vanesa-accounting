@@ -49,6 +49,16 @@ export const es: Content = {
     greeting: 'Hola Vanesa, quiero información sobre tus servicios contables.',
     serviceInquiry: (service) => `Hola Vanesa, quiero información sobre: ${service}.`,
   },
+  form: {
+    name: 'Nombre',
+    email: 'Correo',
+    message: '¿En qué te puedo ayudar?',
+    send: 'Enviar mensaje',
+    sending: 'Enviando…',
+    success: 'Mensaje enviado. Te respondo pronto.',
+    error: 'No se pudo enviar. Escríbeme por WhatsApp o al correo.',
+    subject: 'Nuevo mensaje desde vanesalotero.com',
+  },
   alts: {
     hero: 'Vanesa Lotero, contadora pública, en su escritorio',
     meeting: 'Reunión de asesoría contable revisando un estado de situación financiera',

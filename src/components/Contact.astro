@@ -13,6 +13,10 @@ const channels = [
   { label: 'WhatsApp', value: site.phone, href: whatsappUrl(t.whatsapp.greeting), external: true },
   { label: t.ui.email, value: site.email, href: `mailto:${site.email}`, external: false },
 ];
+// ponytail: FormSubmit relays the form to the business inbox; move to an own endpoint if it ever needs more than that.
+const formAction = `https://formsubmit.co/${site.email}`;
+const fieldClass =
+  'w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 transition focus:border-white/40 focus:outline-none';
 ---
 
 <section id="contacto" class="relative isolate scroll-mt-0 overflow-clip bg-ink text-white">
@@ -39,7 +43,8 @@ const channels = [
 
   <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-36">
     <SectionHeading tone="dark" {...t.sections.contact} />
-    <ul class="mt-12 grid max-w-2xl gap-4 sm:grid-cols-2">
+    <div class="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
+    <ul class="grid content-start gap-4">
       {
         channels.map((channel, index) => (
           <li style={`--i: ${index}`} class="reveal">
@@ -58,5 +63,73 @@ const channels = [
         ))
       }
     </ul>
+    <form
+      method="post"
+      action={formAction}
+      data-contact-form
+      style="--i: 2"
+      class="reveal grid gap-4 rounded-xl border border-white/15 bg-white/5 p-6 backdrop-blur"
+    >
+      <input type="hidden" name="_subject" value={t.form.subject} />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
+      <div class="grid gap-4 sm:grid-cols-2">
+        <label class="grid gap-1.5 text-sm text-white/60">
+          {t.form.name}
+          <input type="text" name="name" required autocomplete="name" class={fieldClass} />
+        </label>
+        <label class="grid gap-1.5 text-sm text-white/60">
+          {t.form.email}
+          <input type="email" name="email" required autocomplete="email" class={fieldClass} />
+        </label>
+      </div>
+      <label class="grid gap-1.5 text-sm text-white/60">
+        {t.form.message}
+        <textarea name="message" required rows="4" class={fieldClass}></textarea>
+      </label>
+      <button
+        type="submit"
+        data-submit
+        data-sending={t.form.sending}
+        class="group inline-flex items-center justify-center gap-2 rounded bg-white px-5 py-3.5 font-medium text-ink transition hover:bg-white/90 disabled:opacity-60"
+      >
+        {t.form.send}
+        <Icon name="arrow-right" class="size-5 transition duration-300 group-hover:translate-x-1" />
+      </button>
+      <p role="status" aria-live="polite" data-status data-success={t.form.success} data-error={t.form.error} class="min-h-6 text-sm"></p>
+    </form>
+    </div>
   </div>
 </section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+  const button = form?.querySelector<HTMLButtonElement>('[data-submit]');
+  const status = form?.querySelector<HTMLParagraphElement>('[data-status]');
+
+  // Without JS the form still posts to FormSubmit, which shows its own confirmation page.
+  form?.addEventListener('submit', async (event) => {
+    if (!button || !status) return;
+    event.preventDefault();
+    const label = button.innerHTML;
+    button.disabled = true;
+    button.textContent = button.dataset.sending ?? '';
+    status.textContent = '';
+    try {
+      const response = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      if (!response.ok) throw new Error(String(response.status));
+      form.reset();
+      status.textContent = status.dataset.success ?? '';
+    } catch {
+      status.textContent = status.dataset.error ?? '';
+    } finally {
+      button.disabled = false;
+      button.innerHTML = label;
+    }
+  });
+</script>
