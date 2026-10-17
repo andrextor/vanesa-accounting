@@ -57,6 +57,7 @@ export const en: Content = {
     sending: 'Sending…',
     success: 'Message sent. I will get back to you soon.',
     error: 'Could not send. Write to me on WhatsApp or by email.',
+    limit: 'I already got your message today. If it is urgent, write to me on WhatsApp.',
     subject: 'New message from vanesalotero.com',
   },
   alts: {

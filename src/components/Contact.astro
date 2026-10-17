@@ -97,7 +97,7 @@ const fieldClass =
         {t.form.send}
         <Icon name="arrow-right" class="size-5 transition duration-300 group-hover:translate-x-1" />
       </button>
-      <p role="status" aria-live="polite" data-status data-success={t.form.success} data-error={t.form.error} class="min-h-6 text-sm"></p>
+      <p role="status" aria-live="polite" data-status data-success={t.form.success} data-error={t.form.error} data-limit={t.form.limit} class="min-h-6 text-sm"></p>
     </form>
     </div>
   </div>
@@ -107,11 +107,31 @@ const fieldClass =
   const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
   const button = form?.querySelector<HTMLButtonElement>('[data-submit]');
   const status = form?.querySelector<HTMLParagraphElement>('[data-status]');
+  const sentKey = 'contact-sent-at';
+  const dayMs = 86_400_000;
+
+  // ponytail: per-browser daily limit, enough to stop accidental double sends; real rate limiting belongs server side.
+  const sentToday = (): boolean => {
+    try {
+      return Date.now() - Number(localStorage.getItem(sentKey)) < dayMs;
+    } catch {
+      return false;
+    }
+  };
+  const markSent = (): void => {
+    try {
+      localStorage.setItem(sentKey, String(Date.now()));
+    } catch {}
+  };
 
   // Without JS the form still posts to FormSubmit, which shows its own confirmation page.
   form?.addEventListener('submit', async (event) => {
     if (!button || !status) return;
     event.preventDefault();
+    if (sentToday()) {
+      status.textContent = status.dataset.limit ?? '';
+      return;
+    }
     const label = button.innerHTML;
     button.disabled = true;
     button.textContent = button.dataset.sending ?? '';
@@ -124,6 +144,7 @@ const fieldClass =
       });
       if (!response.ok) throw new Error(String(response.status));
       form.reset();
+      markSent();
       status.textContent = status.dataset.success ?? '';
     } catch {
       status.textContent = status.dataset.error ?? '';

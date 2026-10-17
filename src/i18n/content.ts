@@ -87,6 +87,7 @@ export interface Content {
     sending: string;
     success: string;
     error: string;
+    limit: string;
     subject: string;
   };
   alts: { hero: string; meeting: string; portrait: string };

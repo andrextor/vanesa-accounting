@@ -57,6 +57,7 @@ export const es: Content = {
     sending: 'Enviando…',
     success: 'Mensaje enviado. Te respondo pronto.',
     error: 'No se pudo enviar. Escríbeme por WhatsApp o al correo.',
+    limit: 'Ya recibí tu mensaje hoy. Si es urgente, escríbeme por WhatsApp.',
     subject: 'Nuevo mensaje desde vanesalotero.com',
   },
   alts: {
