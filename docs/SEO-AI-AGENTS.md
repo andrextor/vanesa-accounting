@@ -21,7 +21,7 @@ Cómo leen los agentes: descargan el HTML **sin ejecutar JavaScript**, respetan 
 | Title, description, canonical, hreflang, OG, Twitter | ✅ | Hecho en la parte A |
 | Jerarquía de encabezados | ✅ | 1 `h1`, 5 `h2`, 17 `h3` |
 | Sitemap con alternativas de idioma | ✅ | `i18n` ya configurado |
-| **Dominio en producción** | ❌ | `vanesalotero.com` no resuelve hoy (`curl` sin respuesta). **Sin sitio publicado ningún agente puede leer nada**: es el bloqueo principal |
+| **Dominio en producción** | ⚠️ | Publicado en Vercel como `www.vanesalotero.com` (la raíz redirige 308 a `www`). El deploy del 17/10 tenía `SITE_URL=https://vanesa-lotero.vercel.app`: canonical, hreflang, sitemap y `@id` apuntaban al subdominio de Vercel. Corregido en código; falta quitar esa variable en Vercel y redesplegar |
 | `@id` del JSON-LD | ✅ | `StructuredData.astro` usa la URL de la página (`/` y `/en/`), así que Vanesa en español y en inglés son **dos personas distintas** para un parser. Debe ser un `@id` fijo de la raíz |
 | Servicios en JSON-LD | ✅ | Solo `knowsAbout` con los títulos. Falta `hasOfferCatalog` con cada `Service` y su descripción, que es lo que un agente cita al responder "qué hace" |
 | Ciudad / zona de atención | ❌ | `areaServed: Colombia` sin ciudad ni `address`. Pendiente de `CLIENT-QUESTIONS.md` |

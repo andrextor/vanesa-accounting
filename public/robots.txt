@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vanesalotero.com/sitemap-index.xml
+Sitemap: https://www.vanesalotero.com/sitemap-index.xml
