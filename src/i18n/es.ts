@@ -52,12 +52,13 @@ export const es: Content = {
   form: {
     name: 'Nombre',
     email: 'Correo',
+    phone: 'WhatsApp (opcional)',
     message: '¿En qué te puedo ayudar?',
     send: 'Enviar mensaje',
     sending: 'Enviando…',
     success: 'Mensaje enviado. Te respondo pronto.',
     error: 'No se pudo enviar. Escríbeme por WhatsApp o al correo.',
-    limit: 'Ya recibí tu mensaje hoy. Si es urgente, escríbeme por WhatsApp.',
+    limit: 'Ya recibí tu mensaje y te respondo pronto. Si es urgente, escríbeme por WhatsApp.',
     subject: 'Nuevo mensaje desde vanesalotero.com',
   },
   alts: {

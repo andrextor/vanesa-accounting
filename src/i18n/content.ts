@@ -88,6 +88,7 @@ export interface Content {
   form: {
     name: string;
     email: string;
+    phone: string;
     message: string;
     send: string;
     sending: string;
