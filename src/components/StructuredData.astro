@@ -20,6 +20,14 @@ const graph = {
       areaServed: { '@type': 'Country', name: 'Colombia' },
       founder: { '@id': personId },
       knowsAbout: t.services.map((service) => service.title),
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: t.sections.services.eyebrow,
+        itemListElement: t.services.map((service) => ({
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: service.title, description: service.description },
+        })),
+      },
       sameAs: [site.linkedin],
     },
     {
