@@ -2,7 +2,7 @@
 
 Borrador 1 · 17/10/2026 · Rama sugerida `feat/seo-ai-agents`. Parte del estado de `main` tras el PR #6.
 
-**Estado (17/10/2026):** tareas 1–3 hechas en la rama (`` estables, `hasOfferCatalog`, `llms.txt`); `astro check` y Biome sin errores. Pendientes 4 (dominio y deploy), 5 y 6 (datos de Vanesa).
+**Estado (17/10/2026):** tareas 1–3 hechas en la rama (`` estables, `hasOfferCatalog`, `llms.txt`); `astro check` y Biome sin errores. Actualización 17/10 (tarde): dominio publicado en `www.vanesalotero.com`, tareas 4, 5 y 6 hechas con las respuestas de Vanesa (ciudad, FAQ, cobertura virtual). Página propia `/declaracion-de-renta/` con `Service` y `FAQPage`. Queda fuera del código: Search Console y validator.schema.org.
 
 **Objetivo:** que Claude, ChatGPT, Gemini y Perplexity, cuando buscan en la web por "contadora en Colombia", "declaración de renta persona natural" o el nombre de Vanesa, puedan leer la página, entender qué ofrece y citarla con datos correctos. Complementa `SEO-AND-BACKGROUNDS.md` (parte A), no lo reemplaza.
 
@@ -24,9 +24,9 @@ Cómo leen los agentes: descargan el HTML **sin ejecutar JavaScript**, respetan 
 | **Dominio en producción** | ⚠️ | Publicado en Vercel como `www.vanesalotero.com` (la raíz redirige 308 a `www`). El deploy del 17/10 tenía `SITE_URL=https://vanesa-lotero.vercel.app`: canonical, hreflang, sitemap y `@id` apuntaban al subdominio de Vercel. Corregido en código; falta quitar esa variable en Vercel y redesplegar |
 | `@id` del JSON-LD | ✅ | `StructuredData.astro` usa la URL de la página (`/` y `/en/`), así que Vanesa en español y en inglés son **dos personas distintas** para un parser. Debe ser un `@id` fijo de la raíz |
 | Servicios en JSON-LD | ✅ | Solo `knowsAbout` con los títulos. Falta `hasOfferCatalog` con cada `Service` y su descripción, que es lo que un agente cita al responder "qué hace" |
-| Ciudad / zona de atención | ❌ | `areaServed: Colombia` sin ciudad ni `address`. Pendiente de `CLIENT-QUESTIONS.md` |
+| Ciudad / zona de atención | ✅ | `areaServed`: Cali y Yumbo (presencial) + Colombia, Estados Unidos y España (virtual). Sin `address`: no hay oficina pública |
 | `llms.txt` | ✅ | `src/pages/llms.txt.ts`, generado desde `getContent('es')` |
-| `FAQPage` | ❌ | Bloqueado: la FAQ depende de respuestas de Vanesa (tarea 7 del plan anterior) |
+| `FAQPage` | ✅ | Seis preguntas con las respuestas de Vanesa en `/declaracion-de-renta/` (`t.incomeTax.faq`), también en `llms.txt` |
 
 ## 2 · Tareas
 
@@ -66,9 +66,9 @@ Un commit por tarea, en este orden.
 | 1 ✅ | 2.1 `@id` estables | — |
 | 2 ✅ | 2.2 Catálogo de servicios | 1 |
 | 3 ✅ | 2.3 `llms.txt` | — |
-| 4 ⏳ | 2.5 Publicar y verificar | Dominio y deploy |
-| 5 ⏳ | 2.4 Ubicación | Ciudad confirmada por Vanesa |
-| 6 ⏳ | `FAQPage` (tarea 7 de `SEO-AND-BACKGROUNDS.md`) | Respuestas de Vanesa |
+| 4 ✅ | 2.5 Publicar y verificar | Deploy en Vercel; bots de IA responden 200. Falta Search Console y validator.schema.org (manual) |
+| 5 ✅ | 2.4 Ubicación | Cali y Yumbo, confirmado el 17/10/2026 |
+| 6 ✅ | `FAQPage` (tarea 7 de `SEO-AND-BACKGROUNDS.md`) | En la página de renta |
 
 Las tareas 1–3 se pueden hacer ya; son unas 80 líneas en total.
 

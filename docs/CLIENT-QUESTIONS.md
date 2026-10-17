@@ -6,7 +6,7 @@ Para que la web solo muestre información real. Responde lo que puedas; lo que q
 
 1. Nombre como quieres aparecer: ¿"Vanesa Lotero", "Leidy Vanesa Lotero" u otro?
 2. ~~Universidad, título y año de grado; diplomados y certificaciones.~~ ✅ Respondida.
-3. Número de **tarjeta profesional** (Junta Central de Contadores). ¿Lo podemos mostrar? Da mucha confianza.
+3. ~~Número de **tarjeta profesional**.~~ ✅ No se publica; se envía por WhatsApp a quien lo pida antes de empezar (está en la FAQ).
 4. ~~Años de experiencia.~~ ✅ Más de 8 años.
 5. ¿Nos puedes exportar tu LinkedIn en PDF? (Perfil → "Más" → "Guardar en PDF"). LinkedIn no deja leer el perfil de forma automática.
 
@@ -35,18 +35,18 @@ Para que la web solo muestre información real. Responde lo que puedas; lo que q
     - Revisar las descripciones cortas que redactamos para cada servicio (te las enviamos).
     - ¿Nómina y seguridad social, renta de personas jurídicas o constitución de empresas? No estaban en tu lista; si no los ofreces, no aparecen.
 13. ~~Servicio estrella.~~ ✅ Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas.
-14. ¿Se muestran **precios** o tarifas "desde"? ¿O siempre "cotiza sin compromiso"?
-15. ¿La primera conversación es gratuita?
+14. ~~Precios.~~ ✅ Sin tarifas publicadas: "cotiza sin compromiso".
+15. ~~Primera conversación.~~ ✅ Gratis.
 16. ~~Software.~~ ✅ Alegra, SAP, Siigo, Helisa, QuickBooks Online, Excel, Google Sheets, Power BI.
 
 ## 4. Ubicación y contacto
 
-17. Ciudad. ¿Atiendes solo ahí o también de forma remota en todo el país?
-18. ¿Tienes oficina con dirección pública o es solo virtual?
+17. ~~Ciudad.~~ ✅ Presencial en Cali y Yumbo; virtual en toda Colombia, Estados Unidos y España.
+18. ~~Oficina.~~ ✅ Todo es virtual, sin dirección pública.
 19. ~~WhatsApp.~~ ✅ +57 314 696 3798. Falta: horario de atención.
 20. ~~Correo.~~ ✅ vanesacruz0816@gmail.com. Falta: ¿tienes dominio propio (ej. vanesalotero.com) o lo compramos?
 21. Redes: Instagram, Facebook, TikTok… (solo las que uses).
-22. ¿Tienes perfil de **Google Business** (Google Maps)? Si no, recomendamos crearlo.
+22. ~~Google Business.~~ ✅ Lo está creando (17/10/2026). Debe usar el mismo nombre, teléfono y correo de la web.
 23. ¿Usas agenda en línea (Calendly, Cal.com) o todo por WhatsApp?
 
 ## 5. Marca y tono
