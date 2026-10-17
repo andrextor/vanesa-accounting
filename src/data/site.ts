@@ -2,7 +2,7 @@
 export const site = {
   name: 'Vanesa Lotero',
   linkedin: 'https://www.linkedin.com/in/leidy-vanesa-lotero-cruz-196739207/',
-  email: 'vanesacruz0816@gmail.com',
+  email: 'contacto@vanesalotero.com',
   whatsapp: '573146963798',
   phone: '+57 314 696 3798',
   experienceYears: 8,
