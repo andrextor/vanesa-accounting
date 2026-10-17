@@ -2,13 +2,13 @@ import type { Content } from './content';
 
 export const en: Content = {
   meta: {
-    title: 'Vanesa Lotero · Public Accountant in Colombia',
+    title: 'Vanesa Lotero · Public Accountant in Cali and Yumbo',
     description:
-      'Bookkeeping, taxes and tax compliance for individuals and small businesses in Colombia. Income tax, VAT, IFRS and clear advice.',
+      'Bookkeeping, taxes and income tax returns for individuals and small businesses. In person in Cali and Yumbo, online across Colombia.',
   },
   role: 'Public Accountant',
   roleLine: 'Public Accountant · Financial Administrator',
-  location: 'Colombia',
+  location: 'Cali and Yumbo, Colombia',
   nav: [
     { href: '#servicios', label: 'Services' },
     { href: '#para-quien', label: 'Who it’s for' },
@@ -55,7 +55,7 @@ export const en: Content = {
     portrait: 'Vanesa Lotero reviewing a financial statement at her desk',
   },
   hero: {
-    eyebrow: 'Public Accountant · Colombia',
+    eyebrow: 'Public Accountant · Cali and Yumbo',
     heading: 'Your numbers in order, your business at ease.',
     lead: 'Bookkeeping, taxes and tax compliance for individuals and small businesses, explained in plain language.',
   },
@@ -86,7 +86,7 @@ export const en: Content = {
     contact: {
       eyebrow: 'Contact',
       title: 'Let’s get your accounts in order.',
-      lead: 'Write to me and tell me about your case. I reply personally.',
+      lead: 'I work in person in Cali and Yumbo, and online from anywhere in Colombia, the United States or Spain. Write to me and I reply personally.',
     },
   },
   services: [
@@ -99,6 +99,7 @@ export const en: Content = {
     {
       icon: 'receipt',
       title: 'Individual income tax return',
+      href: '/declaracion-de-renta/',
       description: 'We review your income, deductions and benefits to file your return on time and without surprises.',
     },
     {
@@ -173,6 +174,61 @@ export const en: Content = {
       'I’m Vanesa Lotero, Public Accountant and Financial Administrator, with more than 8 years of experience in accounting and financial management.',
       'I help individuals, entrepreneurs and small businesses keep their numbers in order and meet their tax obligations, explaining every figure in simple language so you can decide with confidence.',
     ],
+  },
+  incomeTax: {
+    meta: {
+      title: 'Income tax returns in Cali and Yumbo · Vanesa Lotero',
+      description:
+        'Colombian income tax returns for individuals, in person in Cali and Yumbo or fully online from Colombia, the United States and Spain. First conversation is free.',
+    },
+    eyebrow: 'Income tax return · Cali and Yumbo',
+    heading: 'Your income tax return, on time and without surprises.',
+    lead: 'We review your income, deductions and benefits, and I file your return with the DIAN. In person in Cali and Yumbo, or online from wherever you are.',
+    facts: {
+      eyebrow: 'The essentials',
+      title: 'How it works.',
+      items: [
+        'For individuals who exceed the thresholds the DIAN sets each year.',
+        'The whole process can be online: documents, review and filing, no travel needed.',
+        'If you live in the United States or Spain, we work online just as in Colombia.',
+        'The first conversation is free and the quote comes with no obligation.',
+      ],
+    },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'What people ask me most about income tax.',
+      items: [
+        {
+          question: 'How do I know if I have to file an income tax return?',
+          answer:
+            'Each year the DIAN sets thresholds for income, assets, purchases and spending, bank deposits and card use. If you exceeded any of them during the year, you must file. We go through your transactions together and I tell you whether it applies to you.',
+        },
+        {
+          question: 'What documents do I need?',
+          answer:
+            'It depends on whether you file as an individual or as a company, and on your sources of income. In the first conversation I give you the exact list for your case.',
+        },
+        {
+          question: 'How much does it cost to prepare an income tax return?',
+          answer:
+            'There is no fixed fee: it depends on the tax year and the complexity of your return. I quote with no obligation and the first conversation is free.',
+        },
+        {
+          question: 'Can I do the whole process online?',
+          answer:
+            'Yes. You send me the documents, we review your information online and I file the return. I work this way across Colombia, the United States and Spain.',
+        },
+        {
+          question: 'What happens if I did not file on time?',
+          answer:
+            'Filing late results in a penalty from the DIAN. Write to me and we will look at how to get you up to date.',
+        },
+        {
+          question: 'Can I verify your professional license?',
+          answer: 'Yes. I do not publish it on the website, but I send it to you on WhatsApp before we start.',
+        },
+      ],
+    },
   },
   education: [
     { title: 'Public Accountant', institution: 'Corporación Universitaria UNITEC', year: 2025 },

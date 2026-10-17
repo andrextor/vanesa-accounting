@@ -147,7 +147,7 @@ Un ancestro con `overflow: hidden` se convierte en contenedor de scroll y congel
 | 4 ✅ | B.2 Utilidades de fondo en `global.css` | — |
 | 5 ✅ | B.3 Aplicar fondos sección a sección (un commit por sección) | 4 |
 | 6 ✅ | B.4 Contador, línea de scroll, línea de pasos | 4 |
-| 7 ⏳ | A.2.5 Páginas por servicio | Descripciones revisadas por Vanesa |
+| 7 ◐ | A.2.5 Páginas por servicio | Hecha solo la de renta (`/declaracion-de-renta/`, página estática con FAQ, sin colección). El resto, cuando Vanesa revise las descripciones |
 | 8 ⏳ | A.2.6 Privacidad y 404 | Datos legales de Vanesa (cédula/NIT) |
 | 9 ✅ | A.2.7 + B.5 Verificación: Lighthouse 100×4, reduced-motion comprobado (solo queda el fundido de opacidad del indicador de scroll) | Todo |
 

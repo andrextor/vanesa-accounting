@@ -28,7 +28,7 @@ const consultation = whatsappUrl(t.whatsapp.greeting);
           t.nav.map((link) => (
             <li>
               <a
-                href={link.href}
+                href={`${home}${link.href}`}
                 data-nav-link
                 class="flex h-9 items-center rounded-full px-3.5 text-sm text-ink-soft transition-colors duration-500 ease-fluid hover:text-ink aria-[current]:text-ink"
               >
@@ -83,7 +83,7 @@ const consultation = whatsappUrl(t.whatsapp.greeting);
             class="translate-y-10 opacity-0 transition-all duration-700 ease-fluid group-data-open/menu:translate-y-0 group-data-open/menu:opacity-100"
             style={`transition-delay: ${100 + index * 50}ms`}
           >
-            <a href={link.href} data-menu-link class="text-5xl font-medium tracking-[-0.04em] text-ink">
+            <a href={`${home}${link.href}`} data-menu-link class="text-5xl font-medium tracking-[-0.04em] text-ink">
               {link.label}
             </a>
           </li>
@@ -152,7 +152,7 @@ const consultation = whatsappUrl(t.whatsapp.greeting);
 
   const setActive = (href: string | null): void => {
     for (const link of navLinks) {
-      if (link.getAttribute('href') === href) link.setAttribute('aria-current', 'location');
+      if (link.hash === href) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     }
     moveIndicator();
@@ -163,7 +163,7 @@ const consultation = whatsappUrl(t.whatsapp.greeting);
       for (const entry of entries) {
         if (entry.isIntersecting) {
           const href = `#${entry.target.id}`;
-          setActive(navLinks.some((link) => link.getAttribute('href') === href) ? href : null);
+          setActive(navLinks.some((link) => link.hash === href) ? href : null);
         }
       }
     },

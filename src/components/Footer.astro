@@ -7,13 +7,14 @@ import Logo from './Logo.astro';
 const locale = resolveLocale(Astro.currentLocale);
 const t = getContent(locale);
 const year = new Date().getFullYear();
+const home = getRelativeLocaleUrl(locale);
 ---
 
 <footer class="relative isolate bg-linear-to-b from-ink to-[#070e1a] text-white">
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-noise"></div>
   <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-5 py-14 md:grid-cols-[2fr_1fr_1fr] md:px-10">
     <div>
-      <a href={getRelativeLocaleUrl(locale)} class="inline-block text-2xl">
+      <a href={home} class="inline-block text-2xl">
         <Logo tone="dark" withRole />
       </a>
       <p class="mt-4 max-w-sm text-sm leading-relaxed text-white/60">{t.flagship}.</p>
@@ -21,7 +22,7 @@ const year = new Date().getFullYear();
     <nav aria-label={t.ui.footerNav}>
       <p class="text-xs font-medium uppercase tracking-[0.18em] text-white/50">{t.ui.navigation}</p>
       <ul class="mt-4 space-y-2 text-sm">
-        {t.nav.map((item) => <li><a href={item.href} class="text-white/75 transition hover:text-white">{item.label}</a></li>)}
+        {t.nav.map((item) => <li><a href={`${home}${item.href}`} class="text-white/75 transition hover:text-white">{item.label}</a></li>)}
       </ul>
     </nav>
     <div>

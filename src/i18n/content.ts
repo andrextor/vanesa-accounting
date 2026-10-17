@@ -4,6 +4,12 @@ export interface Service {
   icon: IconName;
   title: string;
   description: string;
+  href?: string;
+}
+
+export interface Faq {
+  question: string;
+  answer: string;
 }
 
 export interface Step {
@@ -95,6 +101,14 @@ export interface Content {
   sectors: string[];
   steps: Step[];
   about: { heading: string; body: string[] };
+  incomeTax: {
+    meta: { title: string; description: string };
+    eyebrow: string;
+    heading: string;
+    lead: string;
+    facts: SectionCopy & { items: string[] };
+    faq: SectionCopy & { items: Faq[] };
+  };
   education: Degree[];
   certifications: string[];
   training: string[];
