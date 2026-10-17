@@ -2,6 +2,8 @@
 
 Borrador 1 · 17/10/2026 · Rama sugerida `feat/seo-ai-agents`. Parte del estado de `main` tras el PR #6.
 
+**Estado (17/10/2026):** tareas 1–3 hechas en la rama (`` estables, `hasOfferCatalog`, `llms.txt`); `astro check` y Biome sin errores. Pendientes 4 (dominio y deploy), 5 y 6 (datos de Vanesa).
+
 **Objetivo:** que Claude, ChatGPT, Gemini y Perplexity, cuando buscan en la web por "contadora en Colombia", "declaración de renta persona natural" o el nombre de Vanesa, puedan leer la página, entender qué ofrece y citarla con datos correctos. Complementa `SEO-AND-BACKGROUNDS.md` (parte A), no lo reemplaza.
 
 **Referencia:** la misma mejora ya está hecha en `stephany-art`, rama `feat/seo-ai-agents` (commit `95581bd`): `src/pages/llms.txt.ts` y `src/lib/seo.ts`.
@@ -20,10 +22,10 @@ Cómo leen los agentes: descargan el HTML **sin ejecutar JavaScript**, respetan 
 | Jerarquía de encabezados | ✅ | 1 `h1`, 5 `h2`, 17 `h3` |
 | Sitemap con alternativas de idioma | ✅ | `i18n` ya configurado |
 | **Dominio en producción** | ❌ | `vanesalotero.com` no resuelve hoy (`curl` sin respuesta). **Sin sitio publicado ningún agente puede leer nada**: es el bloqueo principal |
-| `@id` del JSON-LD | ⚠️ | `StructuredData.astro` usa la URL de la página (`/` y `/en/`), así que Vanesa en español y en inglés son **dos personas distintas** para un parser. Debe ser un `@id` fijo de la raíz |
-| Servicios en JSON-LD | ⚠️ | Solo `knowsAbout` con los títulos. Falta `hasOfferCatalog` con cada `Service` y su descripción, que es lo que un agente cita al responder "qué hace" |
+| `@id` del JSON-LD | ✅ | `StructuredData.astro` usa la URL de la página (`/` y `/en/`), así que Vanesa en español y en inglés son **dos personas distintas** para un parser. Debe ser un `@id` fijo de la raíz |
+| Servicios en JSON-LD | ✅ | Solo `knowsAbout` con los títulos. Falta `hasOfferCatalog` con cada `Service` y su descripción, que es lo que un agente cita al responder "qué hace" |
 | Ciudad / zona de atención | ❌ | `areaServed: Colombia` sin ciudad ni `address`. Pendiente de `CLIENT-QUESTIONS.md` |
-| `llms.txt` | ❌ | No existe |
+| `llms.txt` | ✅ | `src/pages/llms.txt.ts`, generado desde `getContent('es')` |
 | `FAQPage` | ❌ | Bloqueado: la FAQ depende de respuestas de Vanesa (tarea 7 del plan anterior) |
 
 ## 2 · Tareas
@@ -61,10 +63,10 @@ Un commit por tarea, en este orden.
 
 | # | Tarea | Depende de |
 |---|---|---|
-| 1 | 2.1 `@id` estables | — |
-| 2 | 2.2 Catálogo de servicios | 1 |
-| 3 | 2.3 `llms.txt` | — |
-| 4 | 2.5 Publicar y verificar | Dominio y deploy |
+| 1 ✅ | 2.1 `@id` estables | — |
+| 2 ✅ | 2.2 Catálogo de servicios | 1 |
+| 3 ✅ | 2.3 `llms.txt` | — |
+| 4 ⏳ | 2.5 Publicar y verificar | Dominio y deploy |
 | 5 ⏳ | 2.4 Ubicación | Ciudad confirmada por Vanesa |
 | 6 ⏳ | `FAQPage` (tarea 7 de `SEO-AND-BACKGROUNDS.md`) | Respuestas de Vanesa |
 
