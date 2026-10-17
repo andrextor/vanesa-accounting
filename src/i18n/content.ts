@@ -85,6 +85,17 @@ export interface Content {
     greeting: string;
     serviceInquiry: (service: string) => string;
   };
+  form: {
+    name: string;
+    email: string;
+    message: string;
+    send: string;
+    sending: string;
+    success: string;
+    error: string;
+    limit: string;
+    subject: string;
+  };
   alts: { hero: string; meeting: string; portrait: string };
   hero: { eyebrow: string; heading: string; lead: string };
   stats: { years: string; degrees: string; certifications: string; tools: string };

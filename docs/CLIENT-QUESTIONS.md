@@ -44,7 +44,7 @@ Para que la web solo muestre información real. Responde lo que puedas; lo que q
 17. ~~Ciudad.~~ ✅ Presencial en Cali y Yumbo; virtual en toda Colombia, Estados Unidos y España.
 18. ~~Oficina.~~ ✅ Todo es virtual, sin dirección pública.
 19. ~~WhatsApp.~~ ✅ +57 314 696 3798. Falta: horario de atención.
-20. ~~Correo.~~ ✅ vanesacruz0816@gmail.com. Falta: ¿tienes dominio propio (ej. vanesalotero.com) o lo compramos?
+20. ~~Correo.~~ ✅ contacto@vanesalotero.com (ImprovMX reenvía a su Gmail; DNS en Vercel, 17/10/2026).
 21. Redes: Instagram, Facebook, TikTok… (solo las que uses).
 22. ~~Google Business.~~ ✅ Lo está creando (17/10/2026). Debe usar el mismo nombre, teléfono y correo de la web.
 23. ¿Usas agenda en línea (Calendly, Cal.com) o todo por WhatsApp?
