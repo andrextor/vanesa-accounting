@@ -59,22 +59,23 @@ const inquiry = whatsappUrl(t.whatsapp.serviceInquiry(service.title));
     <section class="relative isolate bg-paper">
       <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots"></div>
       <div class="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32">
-        <SectionHeading eyebrow={page.facts.eyebrow} title={page.facts.title} />
-        <ul class="mt-12 grid gap-4 md:grid-cols-2">
-          {
-            page.facts.items.map((item, index) => (
-              <li
-                style={`--i: ${index}`}
-                class="reveal flex gap-4 rounded-xl border border-line bg-linear-to-b from-surface to-paper p-6"
-              >
-                <span class="grid size-9 shrink-0 place-items-center rounded-full bg-ink text-accent-light">
-                  <Icon name="check" class="size-4" />
-                </span>
-                <p class="leading-relaxed">{item}</p>
-              </li>
-            ))
-          }
-        </ul>
+        <div class="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
+          <div class="self-start lg:sticky lg:top-32">
+            <SectionHeading eyebrow={page.facts.eyebrow} title={page.facts.title} />
+          </div>
+          <ol class="divide-y divide-line border-y border-line">
+            {
+              page.facts.items.map((item, index) => (
+                <li style={`--i: ${index}`} class="reveal flex gap-6 py-7 md:gap-8">
+                  <span class="grid size-11 shrink-0 place-items-center rounded-full border border-line bg-paper text-sm font-medium text-ink-soft tabular-nums">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <p class="pt-2 text-xl leading-snug tracking-[-0.015em] text-balance md:text-2xl">{item}</p>
+                </li>
+              ))
+            }
+          </ol>
+        </div>
       </div>
     </section>
 
