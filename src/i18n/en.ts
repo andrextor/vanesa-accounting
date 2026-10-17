@@ -2,13 +2,13 @@ import type { Content } from './content';
 
 export const en: Content = {
   meta: {
-    title: 'Vanesa Lotero · Public Accountant in Colombia',
+    title: 'Vanesa Lotero · Public Accountant in Cali and Yumbo',
     description:
-      'Bookkeeping, taxes and tax compliance for individuals and small businesses in Colombia. Income tax, VAT, IFRS and clear advice.',
+      'Bookkeeping, taxes and income tax returns for individuals and small businesses. In person in Cali and Yumbo, online across Colombia.',
   },
   role: 'Public Accountant',
   roleLine: 'Public Accountant · Financial Administrator',
-  location: 'Colombia',
+  location: 'Cali and Yumbo, Colombia',
   nav: [
     { href: '#servicios', label: 'Services' },
     { href: '#para-quien', label: 'Who it’s for' },
@@ -55,7 +55,7 @@ export const en: Content = {
     portrait: 'Vanesa Lotero reviewing a financial statement at her desk',
   },
   hero: {
-    eyebrow: 'Public Accountant · Colombia',
+    eyebrow: 'Public Accountant · Cali and Yumbo',
     heading: 'Your numbers in order, your business at ease.',
     lead: 'Bookkeeping, taxes and tax compliance for individuals and small businesses, explained in plain language.',
   },
@@ -86,7 +86,7 @@ export const en: Content = {
     contact: {
       eyebrow: 'Contact',
       title: 'Let’s get your accounts in order.',
-      lead: 'Write to me and tell me about your case. I reply personally.',
+      lead: 'I work in person in Cali and Yumbo, and online from anywhere in Colombia, the United States or Spain. Write to me and I reply personally.',
     },
   },
   services: [

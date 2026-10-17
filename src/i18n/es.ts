@@ -2,13 +2,13 @@ import type { Content } from './content';
 
 export const es: Content = {
   meta: {
-    title: 'Vanesa Lotero · Contadora Pública en Colombia',
+    title: 'Vanesa Lotero · Contadora Pública en Cali y Yumbo',
     description:
-      'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas en Colombia. Renta, IVA, NIIF y asesoría clara.',
+      'Contabilidad, impuestos y declaración de renta para personas naturales y pequeñas empresas. Presencial en Cali y Yumbo, virtual en toda Colombia.',
   },
   role: 'Contadora Pública',
   roleLine: 'Contadora Pública · Administradora Financiera',
-  location: 'Colombia',
+  location: 'Cali y Yumbo, Colombia',
   nav: [
     { href: '#servicios', label: 'Servicios' },
     { href: '#para-quien', label: 'Para quién' },
@@ -55,7 +55,7 @@ export const es: Content = {
     portrait: 'Vanesa Lotero revisando un estado financiero en su escritorio',
   },
   hero: {
-    eyebrow: 'Contadora Pública · Colombia',
+    eyebrow: 'Contadora Pública · Cali y Yumbo',
     heading: 'Tus números en orden, tu negocio en calma.',
     lead: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas, explicado en un lenguaje claro.',
   },
@@ -86,7 +86,7 @@ export const es: Content = {
     contact: {
       eyebrow: 'Contacto',
       title: 'Pongamos tus cuentas en orden.',
-      lead: 'Escríbeme y cuéntame tu caso. Te respondo personalmente.',
+      lead: 'Atiendo en persona en Cali y Yumbo, y en línea desde cualquier lugar de Colombia, Estados Unidos o España. Escríbeme y te respondo personalmente.',
     },
   },
   // Service list confirmed by Vanesa; descriptions are draft copy pending her review.

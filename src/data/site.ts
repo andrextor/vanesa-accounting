@@ -6,6 +6,8 @@ export const site = {
   whatsapp: '573146963798',
   phone: '+57 314 696 3798',
   experienceYears: 8,
+  inPersonCities: ['Cali', 'Yumbo'],
+  remoteCountries: ['Colombia', 'United States', 'Spain'],
   software: ['Alegra', 'SAP', 'Siigo', 'Helisa', 'QuickBooks Online', 'Microsoft Excel', 'Google Sheets', 'Power BI'],
 } as const;
 

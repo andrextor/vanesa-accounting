@@ -7,6 +7,10 @@ const t = getContent(locale);
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const id = (fragment: string): string => new URL(`/#${fragment}`, Astro.site).href;
 const personId = id('person');
+const areaServed = [
+  ...site.inPersonCities.map((name) => ({ '@type': 'City', name })),
+  ...site.remoteCountries.map((name) => ({ '@type': 'Country', name })),
+];
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -17,7 +21,7 @@ const graph = {
       url,
       telephone: site.phone,
       email: site.email,
-      areaServed: { '@type': 'Country', name: 'Colombia' },
+      areaServed,
       founder: { '@id': personId },
       knowsAbout: t.services.map((service) => service.title),
       hasOfferCatalog: {
