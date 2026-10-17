@@ -54,20 +54,26 @@ const fieldClass =
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" />
-        <div class="grid gap-4 sm:grid-cols-2">
+        <div data-fields class="grid gap-4">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="grid gap-1.5 text-sm text-white/60">
+              {t.form.name}
+              <input type="text" name="name" required autocomplete="name" class={fieldClass} />
+            </label>
+            <label class="grid gap-1.5 text-sm text-white/60">
+              {t.form.email}
+              <input type="email" name="email" required autocomplete="email" class={fieldClass} />
+            </label>
+          </div>
           <label class="grid gap-1.5 text-sm text-white/60">
-            {t.form.name}
-            <input type="text" name="name" required autocomplete="name" class={fieldClass} />
+            {t.form.phone}
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" class={fieldClass} />
           </label>
           <label class="grid gap-1.5 text-sm text-white/60">
-            {t.form.email}
-            <input type="email" name="email" required autocomplete="email" class={fieldClass} />
+            {t.form.message}
+            <textarea name="message" required rows="4" class={fieldClass}></textarea>
           </label>
         </div>
-        <label class="grid gap-1.5 text-sm text-white/60">
-          {t.form.message}
-          <textarea name="message" required rows="4" class={fieldClass}></textarea>
-        </label>
         <div class="flex flex-wrap items-center gap-4">
           <button
             type="submit"
@@ -85,7 +91,7 @@ const fieldClass =
             data-success={t.form.success}
             data-error={t.form.error}
             data-limit={t.form.limit}
-            class="text-sm text-white/80"
+            class="text-base text-white/80"
           >
           </p>
         </div>
@@ -118,6 +124,7 @@ const fieldClass =
   const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
   const button = form?.querySelector<HTMLButtonElement>('[data-submit]');
   const status = form?.querySelector<HTMLParagraphElement>('[data-status]');
+  const fields = form?.querySelector<HTMLElement>('[data-fields]');
   const sentKey = 'contact-sent-at';
   const dayMs = 86_400_000;
 
@@ -134,15 +141,19 @@ const fieldClass =
       localStorage.setItem(sentKey, String(Date.now()));
     } catch {}
   };
+  const showDone = (message: string | undefined): void => {
+    if (!fields || !button || !status) return;
+    fields.hidden = true;
+    button.hidden = true;
+    status.textContent = message ?? '';
+  };
+
+  if (sentToday()) showDone(status?.dataset.limit);
 
   // Without JS the form still posts to FormSubmit, which shows its own confirmation page.
   form?.addEventListener('submit', async (event) => {
     if (!button || !status) return;
     event.preventDefault();
-    if (sentToday()) {
-      status.textContent = status.dataset.limit ?? '';
-      return;
-    }
     const label = button.innerHTML;
     button.disabled = true;
     button.textContent = button.dataset.sending ?? '';
@@ -156,7 +167,7 @@ const fieldClass =
       if (!response.ok) throw new Error(String(response.status));
       form.reset();
       markSent();
-      status.textContent = status.dataset.success ?? '';
+      showDone(status.dataset.success);
     } catch {
       status.textContent = status.dataset.error ?? '';
     } finally {
