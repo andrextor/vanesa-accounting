@@ -5,13 +5,14 @@ import { getContent, htmlLang, resolveLocale } from '../i18n';
 const locale = resolveLocale(Astro.currentLocale);
 const t = getContent(locale);
 const url = new URL(Astro.url.pathname, Astro.site).href;
-const personId = `${url}#person`;
+const id = (fragment: string): string => new URL(`/#${fragment}`, Astro.site).href;
+const personId = id('person');
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'AccountingService',
-      '@id': `${url}#business`,
+      '@id': id('business'),
       name: `${site.name} · ${t.role}`,
       url,
       telephone: site.phone,
@@ -19,6 +20,14 @@ const graph = {
       areaServed: { '@type': 'Country', name: 'Colombia' },
       founder: { '@id': personId },
       knowsAbout: t.services.map((service) => service.title),
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: t.sections.services.eyebrow,
+        itemListElement: t.services.map((service) => ({
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: service.title, description: service.description },
+        })),
+      },
       sameAs: [site.linkedin],
     },
     {
@@ -39,7 +48,7 @@ const graph = {
     },
     {
       '@type': 'WebSite',
-      '@id': `${url}#website`,
+      '@id': id('website'),
       url,
       name: t.meta.title,
       inLanguage: htmlLang[locale],
