@@ -1,5 +1,7 @@
 ---
+import { getImage } from 'astro:assets';
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
+import portrait from '../assets/portraits/vanesa-wide.jpg';
 import { site } from '../data/site';
 import { getContent, htmlLang, resolveLocale } from '../i18n';
 import type { Faq, Service } from '../i18n/content';
@@ -16,6 +18,11 @@ const url = getAbsoluteLocaleUrl(locale);
 const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
 const id = (fragment: string): string => new URL(`/#${fragment}`, Astro.site).href;
 const personId = id('person');
+// Same render as the Open Graph image in Layout, so the build emits one file.
+const image = new URL(
+  (await getImage({ src: portrait, format: 'jpg', width: 1200, height: 630, fit: 'cover' })).src,
+  Astro.site,
+).href;
 const areaServed = [
   ...site.inPersonCities.map((name) => ({ '@type': 'City', name })),
   ...site.remoteCountries.map((name) => ({ '@type': 'Country', name })),
@@ -28,6 +35,7 @@ const graph = {
       '@id': id('business'),
       name: `${site.name} · ${t.role}`,
       url,
+      image,
       telephone: site.phone,
       email: site.email,
       areaServed,
@@ -49,6 +57,7 @@ const graph = {
       name: site.name,
       jobTitle: t.role,
       url,
+      image,
       email: site.email,
       telephone: site.phone,
       sameAs: [site.linkedin],
