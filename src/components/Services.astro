@@ -32,6 +32,7 @@ const t = getContent(locale);
             <a
               href={service.href ? getRelativeLocaleUrl(locale, service.href) : whatsappUrl(t.whatsapp.serviceInquiry(service.title))}
               {...(service.href ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+              data-scroll-hover
               class="group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-paper p-7 transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_24px_48px_-28px_rgb(15_27_45/0.35)]"
             >
               <span

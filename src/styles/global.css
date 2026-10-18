@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* Touch screens have no hover: [data-scroll-hover] cards get data-hover from the layout script while they cross the middle of the viewport. */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+  &:where([data-hover]) {
+    @slot;
+  }
+}
+
+@custom-variant group-hover {
+  @media (hover: hover) {
+    &:is(:where(.group):hover *) {
+      @slot;
+    }
+  }
+  &:is(:where(.group[data-hover]) *) {
+    @slot;
+  }
+}
+
 @theme {
   --font-sans: var(--font-instrument-sans);
   --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);

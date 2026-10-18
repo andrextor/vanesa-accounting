@@ -41,6 +41,7 @@ const t = getContent(Astro.currentLocale);
           t.steps.map((step, index) => (
             <li
               style={`--i: ${index}`}
+              data-scroll-hover
               class="reveal group flex gap-6 rounded-xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:border-accent-light/40 hover:bg-white/[0.06]"
             >
               <span class="grid size-11 shrink-0 place-items-center rounded-full border border-accent-light/40 bg-ink text-sm font-medium text-accent-light tabular-nums transition duration-300 group-hover:bg-accent-light group-hover:text-ink">
