@@ -7,6 +7,7 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'es';
 
 export const incomeTaxPath = '/declaracion-de-renta/';
+export const businessAccountingPath = '/contabilidad-para-empresas/';
 
 // Pages share their path across languages, so swapping the locale prefix lands on the same page.
 export const localelessPath = (pathname: string): string =>

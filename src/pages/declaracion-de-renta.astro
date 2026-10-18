@@ -1,5 +1,8 @@
 ---
-import IncomeTax from '../components/IncomeTax.astro';
+import ServicePage from '../components/ServicePage.astro';
+import { getContent, incomeTaxPath } from '../i18n';
+
+const t = getContent(Astro.currentLocale);
 ---
 
-<IncomeTax />
+<ServicePage page={t.incomeTax} path={incomeTaxPath} />

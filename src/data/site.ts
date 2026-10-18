@@ -9,7 +9,17 @@ export const site = {
   experienceYears: 8,
   inPersonCities: ['Cali', 'Yumbo'],
   remoteCountries: ['Colombia', 'United States', 'Spain'],
-  software: ['Alegra', 'SAP', 'Siigo', 'Helisa', 'QuickBooks Online', 'Microsoft Excel', 'Google Sheets', 'Power BI'],
+  software: [
+    'Alegra',
+    'SAP',
+    'Siigo',
+    'Vector',
+    'Helisa',
+    'QuickBooks Online',
+    'Microsoft Excel',
+    'Google Sheets',
+    'Power BI',
+  ],
 } as const;
 
 export const whatsappUrl = (message: string): string =>

@@ -1,6 +1,7 @@
 ---
 import { whatsappUrl } from '../data/site';
-import { getContent, incomeTaxPath, resolveLocale } from '../i18n';
+import { getContent, resolveLocale } from '../i18n';
+import type { ServicePageContent } from '../i18n/content';
 import Layout from '../layouts/Layout.astro';
 import Contact from './Contact.astro';
 import Footer from './Footer.astro';
@@ -11,10 +12,15 @@ import SectionHeading from './SectionHeading.astro';
 import StructuredData from './StructuredData.astro';
 import WhatsAppButton from './WhatsAppButton.astro';
 
+interface Props {
+  page: ServicePageContent;
+  path: string;
+}
+
+const { page, path } = Astro.props;
 const t = getContent(resolveLocale(Astro.currentLocale));
-const page = t.incomeTax;
-const service = t.services.find((item) => item.href === incomeTaxPath);
-if (!service) throw new Error(`No service links to ${incomeTaxPath}`);
+const service = t.services.find((item) => item.href === path);
+if (!service) throw new Error(`No service links to ${path}`);
 const inquiry = whatsappUrl(t.whatsapp.serviceInquiry(service.title));
 ---
 
