@@ -76,6 +76,18 @@ body {
   }
 }
 
+/* Touch screens never see hover states, so a quick press-in replaces them. */
+@media (hover: none) {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :where(a, button):active {
+    scale: 0.97;
+    transition-duration: 100ms;
+  }
+}
+
 /* Scroll reveals run on the compositor via scroll-driven animations; unsupported browsers show content at rest. */
 @utility reveal {
   @supports (animation-timeline: view()) {
