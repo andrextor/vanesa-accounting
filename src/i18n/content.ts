@@ -46,6 +46,15 @@ export interface SectionCopy {
   lead?: string;
 }
 
+export interface ServicePageContent {
+  meta: { title: string; description: string };
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  facts: SectionCopy & { items: string[] };
+  faq: SectionCopy & { items: Faq[] };
+}
+
 export interface Content {
   meta: { title: string; description: string };
   role: string;
@@ -113,14 +122,8 @@ export interface Content {
   sectors: string[];
   steps: Step[];
   about: { heading: string; body: string[] };
-  incomeTax: {
-    meta: { title: string; description: string };
-    eyebrow: string;
-    heading: string;
-    lead: string;
-    facts: SectionCopy & { items: string[] };
-    faq: SectionCopy & { items: Faq[] };
-  };
+  incomeTax: ServicePageContent;
+  businessAccounting: ServicePageContent;
   education: Degree[];
   certifications: string[];
   training: string[];

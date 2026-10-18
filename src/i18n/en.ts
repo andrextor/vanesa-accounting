@@ -105,6 +105,7 @@ export const en: Content = {
     {
       icon: 'calculator',
       title: 'Monthly bookkeeping',
+      href: '/contabilidad-para-empresas/',
       description:
         'Up-to-date records, reconciliations and closings so you know the real health of your business every month.',
     },
@@ -234,6 +235,69 @@ export const en: Content = {
           question: 'What happens if I did not file on time?',
           answer:
             'Filing late results in a penalty from the DIAN. Write to me and we will look at how to get you up to date.',
+        },
+        {
+          question: 'Can I verify your professional license?',
+          answer: 'Yes. I do not publish it on the website, but I send it to you on WhatsApp before we start.',
+        },
+      ],
+    },
+  },
+  businessAccounting: {
+    meta: {
+      title: 'Business accounting in Colombia · Vanesa Lotero',
+      description:
+        'Monthly bookkeeping for small businesses: electronic invoicing, payables and receivables, taxes and reports. In person in Cali and Yumbo, online across Colombia.',
+    },
+    eyebrow: 'Business accounting · Colombia',
+    heading: 'Your company’s books, up to date and explained.',
+    lead: 'I keep your business’s monthly accounting: electronic invoices, payables and receivables, taxes and reports, with meetings so you understand your numbers. In person in Cali and Yumbo, or online from anywhere in Colombia.',
+    facts: {
+      eyebrow: 'The essentials',
+      title: 'What is included.',
+      items: [
+        'Recording and review of supplier and customer electronic invoices, plus control of accounts payable and receivable.',
+        'Periodic taxes such as VAT, withholding and ICA, reconciliations and monthly closings, with reports and meetings to go over the results.',
+        'If your company is new, we define the accounting your RUT responsibilities require and set it up from day one. If it is behind, we bring it up to date.',
+        'Pricing is by package, based on your volume of transactions. The first conversation is free and the quote comes with no obligation.',
+      ],
+    },
+    faq: {
+      eyebrow: 'FAQ',
+      title: 'What businesses ask me most.',
+      items: [
+        {
+          question: 'Can I pay less tax?',
+          answer:
+            'It depends on how organized your records are, especially purchase and expense invoices. With that information complete and on time, we review what you can deduct within the law.',
+        },
+        {
+          question: 'What does monthly accounting include?',
+          answer:
+            'Recording and review of supplier and customer electronic invoices, accounts payable and receivable, periodic taxes, reconciliations and closings. Every month you get reports and we meet to go over them.',
+        },
+        {
+          question: 'How do you charge?',
+          answer:
+            'By package, based on your company’s volume of transactions. I quote with no obligation after the first conversation, which is free.',
+        },
+        {
+          question: 'Which accounting software do you work with?',
+          answer: 'Alegra, QuickBooks, Siigo and Vector. Tell me which one your company uses when we talk.',
+        },
+        {
+          question: 'My company is new. Where do we start?',
+          answer:
+            'We review your RUT responsibilities to define the accounting you need and set it up from the start, so you begin with everything in order.',
+        },
+        {
+          question: 'My books are behind. Will you take them on?',
+          answer: 'Yes. I also handle overdue accounting: we check where it stands and bring it up to date.',
+        },
+        {
+          question: 'Can I work with you without being in Cali?',
+          answer:
+            'Yes. I work in person in Cali and Yumbo, and online from anywhere in Colombia: documents, review, reports and meetings.',
         },
         {
           question: 'Can I verify your professional license?',

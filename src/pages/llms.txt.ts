@@ -1,12 +1,15 @@
 import type { APIRoute } from 'astro';
 import { site, whatsappUrl } from '../data/site';
-import { getContent, incomeTaxPath } from '../i18n';
+import { businessAccountingPath, getContent, incomeTaxPath } from '../i18n';
+import type { ServicePageContent } from '../i18n/content';
 
 // Plain-text summary for AI agents (https://llmstxt.org), built from the same content as the pages.
 export const GET: APIRoute = ({ site: origin }) => {
   const t = getContent('es');
   const url = (path: string): string => new URL(path, origin).href;
   const list = (items: string[]): string => items.map((item) => `- ${item}`).join('\n');
+  const faq = ({ faq }: ServicePageContent): string =>
+    `## ${faq.title}\n${faq.items.map(({ question, answer }) => `### ${question}\n${answer}`).join('\n\n')}`;
 
   const body = [
     `# ${site.name}`,
@@ -19,8 +22,9 @@ export const GET: APIRoute = ({ site: origin }) => {
     `## ${t.ui.sectorsLabel}\n${list(t.sectors)}`,
     `## ${t.sections.process.eyebrow}\n${t.steps.map(({ title, description }, index) => `${index + 1}. ${title}: ${description}`).join('\n')}`,
     `## ${t.ui.contact}\n- WhatsApp: ${site.phone} (${whatsappUrl(t.whatsapp.greeting)})\n- ${t.ui.email}: ${site.email}\n- LinkedIn: ${site.linkedin}`,
-    `## ${t.incomeTax.faq.eyebrow}\n${t.incomeTax.faq.items.map(({ question, answer }) => `### ${question}\n${answer}`).join('\n\n')}`,
-    `## Páginas\n- [Español](${url('/')})\n- [English](${url('/en/')})\n- [${t.incomeTax.meta.title}](${url(incomeTaxPath)})`,
+    faq(t.incomeTax),
+    faq(t.businessAccounting),
+    `## Páginas\n- [Español](${url('/')})\n- [English](${url('/en/')})\n- [${t.incomeTax.meta.title}](${url(incomeTaxPath)})\n- [${t.businessAccounting.meta.title}](${url(businessAccountingPath)})`,
   ].join('\n\n');
 
   return new Response(`${body}\n`, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

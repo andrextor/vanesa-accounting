@@ -1,0 +1,8 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+import { businessAccountingPath, getContent } from '../../i18n';
+
+const t = getContent(Astro.currentLocale);
+---
+
+<ServicePage page={t.businessAccounting} path={businessAccountingPath} />

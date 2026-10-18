@@ -106,6 +106,7 @@ export const es: Content = {
     {
       icon: 'calculator',
       title: 'Contabilidad mensual',
+      href: '/contabilidad-para-empresas/',
       description: 'Registro, conciliaciones y cierres al día para que conozcas la salud real de tu negocio cada mes.',
     },
     {
@@ -236,6 +237,70 @@ export const es: Content = {
           question: '¿Qué pasa si no presenté mi declaración a tiempo?',
           answer:
             'Presentarla fuera del plazo genera una sanción ante la DIAN. Escríbeme y revisamos cómo ponerte al día.',
+        },
+        {
+          question: '¿Puedo verificar tu tarjeta profesional?',
+          answer: 'Sí. No la publico en la web, pero te la envío por WhatsApp antes de empezar.',
+        },
+      ],
+    },
+  },
+  // Answers written from Vanesa's own replies (17/10/2026); no prices, scope or software invented.
+  businessAccounting: {
+    meta: {
+      title: 'Contabilidad para empresas en Colombia · Vanesa Lotero',
+      description:
+        'Contabilidad mensual para pequeñas empresas y negocios: facturación electrónica, cuentas por pagar y por cobrar, impuestos e informes. Presencial en Cali y Yumbo, virtual en toda Colombia.',
+    },
+    eyebrow: 'Contabilidad para empresas · Colombia',
+    heading: 'La contabilidad de tu empresa, al día y explicada.',
+    lead: 'Llevo la contabilidad mensual de tu negocio: facturas electrónicas, cuentas por pagar y por cobrar, impuestos e informes, con reuniones para que entiendas tus números. Presencial en Cali y Yumbo, o en línea desde cualquier lugar de Colombia.',
+    facts: {
+      eyebrow: 'Lo esencial',
+      title: 'Qué incluye.',
+      items: [
+        'Registro y revisión de las facturas electrónicas de proveedores y clientes, y control de cuentas por pagar y por cobrar.',
+        'Impuestos periódicos como IVA, retención en la fuente e ICA, conciliaciones y cierres mensuales, con informes y reuniones para revisar los resultados.',
+        'Si tu empresa es nueva, definimos la contabilidad que exigen las responsabilidades de tu RUT y la configuramos desde el inicio. Si está atrasada, la ponemos al día.',
+        'Cobro por paquetes según el volumen de movimientos. La primera conversación es gratis y la cotización, sin compromiso.',
+      ],
+    },
+    faq: {
+      eyebrow: 'Preguntas frecuentes',
+      title: 'Lo que más me preguntan las empresas.',
+      items: [
+        {
+          question: '¿Se puede pagar menos impuestos?',
+          answer:
+            'Depende de la organización de tus registros, en especial las facturas de compras y gastos. Con esa información completa y a tiempo, revisamos qué puedes descontar dentro de la ley.',
+        },
+        {
+          question: '¿Qué incluye la contabilidad mensual?',
+          answer:
+            'Registro y revisión de facturas electrónicas de proveedores y clientes, cuentas por pagar y por cobrar, impuestos periódicos, conciliaciones y cierres. Cada mes recibes informes y nos reunimos para revisarlos.',
+        },
+        {
+          question: '¿Cómo cobras el servicio?',
+          answer:
+            'Por paquetes, según el volumen de movimientos de tu empresa. Cotizo sin compromiso después de la primera conversación, que es gratis.',
+        },
+        {
+          question: '¿Con qué programa contable trabajas?',
+          answer: 'Con Alegra, QuickBooks, Siigo y Vector. Cuéntame cuál usa tu empresa cuando hablemos.',
+        },
+        {
+          question: 'Mi empresa es nueva, ¿por dónde empezamos?',
+          answer:
+            'Revisamos las responsabilidades de tu RUT para definir la contabilidad que necesitas y la configuramos desde el inicio, para que arranques con todo en orden.',
+        },
+        {
+          question: 'Tengo la contabilidad atrasada, ¿me recibes?',
+          answer: 'Sí. También llevo contabilidades atrasadas: revisamos en qué estado está y la ponemos al día.',
+        },
+        {
+          question: '¿Puedo tener contadora sin estar en Cali?',
+          answer:
+            'Sí. Atiendo en persona en Cali y Yumbo, y en línea desde cualquier lugar de Colombia: documentos, revisión, informes y reuniones.',
         },
         {
           question: '¿Puedo verificar tu tarjeta profesional?',
