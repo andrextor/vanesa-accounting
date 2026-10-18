@@ -16,6 +16,7 @@ const t = getContent(Astro.currentLocale);
         t.audiences.map((audience, index) => (
           <li
             style={`--i: ${index}`}
+            data-scroll-hover
             class="reveal group relative isolate overflow-hidden rounded-xl border border-line bg-linear-to-b from-surface to-paper p-8 transition duration-300 hover:border-accent/40"
           >
             <span

@@ -58,5 +58,16 @@ const ogAlt = `${site.name}, ${t.role.toLowerCase()}`;
       {t.ui.skipToContent}
     </a>
     <slot />
+    <script>
+      if (matchMedia('(hover: none)').matches) {
+        const band = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) entry.target.toggleAttribute('data-hover', entry.isIntersecting);
+          },
+          { rootMargin: '-35% 0px -35% 0px' },
+        );
+        for (const card of document.querySelectorAll('[data-scroll-hover]')) band.observe(card);
+      }
+    </script>
   </body>
 </html>
