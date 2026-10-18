@@ -2,7 +2,7 @@ import type { Content } from './content';
 
 export const es: Content = {
   meta: {
-    title: 'Vanesa Lotero · Contadora Pública en Cali y Yumbo',
+    title: 'Vanesa Lotero · Contadora Pública en Colombia',
     description:
       'Contabilidad, impuestos y declaración de renta para personas naturales y pequeñas empresas. Presencial en Cali y Yumbo, virtual en toda Colombia.',
   },
@@ -67,7 +67,7 @@ export const es: Content = {
     portrait: 'Vanesa Lotero revisando un estado financiero en su escritorio',
   },
   hero: {
-    eyebrow: 'Contadora Pública · Cali y Yumbo',
+    eyebrow: 'Contadora Pública · Colombia',
     heading: 'Tus números en orden, tu negocio en calma.',
     lead: 'Contabilidad, impuestos y cumplimiento tributario para personas naturales y pequeñas empresas, explicado en un lenguaje claro.',
   },
@@ -191,11 +191,11 @@ export const es: Content = {
   // Answers written from Vanesa's own replies (17/10/2026); no thresholds, prices or deadlines invented.
   incomeTax: {
     meta: {
-      title: 'Declaración de renta en Cali y Yumbo · Vanesa Lotero',
+      title: 'Declaración de renta en Colombia · Vanesa Lotero',
       description:
         'Declaración de renta para personas naturales, presencial en Cali y Yumbo o 100 % virtual desde Colombia, Estados Unidos y España. Primera conversación gratis.',
     },
-    eyebrow: 'Declaración de renta · Cali y Yumbo',
+    eyebrow: 'Declaración de renta · Colombia',
     heading: 'Tu declaración de renta, a tiempo y sin sorpresas.',
     lead: 'Revisamos tus ingresos, deducciones y beneficios, y presento tu declaración ante la DIAN. Presencial en Cali y Yumbo, o en línea desde donde estés.',
     facts: {

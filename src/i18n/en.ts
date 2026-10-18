@@ -2,7 +2,7 @@ import type { Content } from './content';
 
 export const en: Content = {
   meta: {
-    title: 'Vanesa Lotero · Public Accountant in Cali and Yumbo',
+    title: 'Vanesa Lotero · Public Accountant in Colombia',
     description:
       'Bookkeeping, taxes and income tax returns for individuals and small businesses. In person in Cali and Yumbo, online across Colombia.',
   },
@@ -67,7 +67,7 @@ export const en: Content = {
     portrait: 'Vanesa Lotero reviewing a financial statement at her desk',
   },
   hero: {
-    eyebrow: 'Public Accountant · Cali and Yumbo',
+    eyebrow: 'Public Accountant · Colombia',
     heading: 'Your numbers in order, your business at ease.',
     lead: 'Bookkeeping, taxes and tax compliance for individuals and small businesses, explained in plain language.',
   },
@@ -189,11 +189,11 @@ export const en: Content = {
   },
   incomeTax: {
     meta: {
-      title: 'Income tax returns in Cali and Yumbo · Vanesa Lotero',
+      title: 'Income tax returns in Colombia · Vanesa Lotero',
       description:
         'Colombian income tax returns for individuals, in person in Cali and Yumbo or fully online from Colombia, the United States and Spain. First conversation is free.',
     },
-    eyebrow: 'Income tax return · Cali and Yumbo',
+    eyebrow: 'Income tax return · Colombia',
     heading: 'Your income tax return, on time and without surprises.',
     lead: 'We review your income, deductions and benefits, and I file your return with the DIAN. In person in Cali and Yumbo, or online from wherever you are.',
     facts: {
