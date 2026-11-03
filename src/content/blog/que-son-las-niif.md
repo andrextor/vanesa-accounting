@@ -1,5 +1,5 @@
 ---
-title: ¿Qué son las NIIF y a quién aplican en Colombia?
+title: "NIIF en Colombia: qué son y a quién aplican en 2027"
 description: Qué son las Normas Internacionales de Información Financiera, los tres grupos en que se clasifican las empresas en Colombia y qué cambia en la contabilidad de tu negocio.
 published: 2026-11-02
 ---
@@ -37,7 +37,7 @@ Unos estados financieros bajo NIIF, bien hechos, te sirven para mucho más que c
 - Pedir **créditos** a los bancos, que los exigen para estudiar tu solicitud.
 - Participar en **licitaciones** o trabajar con empresas grandes.
 - Tomar **decisiones** con números confiables: cuánto ganas, cuánto debes y cuánto vale tu negocio.
-- Rendir cuentas a tus **socios**, que aprueban los estados financieros cada año, normalmente en los tres primeros meses.
+- Rendir cuentas a tus **socios**, que aprueban los estados financieros cada año, normalmente en los tres primeros meses: los de 2026 se aprueban a más tardar en marzo de 2027.
 
 ## ¿Tu empresa está al día?
 

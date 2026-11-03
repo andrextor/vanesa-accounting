@@ -1,14 +1,14 @@
 ---
-title: "Documentos para declarar renta: la lista completa"
-description: Qué certificados y soportes necesitas reunir para declarar renta como persona natural en Colombia, y cómo revisar lo que terceros ya le reportaron a la DIAN.
+title: "Documentos para declarar renta en 2027: la lista completa"
+description: Qué certificados y soportes necesitas reunir para declarar renta en 2027 (año gravable 2026) como persona natural en Colombia, y cómo revisar lo que terceros ya le reportaron a la DIAN.
 published: 2026-11-02
 ---
 
-La mitad del trabajo de una declaración de renta es reunir los papeles. Si los tienes listos antes de la temporada, todo es más rápido y no se te pasa ninguna deducción. Esta es la lista que les pido a mis clientes.
+La mitad del trabajo de una declaración de renta es reunir los papeles. Si los tienes listos antes de la temporada, todo es más rápido y no se te pasa ninguna deducción. Esta es la lista que les pido a mis clientes para la declaración de 2027, que corresponde al año gravable 2026.
 
 ## Ingresos
 
-- **Certificado de ingresos y retenciones** (formulario 220), si eres empleado. Te lo entrega la empresa a más tardar en marzo.
+- **Certificado de ingresos y retenciones** (formulario 220), si eres empleado. Te lo entrega la empresa a más tardar en marzo de 2027.
 - **Certificados de retención en la fuente**, si eres independiente y te pagaron honorarios o servicios.
 - **Contratos de arrendamiento** y el registro de lo que recibiste, si arriendas un inmueble.
 - **Certificado de pensión**, si estás pensionado.
@@ -16,7 +16,8 @@ La mitad del trabajo de una declaración de renta es reunir los papeles. Si los 
 
 ## Bancos e inversiones
 
-- **Certificados bancarios** de cada cuenta, con el saldo al 31 de diciembre y los intereses del año.
+- **Certificados bancarios** de cada cuenta, con el saldo al 31 de diciembre de 2026 y los intereses del año.
+- **Movimientos de Nequi, Daviplata y otras billeteras**, que también cuentan para los topes. Te explico cómo en [¿debo declarar si me transfieren por Nequi o Bre-B?](/blog/nequi-bre-b-declarar-renta/).
 - **Extractos de las tarjetas de crédito**, para saber cuánto consumiste.
 - **Certificados de inversiones**: CDT, fondos, criptoactivos o cuentas en el exterior.
 - **Certificados de deudas**: hipoteca, créditos de libre inversión o de vehículo, con el saldo al 31 de diciembre.

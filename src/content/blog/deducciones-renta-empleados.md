@@ -1,5 +1,5 @@
 ---
-title: Deducciones y rentas exentas para empleados en la declaración de renta
+title: Deducciones y rentas exentas para empleados en la declaración de renta 2027
 description: "Cómo pagar menos impuesto de renta siendo empleado en Colombia: dependientes, intereses de vivienda, medicina prepagada, aportes voluntarios y compras con factura electrónica, con sus límites en pesos."
 published: 2026-11-02
 ---
@@ -35,4 +35,4 @@ Cada caso cambia según los ingresos y los soportes. Lo importante es tener los 
 
 Los certificados de cada beneficio están en [la lista de documentos para declarar renta](/blog/documentos-para-declarar-renta/). Si quieres saber cuánto podrías ahorrar en tu caso, escríbeme y lo calculamos.
 
-*Este artículo es informativo y no reemplaza una asesoría sobre tu caso particular. Los límites corresponden a la Ley 2277 de 2022 y pueden cambiar con nuevas reformas.*
+*Este artículo es informativo y no reemplaza una asesoría sobre tu caso particular. Los límites corresponden a la Ley 2277 de 2022 y aplican a la declaración de 2027. El proyecto de Ley de Rescate Económico, radicado en octubre de 2026, podría cambiarlos desde el año gravable 2027 si se aprueba.*

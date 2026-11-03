@@ -28,7 +28,7 @@ El tope de ingresos equivale a unos **$6.110.300 al mes** en promedio. Si en 202
 - **Ingresos brutos:** todo lo que recibiste en el año antes de descuentos: salario, honorarios, arriendos, intereses, dividendos, pensiones, entre otros.
 - **Tarjeta de crédito:** la suma de todo lo que pagaste con tus tarjetas de crédito.
 - **Compras y consumos:** todo lo que gastaste en el año, con cualquier medio de pago.
-- **Consignaciones:** todo lo que entró a tus cuentas, aunque no sea un ingreso. Un préstamo o un giro de un familiar también suma.
+- **Consignaciones:** todo lo que entró a tus cuentas, aunque no sea un ingreso. Un préstamo o un giro de un familiar también suma, y también lo que recibes por Nequi, Daviplata o Bre-B ([lo explico aquí](/blog/nequi-bre-b-declarar-renta/)).
 
 ## Dos ejemplos
 

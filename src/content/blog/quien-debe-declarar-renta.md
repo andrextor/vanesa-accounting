@@ -28,7 +28,7 @@ Además, si eres **responsable de IVA** al 31 de diciembre, debes declarar sin i
 
 Casi todos piensan en el salario, pero muchas personas quedan obligadas por los otros criterios:
 
-- **Las consignaciones.** La DIAN suma todo lo que entra a tus cuentas, aunque no sea un ingreso: un préstamo, la venta de un carro o el dinero que te envía un familiar.
+- **Las consignaciones.** La DIAN suma todo lo que entra a tus cuentas, aunque no sea un ingreso: un préstamo, la venta de un carro o el dinero que te envía un familiar. Eso incluye Nequi, Daviplata y Bre-B: lo explico en [¿debo declarar si me transfieren por Nequi o Bre-B?](/blog/nequi-bre-b-declarar-renta/).
 - **La tarjeta de crédito.** Si pagas casi todo con tarjeta para acumular millas, es fácil superar el tope.
 - **El patrimonio.** Una casa o un apartamento a tu nombre puede bastar, aunque tengas una hipoteca: el patrimonio *bruto* no resta deudas.
 
@@ -45,6 +45,10 @@ No estás obligado, pero **puedes declarar de forma voluntaria**. Conviene hacer
 ## ¿Cuándo hay que declarar?
 
 Las personas naturales declaran normalmente **entre agosto y octubre**, según los dos últimos dígitos del NIT (el número de la cédula sin el dígito de verificación). En 2026 el plazo fue del 12 de agosto al 26 de octubre. La DIAN publica las fechas exactas para 2027 al final de este año; cuando salgan, actualizo este artículo.
+
+## ¿Cambia algo con la reforma?
+
+En octubre de 2026 el Gobierno radicó el proyecto de Ley de Rescate Económico, que cambiaría la tabla del impuesto de renta de las personas naturales. **No está aprobado** y, si se aprueba en 2026, aplicaría desde el año gravable 2027, es decir, para la declaración de 2028. **La declaración que presentas en 2027 no cambia.**
 
 ## ¿Qué pasa si no declaro estando obligado?
 

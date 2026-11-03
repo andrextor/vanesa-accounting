@@ -1,10 +1,10 @@
 ---
-title: Declaración de renta para colombianos que viven en el exterior
-description: Si vives en Estados Unidos, España u otro país, ¿debes declarar renta en Colombia? Residencia fiscal, doble tributación y cómo declarar sin viajar.
+title: Declaración de renta 2027 para colombianos que viven en el exterior
+description: Si vives en Estados Unidos, España u otro país, ¿debes declarar renta en Colombia en 2027? Residencia fiscal, doble tributación y cómo declarar sin viajar.
 published: 2026-11-02
 ---
 
-Vivir fuera de Colombia no te libera automáticamente de la DIAN, pero tampoco significa que debas declarar todo dos veces. La clave está en tu **residencia fiscal**.
+Vivir fuera de Colombia no te libera automáticamente de la DIAN, pero tampoco significa que debas declarar todo dos veces. La clave está en tu **residencia fiscal** durante 2026, el año que se declara en 2027.
 
 ## Paso 1: ¿sigues siendo residente fiscal en Colombia?
 

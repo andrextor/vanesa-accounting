@@ -1,6 +1,6 @@
 ---
-title: "Régimen Simple de Tributación: ¿le conviene a tu negocio?"
-description: Qué es el Régimen Simple de Tributación (RST) en Colombia, quién puede inscribirse, sus ventajas, cuándo no conviene y hasta qué fecha te puedes cambiar.
+title: "Régimen Simple de Tributación en 2027: ¿le conviene a tu negocio?"
+description: Qué es el Régimen Simple de Tributación (RST) en Colombia, quién puede inscribirse para 2027, sus ventajas, cuándo no conviene y hasta qué fecha te puedes cambiar.
 published: 2026-11-02
 ---
 
@@ -15,7 +15,7 @@ Es un impuesto que **reemplaza el impuesto de renta** y, en un solo pago, **inte
 - **Personas naturales** que tengan un negocio o ejerzan una profesión de forma independiente.
 - **Sociedades** cuyos socios sean personas naturales.
 
-En ambos casos, los ingresos brutos del año anterior deben ser **inferiores a 100.000 UVT** (unos $5.237 millones con la UVT de 2026).
+En ambos casos, los ingresos brutos del año anterior deben ser **inferiores a 100.000 UVT**. Para aplicar en 2027 se miran los ingresos de 2026: unos $5.237 millones con la UVT de 2026.
 
 Algunas actividades no pueden inscribirse, como la asesoría financiera o el factoring. Tampoco aplica para quien, en la práctica, tiene una relación laboral con su contratante.
 
@@ -35,7 +35,7 @@ En cambio, suele convenir a profesionales independientes y servicios con pocos c
 
 ## ¿Hasta cuándo puedo cambiarme?
 
-Si ya tienes RUT, puedes inscribirte en el Régimen Simple hasta el **último día hábil de febrero** del año en que quieres aplicarlo. Si estás creando tu negocio, puedes escogerlo desde la inscripción en el RUT. Por eso noviembre y diciembre son buen momento para hacer las cuentas.
+Si ya tienes RUT, puedes inscribirte en el Régimen Simple hasta el **último día hábil de febrero** del año en que quieres aplicarlo: para 2027, el último día hábil de febrero de 2027. Si estás creando tu negocio, puedes escogerlo desde la inscripción en el RUT. Por eso noviembre y diciembre son buen momento para hacer las cuentas.
 
 ## Hagamos la comparación
 

@@ -1,5 +1,5 @@
 ---
-title: "RUT en Colombia: qué es, cómo sacarlo y cuándo actualizarlo"
+title: "RUT en Colombia 2027: qué es, cómo sacarlo y cuándo actualizarlo"
 description: Qué es el Registro Único Tributario, quién debe tenerlo, cómo sacarlo gratis en el portal de la DIAN y qué pasa si no lo mantienes actualizado.
 published: 2026-11-02
 ---
@@ -37,6 +37,8 @@ Si prefieres, también puedes hacerlo con cita en un punto de atención de la DI
 ## Cuándo actualizarlo
 
 Debes actualizar el RUT cuando cambie tu información: dirección, teléfono, correo, actividad económica o responsabilidades. Es especialmente importante el **correo**, porque la DIAN te notifica por ese medio. No actualizarlo a tiempo puede generar sanciones.
+
+Si vas a declarar renta en 2027 o quieres pasarte al Régimen Simple, revisa tu RUT antes de febrero de 2027: ese es el plazo para inscribirte en el Régimen Simple.
 
 Si vives fuera de Colombia, revisa también [la declaración de renta para colombianos en el exterior](/blog/renta-colombianos-en-el-exterior/).
 
