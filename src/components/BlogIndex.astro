@@ -1,0 +1,39 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getContent, htmlLang, resolveLocale } from '../i18n';
+import { getPosts, postSlug } from '../lib/blog';
+import BlogPage from './BlogPage.astro';
+import Icon from './Icon.astro';
+
+const locale = resolveLocale(Astro.currentLocale);
+const t = getContent(locale);
+const posts = await getPosts(locale);
+const formatDate = new Intl.DateTimeFormat(htmlLang[locale], { dateStyle: 'long', timeZone: 'UTC' }).format;
+---
+
+<BlogPage title={t.blog.meta.title} description={t.blog.meta.description} eyebrow="Blog" heading={t.blog.heading} lead={t.blog.lead}>
+  <section class="relative isolate bg-paper">
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots"></div>
+    <ul class="mx-auto max-w-4xl divide-y divide-line border-y border-line px-5 md:px-10">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={getRelativeLocaleUrl(locale, `blog/${postSlug(post)}/`)} class="group block py-10">
+              <time datetime={post.data.published.toISOString()} class="text-sm text-ink-soft">
+                {formatDate(post.data.published)}
+              </time>
+              <h2 class="mt-3 text-2xl font-medium tracking-[-0.025em] text-balance transition-colors group-hover:text-accent-deep md:text-3xl">
+                {post.data.title}
+              </h2>
+              <p class="mt-3 leading-relaxed text-ink-soft">{post.data.description}</p>
+              <span class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent-deep">
+                {t.blog.readMore}
+                <Icon name="arrow-right" class="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BlogPage>

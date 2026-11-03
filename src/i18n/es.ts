@@ -191,6 +191,21 @@ export const es: Content = {
     ],
   },
   // Answers written from Vanesa's own replies (17/10/2026); no thresholds, prices or deadlines invented.
+  blog: {
+    meta: {
+      title: 'Blog de impuestos y contabilidad · Vanesa Lotero',
+      description:
+        'Guías claras sobre declaración de renta, topes de la DIAN y contabilidad para personas naturales y pequeñas empresas en Colombia.',
+    },
+    heading: 'Impuestos y contabilidad, explicados claro.',
+    lead: 'Guías prácticas para personas naturales y pequeñas empresas en Colombia.',
+    readMore: 'Leer artículo',
+    ctaTitle: '¿Tienes dudas sobre tu caso?',
+    ctaBody: 'Escríbeme por WhatsApp. Soy Vanesa Lotero, contadora pública, y te respondo personalmente.',
+    ctaButton: 'Escríbeme por WhatsApp',
+    morePosts: 'Ver más artículos',
+    inquiry: (title) => `Hola Vanesa, leí tu artículo "${title}" y tengo una pregunta.`,
+  },
   incomeTax: {
     meta: {
       title: 'Declaración de renta en Colombia · Vanesa Lotero',

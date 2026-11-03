@@ -1,8 +1,8 @@
-import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';
 import { site, whatsappUrl } from '../data/site';
 import { blogPath, businessAccountingPath, getContent, incomeTaxPath } from '../i18n';
 import type { ServicePageContent } from '../i18n/content';
+import { getPosts, postSlug } from '../lib/blog';
 
 // Plain-text summary for AI agents (https://llmstxt.org), built from the same content as the pages.
 export const GET: APIRoute = async ({ site: origin }) => {
@@ -12,7 +12,7 @@ export const GET: APIRoute = async ({ site: origin }) => {
   const faq = ({ faq }: ServicePageContent): string =>
     `## ${faq.title}\n${faq.items.map(({ question, answer }) => `### ${question}\n${answer}`).join('\n\n')}`;
 
-  const posts = await getCollection('blog');
+  const posts = await getPosts('es');
 
   const body = [
     `# ${site.name}`,
@@ -28,7 +28,7 @@ export const GET: APIRoute = async ({ site: origin }) => {
     faq(t.incomeTax),
     faq(t.businessAccounting),
     `## Páginas\n- [Español](${url('/')})\n- [English](${url('/en/')})\n- [${t.incomeTax.meta.title}](${url(incomeTaxPath)})\n- [${t.businessAccounting.meta.title}](${url(businessAccountingPath)})`,
-    `## Blog\n${list(posts.map(({ id, data }) => `[${data.title}](${url(`${blogPath}${id}/`)}): ${data.description}`))}`,
+    `## Blog\n${list(posts.map((post) => `[${post.data.title}](${url(`${blogPath}${postSlug(post)}/`)}): ${post.data.description}`))}`,
   ].join('\n\n');
 
   return new Response(`${body}\n`, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

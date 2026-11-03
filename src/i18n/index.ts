@@ -14,9 +14,6 @@ export const blogPath = '/blog/';
 export const localelessPath = (pathname: string): string =>
   pathname.replace(new RegExp(`^/(${locales.join('|')})(?=/|$)`), '');
 
-// The blog is Spanish-only: its pages get no hreflang alternates and the language switch falls back to the home page.
-export const isTranslated = (path: string): boolean => !path.startsWith(blogPath);
-
 export const localeNames: Record<Locale, string> = { es: 'Español', en: 'English' };
 export const htmlLang: Record<Locale, string> = { es: 'es-CO', en: 'en' };
 export const ogLocale: Record<Locale, string> = { es: 'es_CO', en: 'en_US' };

@@ -1,0 +1,61 @@
+---
+import { render } from 'astro:content';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { site, whatsappUrl } from '../data/site';
+import { getContent, htmlLang, resolveLocale } from '../i18n';
+import type { Post } from '../lib/blog';
+import BlogPage from './BlogPage.astro';
+import Icon from './Icon.astro';
+import StructuredData from './StructuredData.astro';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, published, updated } = post.data;
+const { Content } = await render(post);
+const locale = resolveLocale(Astro.currentLocale);
+const t = getContent(locale);
+const formatDate = new Intl.DateTimeFormat(htmlLang[locale], { dateStyle: 'long', timeZone: 'UTC' }).format;
+---
+
+<BlogPage
+  title={`${title} · ${site.name}`}
+  description={description}
+  eyebrow={`Blog · ${formatDate(updated ?? published)}`}
+  heading={title}
+  lead={description}
+>
+  <StructuredData slot="head" article={{ headline: title, description, published, updated }} />
+
+  <article class="bg-paper">
+    <div class="article mx-auto max-w-3xl px-5 py-16 md:px-10 md:py-24">
+      <Content />
+    </div>
+  </article>
+
+  <section class="bg-surface">
+    <div class="mx-auto flex max-w-3xl flex-col items-start gap-6 px-5 py-16 md:px-10">
+      <p class="text-2xl font-medium tracking-[-0.025em] text-balance md:text-3xl">{t.blog.ctaTitle}</p>
+      <p class="leading-relaxed text-ink-soft">{t.blog.ctaBody}</p>
+      <div class="flex flex-wrap items-center gap-4">
+        <a
+          href={whatsappUrl(t.blog.inquiry(title))}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded bg-ink px-5 py-3.5 font-medium text-white transition hover:bg-accent-deep"
+        >
+          <Icon name="whatsapp-logo" class="size-5" />
+          {t.blog.ctaButton}
+        </a>
+        <a
+          href={getRelativeLocaleUrl(locale, 'blog/')}
+          class="text-sm font-medium text-ink-soft underline underline-offset-4 hover:text-ink"
+        >
+          {t.blog.morePosts}
+        </a>
+      </div>
+    </div>
+  </section>
+</BlogPage>
