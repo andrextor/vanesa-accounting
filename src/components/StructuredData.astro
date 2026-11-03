@@ -9,9 +9,10 @@ import type { Faq, Service } from '../i18n/content';
 interface Props {
   service?: Service;
   faq?: Faq[];
+  article?: { headline: string; description: string; published: Date; updated?: Date };
 }
 
-const { service, faq } = Astro.props;
+const { service, faq, article } = Astro.props;
 const locale = resolveLocale(Astro.currentLocale);
 const t = getContent(locale);
 const url = getAbsoluteLocaleUrl(locale);
@@ -99,6 +100,23 @@ const graph = {
               name: question,
               acceptedAnswer: { '@type': 'Answer', text: answer },
             })),
+          },
+        ]
+      : []),
+    ...(article
+      ? [
+          {
+            '@type': 'BlogPosting',
+            '@id': `${pageUrl}#article`,
+            headline: article.headline,
+            description: article.description,
+            datePublished: article.published.toISOString(),
+            dateModified: (article.updated ?? article.published).toISOString(),
+            inLanguage: htmlLang[locale],
+            mainEntityOfPage: pageUrl,
+            image,
+            author: { '@id': personId },
+            publisher: { '@id': personId },
           },
         ]
       : []),

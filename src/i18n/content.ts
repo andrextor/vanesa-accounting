@@ -122,6 +122,17 @@ export interface Content {
   sectors: string[];
   steps: Step[];
   about: { heading: string; body: string[] };
+  blog: {
+    meta: { title: string; description: string };
+    heading: string;
+    lead: string;
+    readMore: string;
+    ctaTitle: string;
+    ctaBody: string;
+    ctaButton: string;
+    morePosts: string;
+    inquiry: (title: string) => string;
+  };
   incomeTax: ServicePageContent;
   businessAccounting: ServicePageContent;
   education: Degree[];

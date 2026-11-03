@@ -15,6 +15,7 @@ export const en: Content = {
     { href: '#proceso', label: 'Process' },
     { href: '#sobre-mi', label: 'About' },
     { href: '#contacto', label: 'Contact' },
+    { href: 'blog/', label: 'Blog' },
   ],
   ui: {
     skipToContent: 'Skip to content',
@@ -187,6 +188,22 @@ export const en: Content = {
       'I’m Vanesa Lotero, Public Accountant and Financial Administrator, with more than 8 years of experience in accounting and financial management.',
       'I help individuals, entrepreneurs and small businesses keep their numbers in order and meet their tax obligations, explaining every figure in simple language so you can decide with confidence.',
     ],
+  },
+  blog: {
+    meta: {
+      title: 'Colombian tax and accounting blog · Vanesa Lotero',
+      description:
+        'Clear guides on Colombian income tax returns, DIAN thresholds and accounting for individuals and small businesses.',
+    },
+    heading: 'Colombian taxes and accounting, explained clearly.',
+    lead: 'Practical guides for individuals and small businesses with ties to Colombia.',
+    readMore: 'Read article',
+    ctaTitle: 'Questions about your situation?',
+    ctaBody:
+      'Message me on WhatsApp. I’m Vanesa Lotero, a Colombian public accountant, and I’ll answer you personally.',
+    ctaButton: 'Message me on WhatsApp',
+    morePosts: 'See more articles',
+    inquiry: (title) => `Hi Vanesa, I read your article "${title}" and I have a question.`,
   },
   incomeTax: {
     meta: {
