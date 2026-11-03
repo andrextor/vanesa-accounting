@@ -1,6 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { getContent, localelessPath, localeNames, locales, resolveLocale } from '../i18n';
+import { getContent, isTranslated, localelessPath, localeNames, locales, resolveLocale } from '../i18n';
 
 interface Props {
   class?: string;
@@ -16,7 +16,7 @@ const path = localelessPath(Astro.url.pathname);
   {
     locales.map((locale) => (
       <a
-        href={getRelativeLocaleUrl(locale, path)}
+        href={getRelativeLocaleUrl(locale, locale === current || isTranslated(path) ? path : '')}
         hreflang={locale}
         lang={locale}
         aria-label={localeNames[locale]}

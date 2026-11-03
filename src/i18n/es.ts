@@ -15,6 +15,7 @@ export const es: Content = {
     { href: '#proceso', label: 'Proceso' },
     { href: '#sobre-mi', label: 'Sobre mí' },
     { href: '#contacto', label: 'Contacto' },
+    { href: 'blog/', label: 'Blog' },
   ],
   ui: {
     skipToContent: 'Saltar al contenido',

@@ -8,10 +8,14 @@ export const defaultLocale: Locale = 'es';
 
 export const incomeTaxPath = '/declaracion-de-renta/';
 export const businessAccountingPath = '/contabilidad-para-empresas/';
+export const blogPath = '/blog/';
 
 // Pages share their path across languages, so swapping the locale prefix lands on the same page.
 export const localelessPath = (pathname: string): string =>
   pathname.replace(new RegExp(`^/(${locales.join('|')})(?=/|$)`), '');
+
+// The blog is Spanish-only: its pages get no hreflang alternates and the language switch falls back to the home page.
+export const isTranslated = (path: string): boolean => !path.startsWith(blogPath);
 
 export const localeNames: Record<Locale, string> = { es: 'Español', en: 'English' };
 export const htmlLang: Record<Locale, string> = { es: 'es-CO', en: 'en' };

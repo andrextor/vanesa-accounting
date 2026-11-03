@@ -290,3 +290,58 @@ body {
     opacity: 0;
   }
 }
+
+/* Long-form Markdown rendered by the blog. */
+.article {
+  @apply text-lg leading-relaxed text-ink-soft;
+
+  & > * + * {
+    @apply mt-6;
+  }
+
+  & h2 {
+    @apply mt-14 text-3xl leading-tight font-medium tracking-[-0.03em] text-balance text-ink;
+  }
+
+  & strong {
+    @apply font-medium text-ink;
+  }
+
+  & a {
+    @apply font-medium text-accent-deep underline underline-offset-4 hover:text-ink;
+  }
+
+  & ul,
+  & ol {
+    @apply space-y-3 pl-6;
+  }
+
+  & ul {
+    @apply list-disc;
+  }
+
+  & ol {
+    @apply list-decimal;
+  }
+
+  & li::marker {
+    @apply text-accent;
+  }
+
+  & table {
+    @apply block w-full overflow-x-auto text-base;
+  }
+
+  & th,
+  & td {
+    @apply border-b border-line px-3 py-3 text-left whitespace-nowrap first:pl-0;
+  }
+
+  & th {
+    @apply font-medium text-ink;
+  }
+
+  & p:last-child em {
+    @apply text-sm;
+  }
+}
