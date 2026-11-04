@@ -22,6 +22,8 @@ If you are a Colombian tax resident, you must file an income tax return in 2027 
 
 On top of that, if you are **registered for VAT** (responsable de IVA) on December 31, you must file regardless of the amounts.
 
+Each criterion works on its own: meeting just one may already create the obligation, even if you don’t meet the others. That’s why you also need to check your tax residency and your VAT status.
+
 How much is that in pesos? I break it down with examples in [the 2027 income tax filing thresholds](/en/blog/topes-para-declarar-renta/).
 
 ## The criteria that catch people off guard
@@ -34,7 +36,7 @@ Most people only think about their salary, but many end up required to file beca
 
 ## Do you live outside Colombia?
 
-What determines the obligation is **tax residency**, not nationality. In general, you are a tax resident if you stayed in Colombia for more than 183 days (consecutive or not) within a 365-day period, although there are other cases: for example, if your family lives in Colombia or if most of your income or assets are here.
+What determines the obligation is **tax residency**, not nationality. In general, you are a tax resident if you stayed in Colombia for more than 183 calendar days (consecutive or not) within any 365-day period. There are other cases for Colombian nationals: for example, if your spouse or permanent partner (not legally separated) or your dependent minor children are tax residents in Colombia, or if most of your income or assets are here.
 
 If you are a resident, you report what you earn in Colombia **and abroad**. If you are not, you only report certain Colombian-source income. Every case is different, so it’s worth checking before assuming it doesn’t apply to you. I cover it in detail in [the 2027 income tax return for Colombians living abroad](/en/blog/renta-colombianos-en-el-exterior/).
 
@@ -44,7 +46,7 @@ You are not required to file, but **you can file voluntarily**. It pays off when
 
 ## When is the deadline?
 
-Individuals usually file **between August and October**, depending on the last two digits of their NIT (their ID number without the verification digit). In 2026 the window ran from August 12 to October 26. The DIAN publishes the exact 2027 dates at the end of this year; once they’re out, I’ll update this article.
+Individuals usually file **between August and October**, depending on the last two digits of their NIT, not counting the verification digit. In 2026, for tax year 2025, the general window ran from August 12 to October 26, with special dates in October and November for those whose tax domicile was in the areas affected by the August earthquake (Decreto 1226 de 2026). Those dates don’t carry over to 2027: for tax year 2026 you need to check the 2027 tax calendar. The DIAN publishes the exact dates at the end of this year; once they’re out, I’ll update this article.
 
 ## Does the tax reform change anything?
 
@@ -52,7 +54,7 @@ In October 2026 the Government filed the Economic Rescue bill (Ley de Rescate Ec
 
 ## What happens if I’m required to file and don’t?
 
-If you file late, you pay a **late-filing penalty** of 5% of the tax for each month or part of a month, with a minimum of 10 UVT. If the DIAN reaches you before you file, the penalty is higher. Filing on time, even if the tax is zero, is always cheaper.
+If you file late, you pay a **late-filing penalty**. When tax is due, the general rule is 5% of the tax for each month or part of a month of delay, within the limits of article 641 of the Estatuto Tributario (Colombia’s tax code). When no tax is due, the penalty is calculated differently, based on gross income, the refund balance or specific limits. The minimum penalty also has its own rules. If the DIAN reaches you before you file, the penalty is higher. Filing on time, even if the tax is zero, is always cheaper.
 
 ## Still have questions?
 

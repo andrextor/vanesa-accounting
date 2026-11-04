@@ -10,10 +10,10 @@ Vivir fuera de Colombia no te libera automáticamente de la DIAN, pero tampoco s
 
 La nacionalidad no define la obligación: la define la residencia fiscal. En general eres residente fiscal en Colombia si:
 
-- Estuviste en el país **más de 183 días**, continuos o no, en un periodo de 365 días.
-- O, siendo colombiano, tu **cónyuge o hijos menores** viven en Colombia, o la mayoría de tus **ingresos o bienes** están aquí.
+- Estuviste en el país **más de 183 días calendario**, continuos o no, dentro de cualquier periodo de 365 días.
+- O, siendo colombiano, tu **cónyuge o compañero permanente** no separado legalmente, o tus **hijos dependientes menores de edad**, tienen residencia fiscal en Colombia, o la mayoría de tus **ingresos o bienes** están aquí.
 
-Hay una excepción importante: si eres colombiano y al menos la mitad de tus ingresos tienen origen en el país donde vives, o la mitad de tus bienes están allá, puedes dejar de ser residente fiscal en Colombia. Este punto se analiza caso por caso.
+Hay una excepción importante para el colombiano que cumple alguna de esas condiciones (numeral 3 del artículo 10 del Estatuto Tributario): puede no ser residente fiscal si el 50 % o más de sus ingresos anuales tienen fuente en la jurisdicción donde tiene su domicilio, o si el 50 % o más de sus activos están localizados allí. Debes poder acreditar tu condición de no residente, y este punto se analiza caso por caso.
 
 ## Si eres residente fiscal
 
@@ -28,11 +28,11 @@ Además, si tus bienes en el exterior superan cierto valor, debes presentar la *
 
 ## Si no eres residente fiscal
 
-Solo declaras en Colombia tus ingresos de **fuente colombiana**: por ejemplo, el arriendo de un apartamento en Cali o la venta de un inmueble en el país. Si esos ingresos ya tuvieron la retención en la fuente completa, en muchos casos no tienes que declarar.
+Solo declaras en Colombia tus ingresos de **fuente colombiana**: por ejemplo, el arriendo de un apartamento en Cali o la venta de un inmueble en el país. Puedes no estar obligado a declarar cuando esos ingresos estuvieron en su totalidad sometidos a las retenciones correspondientes y estas se practicaron efectivamente (artículo 592 del Estatuto Tributario). No basta con que te hayan hecho una retención: hay que verificar el tipo de ingreso, la norma de retención y que se haya practicado correctamente.
 
 ## ¿Puedo declarar sin viajar a Colombia?
 
-Sí. La declaración se presenta en línea en el portal de la DIAN, con la **firma electrónica** que se activa desde el mismo portal. Todo el proceso, desde reunir los documentos hasta pagar, se puede hacer desde el exterior. Así trabajo con clientes que viven en Estados Unidos y en España.
+En general, sí. La declaración se puede presentar virtualmente mediante los servicios informáticos de la DIAN, cuando corresponda, con la **firma electrónica**, y muchas obligaciones y trámites se pueden hacer desde el exterior. Pero no todos: algunos pueden requerir actualizar información, documentos, poderes o actuaciones específicas. Así trabajo con clientes que viven en Estados Unidos y en España.
 
 ## Lo que más se olvida
 

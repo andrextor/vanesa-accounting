@@ -13,17 +13,20 @@ Almost all deductions and exempt income share a cap: together they can’t excee
 ## Under the cap
 
 - **25% exempt labor income.** It applies to what is left of your salary after the other deductions, capped at 790 UVT per year (COP 41,375,460).
-- **Mortgage interest** or housing lease: up to 100 UVT per month (COP 5,237,400).
-- **Private health plans** or health insurance: up to 16 UVT per month (COP 837,984).
+- **Mortgage interest** or housing lease: up to 100 UVT per month (COP 5,237,400) and 1,200 UVT per year (COP 62,848,800), as long as you meet the requirements for the deduction.
+- **Private health plans** and certain health insurance policies that meet the legal requirements: up to 16 UVT per month (COP 837,984).
 - **Dependents:** 10% of your labor income, up to 32 UVT per month (COP 1,675,968).
-- **Voluntary pension and AFC contributions:** up to 30% of your income, capped at 3,800 UVT per year (COP 199,021,200), provided you meet the holding requirements.
 
 ## Outside the cap
 
 These benefits are added separately, even if you have already reached the 40% cap:
 
-- **72 UVT per dependent (COP 3,770,928)**, for up to four dependents. It’s on top of the 10% in the previous list, although you can’t use the same dependent for both benefits.
-- **1% of your purchases with electronic invoices**, up to 240 UVT (COP 12,569,760), as long as you paid electronically and didn’t use them as a cost or deduction elsewhere.
+- **72 UVT per dependent (COP 3,770,928)**, for up to four dependents (COP 15,083,712). It’s on top of the general cap. As a rule, the same dependent can’t generate a double benefit, but if you have income from an employment or statutory relationship, the DIAN recognizes that this deduction and the 10% one can coexist for the same dependent, as long as you meet the requirements.
+- **1% of your purchases with electronic invoices**, up to 240 UVT (COP 12,569,760), as long as you meet the requirements of article 336 of the Estatuto Tributario: the purchase must be backed by a valid electronic sales invoice, you must be the one who made it, and you can’t have also used it as a cost, deduction, exempt income, non-taxable income or other tax benefit.
+
+## A separate case: voluntary contributions
+
+**Voluntary contributions to pension funds and AFC accounts** have a joint limit of 30% of your income and 3,800 UVT per year (COP 199,021,200), under articles 126-1 and 126-4 of the Estatuto Tributario. They have a special regime, with conditions on how long the money stays and what it’s used for, so it’s best to analyze them separately.
 
 ## An example
 

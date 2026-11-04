@@ -45,7 +45,7 @@ Besides, the draft never sought to tax transfers between people: only payments t
 
 ## What’s coming in 2027
 
-- **Bre-B for businesses.** The Central Bank expects Bre-B to be used for payroll, supplier payments and collections during 2027. More digital payments means more information for the DIAN, so keeping your books in order will matter even more.
+- **Bre-B for businesses.** The Central Bank expects Bre-B to be used for payroll, supplier payments and collections progressively from 2027, although the regulation isn’t final yet. More digital payments means more information for the DIAN, so keeping your books in order will matter even more.
 - **Economic Rescue bill.** In October 2026 the Government filed a bill that, among other things, would change the income tax table for individuals. **It has not been approved** and, if approved, it would apply from tax year 2027 (the return filed in 2028). **It doesn’t change the return you file in 2027.** If it moves forward, I’ll update this article.
 
 ## Let’s review your account activity

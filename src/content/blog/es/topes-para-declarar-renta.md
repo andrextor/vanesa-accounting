@@ -1,6 +1,6 @@
 ---
 title: Topes para declarar renta en 2027, en pesos
-description: Los topes de la DIAN para declarar renta en 2027 (año gravable 2026) convertidos a pesos con la UVT de $52.374, con su equivalente mensual y ejemplos.
+description: Los topes de la DIAN para declarar renta en 2027 (año gravable 2026) convertidos a pesos con la UVT de $52.374, con qué cuenta en cada tope y ejemplos.
 published: 2026-11-02
 ---
 
@@ -18,13 +18,13 @@ La DIAN define los topes en **UVT** (Unidad de Valor Tributario), una medida que
 
 Basta con superar **uno** de estos topes para estar obligado. Si quieres entender cada criterio, lee [quién debe declarar renta en 2027](/blog/quien-debe-declarar-renta/).
 
-## ¿Cuánto es al mes?
+## ¿Hay un tope mensual?
 
-El tope de ingresos equivale a unos **$6.110.300 al mes** en promedio. Si en 2026 ganaste más que eso (sumando salario, honorarios, arriendos u otros ingresos), lo más probable es que debas declarar.
+**No.** El tope de 1.400 UVT se analiza sobre los ingresos brutos de todo el año gravable, no mes a mes. Dividir $73.323.600 entre 12 da unos $6.110.300, pero esa cifra es solo un promedio aritmético, no un límite: lo que cuenta es la suma de tus ingresos de 2026 (salario, honorarios, arriendos y otros).
 
 ## Qué cuenta en cada tope
 
-- **Patrimonio bruto:** todo lo que tienes a tu nombre (inmuebles, vehículos, cuentas, inversiones, acciones) **sin restar deudas**. Se toma el valor fiscal, que no siempre coincide con el comercial: un inmueble, por ejemplo, se declara por el mayor entre su costo y el avalúo catastral.
+- **Patrimonio bruto:** todo lo que tienes a tu nombre (inmuebles, vehículos, cuentas, inversiones, acciones) **sin restar deudas**. Se toma el valor fiscal, que no siempre coincide con el comercial. Los inmuebles tienen reglas específicas (artículo 277 del Estatuto Tributario): en términos generales, quien está obligado a llevar contabilidad usa el costo fiscal, y quien no lo está puede declararlo por el mayor valor entre el costo de adquisición y el avalúo catastral, considerando las reglas de costo fiscal y reajustes que correspondan.
 - **Ingresos brutos:** todo lo que recibiste en el año antes de descuentos: salario, honorarios, arriendos, intereses, dividendos, pensiones, entre otros.
 - **Tarjeta de crédito:** la suma de todo lo que pagaste con tus tarjetas de crédito.
 - **Compras y consumos:** todo lo que gastaste en el año, con cualquier medio de pago.
@@ -34,11 +34,11 @@ El tope de ingresos equivale a unos **$6.110.300 al mes** en promedio. Si en 202
 
 **Laura** es empleada y gana $5.000.000 al mes: $60.000.000 en el año, por debajo del tope de ingresos. Pero paga casi todo con tarjeta de crédito y sus consumos sumaron $75.000.000. **Debe declarar**, por el criterio de la tarjeta.
 
-**Andrés** gana $4.000.000 al mes y tiene un apartamento con un avalúo catastral de $250.000.000, aunque todavía le debe $180.000.000 al banco. Su patrimonio bruto supera $235.683.000, porque las deudas no se restan. **Debe declarar**, por el criterio de patrimonio.
+**Andrés** gana $4.000.000 al mes y tiene un apartamento con un valor fiscal de $250.000.000, aunque todavía le debe $180.000.000 al banco. La deuda se resta para calcular el patrimonio líquido, pero el tope se mide sobre el patrimonio bruto, y $250.000.000 supera $235.683.000. **Debe declarar**, por el criterio de patrimonio.
 
 ## ¿Y los topes del año pasado?
 
-Si todavía tienes pendiente la declaración que vencía en 2026 (año gravable 2025), los topes usaban la UVT de $49.799: **$224.095.500** de patrimonio y **$69.718.600** para los demás criterios. Mientras antes la presentes, menor será la sanción.
+Si todavía tienes pendiente la declaración que vencía en 2026 (año gravable 2025), los topes usaban la UVT de $49.799: **$224.095.500** de patrimonio y **$69.718.600** para los demás criterios. Si tu domicilio fiscal está en una zona afectada por el sismo de agosto de 2026, revisa primero tu fecha: el Decreto 1226 de 2026 trasladó algunos vencimientos a octubre y noviembre. Si ya se venció, mientras antes la presentes, menor será la sanción.
 
 ## Revisemos tus números
 

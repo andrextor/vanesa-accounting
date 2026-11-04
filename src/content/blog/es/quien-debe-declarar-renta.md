@@ -22,6 +22,8 @@ Si eres residente fiscal en Colombia, debes declarar renta en 2027 si durante 20
 
 Además, si eres **responsable de IVA** al 31 de diciembre, debes declarar sin importar los montos.
 
+Cada criterio funciona por separado: si cumples uno solo, ya puede existir la obligación, aunque no cumplas los demás. Por eso también hay que revisar tu residencia fiscal y tu responsabilidad frente al IVA.
+
 ¿Cuánto es eso en pesos? Lo detallo con ejemplos en [los topes para declarar renta en 2027](/blog/topes-para-declarar-renta/).
 
 ## Los criterios que más sorprenden
@@ -34,7 +36,7 @@ Casi todos piensan en el salario, pero muchas personas quedan obligadas por los 
 
 ## ¿Vives fuera de Colombia?
 
-Lo que define la obligación es la **residencia fiscal**, no la nacionalidad. En general, eres residente fiscal si permaneciste en Colombia más de 183 días (continuos o no) en un periodo de 365 días, aunque hay otros casos: por ejemplo, si tu familia vive en Colombia o si la mayoría de tus ingresos o bienes están aquí.
+Lo que define la obligación es la **residencia fiscal**, no la nacionalidad. En general, eres residente fiscal si permaneciste en Colombia más de 183 días calendario (continuos o no) dentro de cualquier periodo de 365 días. Hay otros casos para los colombianos: por ejemplo, si tu cónyuge o compañero permanente no separado legalmente, o tus hijos dependientes menores de edad, tienen residencia fiscal en Colombia, o si la mayoría de tus ingresos o bienes están aquí.
 
 Si eres residente, declaras lo que ganas en Colombia **y en el exterior**. Si no lo eres, solo declaras ciertos ingresos de fuente colombiana. Cada caso es distinto, así que vale la pena revisarlo antes de asumir que no te toca. Lo explico en detalle en [declaración de renta para colombianos en el exterior](/blog/renta-colombianos-en-el-exterior/).
 
@@ -44,7 +46,7 @@ No estás obligado, pero **puedes declarar de forma voluntaria**. Conviene hacer
 
 ## ¿Cuándo hay que declarar?
 
-Las personas naturales declaran normalmente **entre agosto y octubre**, según los dos últimos dígitos del NIT (el número de la cédula sin el dígito de verificación). En 2026 el plazo fue del 12 de agosto al 26 de octubre. La DIAN publica las fechas exactas para 2027 al final de este año; cuando salgan, actualizo este artículo.
+Las personas naturales declaran normalmente **entre agosto y octubre**, según los dos últimos dígitos del NIT, sin contar el dígito de verificación. En 2026, para el año gravable 2025, el plazo general fue del 12 de agosto al 26 de octubre, con fechas especiales en octubre y noviembre para quienes tenían domicilio fiscal en las zonas afectadas por el sismo de agosto (Decreto 1226 de 2026). Esas fechas no se trasladan a 2027: para el año gravable 2026 hay que consultar el calendario tributario de 2027. La DIAN publica las fechas exactas al final de este año; cuando salgan, actualizo este artículo.
 
 ## ¿Cambia algo con la reforma?
 
@@ -52,7 +54,7 @@ En octubre de 2026 el Gobierno radicó el proyecto de Ley de Rescate Económico,
 
 ## ¿Qué pasa si no declaro estando obligado?
 
-Si declaras tarde, pagas una **sanción por extemporaneidad** del 5 % del impuesto por cada mes o fracción de retraso, con un mínimo de 10 UVT. Si la DIAN te encuentra antes de que declares, la sanción es mayor. Declarar a tiempo, aunque el impuesto sea cero, siempre sale más barato.
+Si declaras tarde, pagas una **sanción por extemporaneidad**. Cuando hay impuesto a cargo, la regla general es el 5 % del impuesto por cada mes o fracción de mes de retraso, con los límites del artículo 641 del Estatuto Tributario. Si no hay impuesto a cargo, la sanción se calcula de otra forma, con base en los ingresos brutos, el saldo a favor o límites específicos. Además, la sanción mínima tiene sus propias reglas. Si la DIAN te encuentra antes de que declares, la sanción es mayor. Declarar a tiempo, aunque el impuesto sea cero, siempre sale más barato.
 
 ## ¿Te queda alguna duda?
 

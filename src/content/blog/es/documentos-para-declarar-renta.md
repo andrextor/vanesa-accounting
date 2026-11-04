@@ -8,7 +8,7 @@ La mitad del trabajo de una declaración de renta es reunir los papeles. Si los 
 
 ## Ingresos
 
-- **Certificado de ingresos y retenciones** (formulario 220), si eres empleado. Te lo entrega la empresa a más tardar en marzo de 2027.
+- **Certificado de ingresos y retenciones** (formulario 220), si eres empleado. La empresa, como agente de retención, debe expedirlo a más tardar el último día hábil de marzo de 2027.
 - **Certificados de retención en la fuente**, si eres independiente y te pagaron honorarios o servicios.
 - **Contratos de arrendamiento** y el registro de lo que recibiste, si arriendas un inmueble.
 - **Certificado de pensión**, si estás pensionado.
@@ -26,7 +26,7 @@ La mitad del trabajo de una declaración de renta es reunir los papeles. Si los 
 
 - **Recibo del impuesto predial** de cada inmueble, que trae el avalúo catastral.
 - **Escrituras o soportes de compra** de inmuebles y vehículos adquiridos durante el año.
-- **Factura o documento de compra** de vehículos, o su valor en la tabla del Ministerio de Transporte.
+- **Factura o documento de compra** de vehículos. La tabla de valores del Ministerio de Transporte puede servir de referencia, pero el valor patrimonial depende de las reglas del Estatuto Tributario, del tipo de vehículo y de su costo fiscal.
 
 ## Lo que te ayuda a pagar menos
 

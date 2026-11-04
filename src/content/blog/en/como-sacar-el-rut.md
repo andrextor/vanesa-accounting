@@ -8,26 +8,32 @@ The **RUT** is the first step for almost any dealing with the DIAN: filing incom
 
 ## What it is
 
-The **Registro Único Tributario** (Single Tax Registry) is your identification with the DIAN. It states who you are, where you are, what you do and which tax obligations you have. Your RUT number (the NIT) is your ID number plus a verification digit.
+The **Registro Único Tributario** (Single Tax Registry) is your identification with the DIAN. It states who you are, where you are, what you do and which tax obligations you have. In many cases, an individual’s NIT is assigned using their ID number as a base and adding a verification digit (DV). The DV is a control digit, not part of your ID number. Check your NIT and DV on the RUT issued by the DIAN.
 
 ## Who needs it
 
-- Those who **must file income tax**.
-- Those who **issue invoices** or are registered for VAT.
-- **Merchants** and companies.
-- **Independent contractors**: many companies and public entities require it to hire and pay you.
+Not every individual needs one just for having an ID or being of legal age, and it isn’t limited to those who file income tax. The main groups required to register include:
+
+- Individuals or legal entities that are **income tax filers**.
+- Those **registered and not registered for VAT** and for the **national consumption tax**.
+- **Withholding agents**.
+- **Importers, exporters** and customs users.
 - Those who join the [Simple Tax Regime](/en/blog/regimen-simple-de-tributacion/).
+- **Foreign investors** required to meet formal duties.
+- **Representatives, accountants or statutory auditors** who must sign returns by law.
+
+There are also other special cases set by the DIAN. In addition, many companies and public entities ask for it to hire and pay independent contractors.
 
 ## How to get it
 
-The process is **free**, and as an individual you can do it online:
+The process is **free**. Direct online registration is available to individuals with a Colombian citizenship ID who don’t carry out commercial activities, subject to validation by the system. In general terms, the steps are:
 
 1. Go to the DIAN portal and choose the RUT registration option.
 2. Fill in the form with your personal, contact and location details.
 3. Choose your **economic activity** (CIIU code) and the **obligations** that apply to you.
 4. Verify your identity and download the document.
 
-If you prefer, you can also do it by appointment at a DIAN office.
+The exact steps depend on the type of applicant, so check the DIAN’s current guide. Other cases may require assisted or in-person service, and the DIAN also offers the process through its authorized channels and service points.
 
 ## The two fields people get wrong most
 
@@ -38,7 +44,7 @@ If you prefer, you can also do it by appointment at a DIAN office.
 
 You must update your RUT whenever your information changes: address, phone, email, economic activity or obligations. The **email** is especially important, because the DIAN notifies you there. Not updating it on time can lead to penalties.
 
-If you are going to file income tax in 2027 or want to switch to the Simple Regime, review your RUT before February 2027: that’s the deadline to join the Simple Regime.
+If you are going to file income tax in 2027 or want to switch to the Simple Regime, review your RUT in good time: the deadline to join the Simple Regime is the last business day of February 2027.
 
 If you live outside Colombia, see also [the 2027 income tax return for Colombians living abroad](/en/blog/renta-colombianos-en-el-exterior/).
 

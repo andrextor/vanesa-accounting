@@ -13,17 +13,20 @@ Casi todas las deducciones y rentas exentas comparten un tope: juntas no pueden 
 ## Dentro del límite
 
 - **Renta exenta laboral del 25 %.** Se aplica sobre lo que queda de tu salario después de las demás deducciones, con un tope de 790 UVT al año ($41.375.460).
-- **Intereses de crédito de vivienda** o leasing habitacional: hasta 100 UVT al mes ($5.237.400).
-- **Medicina prepagada** o seguros de salud: hasta 16 UVT al mes ($837.984).
+- **Intereses de crédito de vivienda** o leasing habitacional: hasta 100 UVT al mes ($5.237.400) y 1.200 UVT al año ($62.848.800), siempre que cumplas los requisitos de la deducción.
+- **Medicina prepagada** y determinados seguros de salud que cumplan los requisitos legales: hasta 16 UVT al mes ($837.984).
 - **Dependientes:** el 10 % de tus ingresos laborales, hasta 32 UVT al mes ($1.675.968).
-- **Aportes voluntarios a pensión y cuentas AFC:** hasta el 30 % de tus ingresos, con un tope de 3.800 UVT al año ($199.021.200), siempre que cumplas los requisitos de permanencia.
 
 ## Por fuera del límite
 
 Estos beneficios se suman aparte, así ya hayas llegado al tope del 40 %:
 
-- **72 UVT por dependiente ($3.770.928)**, hasta cuatro dependientes. Es adicional al 10 % de la lista anterior, aunque no puedes usar el mismo dependiente para los dos beneficios.
-- **El 1 % de tus compras con factura electrónica**, hasta 240 UVT ($12.569.760), siempre que las hayas pagado con medios electrónicos y no las hayas usado como costo o deducción en otra parte.
+- **72 UVT por dependiente ($3.770.928)**, hasta cuatro dependientes ($15.083.712). Es adicional al límite general. Por regla general, un mismo dependiente no genera doble beneficio, pero si tienes rentas de una relación laboral o legal y reglamentaria, la DIAN reconoce que esta deducción y la del 10 % pueden coexistir para el mismo dependiente, si cumples los requisitos.
+- **El 1 % de tus compras con factura electrónica**, hasta 240 UVT ($12.569.760), siempre que cumplas los requisitos del artículo 336 del Estatuto Tributario: la compra debe estar soportada con una factura electrónica de venta válida, debes haberla hecho tú y no puedes haberla usado también como costo, deducción, renta exenta, ingreso no constitutivo u otro beneficio fiscal.
+
+## Un caso aparte: aportes voluntarios
+
+Los **aportes voluntarios a pensión y a cuentas AFC** tienen un límite conjunto del 30 % de tus ingresos y 3.800 UVT al año ($199.021.200), según los artículos 126-1 y 126-4 del Estatuto Tributario. Tienen un régimen especial, con condiciones de permanencia y destino de los recursos, así que conviene analizarlos por separado.
 
 ## Un ejemplo
 
