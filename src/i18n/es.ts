@@ -2,7 +2,7 @@ import type { Content } from './content';
 
 export const es: Content = {
   meta: {
-    title: 'Vanesa Lotero · Contadora Pública en Colombia',
+    title: 'Contadora en Cali, Yumbo y toda Colombia | Vanesa Lotero',
     description:
       'Contabilidad, impuestos y declaración de renta para personas naturales y pequeñas empresas. Presencial en Cali y Yumbo, virtual en toda Colombia.',
   },
