@@ -45,7 +45,7 @@ Además, el proyecto nunca buscó gravar las transferencias entre personas: solo
 
 ## Lo que viene en 2027
 
-- **Bre-B para empresas.** El Banco de la República prevé que durante 2027 Bre-B sirva para pagar nóminas, proveedores y recaudos. Más pagos digitales significa más información para la DIAN, así que llevar las cuentas en orden será aún más importante.
+- **Bre-B para empresas.** El Banco de la República prevé que, de forma progresiva a partir de 2027, Bre-B sirva para pagar nóminas, proveedores y recaudos, aunque la regulación todavía no es definitiva. Más pagos digitales significa más información para la DIAN, así que llevar las cuentas en orden será aún más importante.
 - **Proyecto de Ley de Rescate Económico.** En octubre de 2026 el Gobierno radicó un proyecto que, entre otras cosas, cambiaría la tabla del impuesto de renta de las personas naturales. **No está aprobado** y, si se aprueba, aplicaría desde el año gravable 2027 (la declaración de 2028). **No cambia la declaración que presentas en 2027.** Si avanza, actualizo este artículo.
 
 ## Revisemos tus movimientos

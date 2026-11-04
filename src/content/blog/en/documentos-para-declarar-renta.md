@@ -8,7 +8,7 @@ Half the work of an income tax return is gathering the paperwork. If you have it
 
 ## Income
 
-- **Income and withholding certificate** (formulario 220), if you are an employee. Your employer must give it to you by March 2027 at the latest.
+- **Income and withholding certificate** (formulario 220), if you are an employee. Your employer, as withholding agent, must issue it by the last business day of March 2027.
 - **Withholding certificates**, if you are self-employed and were paid fees or for services.
 - **Lease agreements** and a record of what you received, if you rent out a property.
 - **Pension certificate**, if you are retired.
@@ -26,7 +26,7 @@ Half the work of an income tax return is gathering the paperwork. If you have it
 
 - **Property tax bill** (impuesto predial) for each property, which shows the cadastral appraisal.
 - **Deeds or purchase records** for properties and vehicles bought during the year.
-- **Invoice or purchase document** for vehicles, or their value in the Ministry of Transport’s table.
+- **Invoice or purchase document** for vehicles. The Ministry of Transport’s value table can serve as a reference, but the value you report depends on the rules of the Estatuto Tributario, the type of vehicle and its tax cost.
 
 ## What helps you pay less
 

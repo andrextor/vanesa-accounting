@@ -14,21 +14,21 @@ Colombia adopted them through **Ley 1314 de 2009**, and today they are compiled 
 
 ## Who they apply to
 
-They apply to those **required to keep books**: companies (such as SAS) and, in general, individuals who are merchants. Not every company applies the same version: depending on their size and activity, they are classified into three groups.
+They apply to individuals and legal entities **required to keep books**: merchants, companies (such as SAS) and other entities depending on their nature and regulation. Those who aren’t required to keep books can also apply them if they want their accounts to serve as evidence. Not every company applies the same version: depending on their size and activity, they are classified into three groups.
 
 | Group | Standard | Who, in general |
 | --- | --- | --- |
 | Group 1 | Full IFRS | Listed companies, public interest entities (banks, insurers) and some large companies |
 | Group 2 | IFRS for SMEs | Most small and medium-sized companies |
-| Group 3 | Simplified accounting for micro-businesses | Very small businesses in staff, assets and income |
+| Group 3 | Simplified technical framework for micro-businesses | Micro-businesses that meet the legal requirements |
 
 The classification depends on criteria such as income, assets and number of employees, which the regulations define and update. If your company grows, it may change groups, so it’s worth checking every year.
 
 ## What changes in practice
 
-- **Complete financial statements.** Companies in groups 1 and 2 prepare a statement of financial position, an income statement, a statement of changes in equity, a cash flow statement and notes. Group 3 has simpler requirements.
+- **Complete financial statements.** Companies in groups 1 and 2 present a complete set: a statement of financial position, a statement of comprehensive income, a statement of changes in equity, a cash flow statement and notes. Group 3 has a simplified set, mainly a statement of financial position, an income statement and notes.
 - **More realistic values.** IFRS aim for assets and debts to reflect what they are really worth, not just what they cost.
-- **Accounting and taxes aren’t the same.** What the IFRS books say doesn’t always match what is reported to the DIAN. The difference is explained in the **tax reconciliation** (conciliación fiscal), a report that those who keep books must prepare.
+- **Accounting and taxes aren’t the same.** What the IFRS books say doesn’t always match what is reported to the DIAN. That’s why those required to keep books must maintain a control system or **tax reconciliation** (conciliación fiscal) of those differences (article 772-1 of the Estatuto Tributario). Not everyone files the report in the same format: Form 2516 has specific conditions and thresholds.
 
 ## Why it matters to you
 
@@ -37,7 +37,7 @@ Well-prepared IFRS financial statements are useful for much more than compliance
 - Applying for **bank loans**, since banks require them to assess your application.
 - Taking part in **tenders** or working with large companies.
 - Making **decisions** with reliable numbers: how much you earn, how much you owe and what your business is worth.
-- Reporting to your **partners**, who approve the financial statements every year, usually in the first three months: the 2026 statements are approved by March 2027 at the latest.
+- Reporting to the company’s **highest governing body**. In commercial companies, the shareholders’ or partners’ meeting holds its ordinary session within the first three months of the year (article 422 of the Código de Comercio), where it reviews and approves or rejects the financial statements: those for 2026, by March 2027 at the latest.
 
 ## Is your company up to date?
 
